@@ -29,6 +29,6 @@
   width: 10rem;
   height: 10rem;
   background-color: gray;
-  border-radius: 50%;
+  border-radius: 51%;
 }
 </style>
