@@ -1,7 +1,10 @@
 <template>
   <div class="section-layout text-center">
     <div class="style-1">services</div>
-    <div style="display: flex; justify-content: space-around; margin: 9rem 0">
+    <div
+      class="service-col"
+      style="display: flex; justify-content: space-around; margin: 9rem 0"
+    >
       <div
         style="width: fit-content"
         v-for="(item, i) in servicesItems"
