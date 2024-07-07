@@ -7,6 +7,7 @@
     <img
       src="/src/assets/media/Images/dire-wolf-beautiful-mythical-wolf-legendary-creature.png"
       alt="wolf image"
+      style="width: 41.8rem; height: 61rem"
     />
   </div>
 </template>

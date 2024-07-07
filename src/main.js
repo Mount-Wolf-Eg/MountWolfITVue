@@ -1,4 +1,4 @@
-// Sass
+// Sass main styles
 import "./assets/main.scss";
 
 import { createApp } from "vue";

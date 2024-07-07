@@ -5,8 +5,7 @@
         id="Group_1964"
         data-name="Group 1964"
         xmlns="http://www.w3.org/2000/svg"
-        width="12.938"
-        height="24"
+        style="width: 1.2938rem; height: 2.4rem"
         viewBox="0 0 12.938 24"
       >
         <path
@@ -24,8 +23,7 @@
         id="Group_1963"
         data-name="Group 1963"
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24.004"
+        style="width: 2.4rem; height: 2.4rem"
         viewBox="0 0 24 24.004"
       >
         <path
@@ -58,8 +56,7 @@
         data-name="Group 1966"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="24.534"
-        height="24.669"
+        style="width: 2.4534rem; height: 2.4669rem"
         viewBox="0 0 24.534 24.669"
       >
         <defs>
@@ -98,8 +95,7 @@
         data-name="Group 1965"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="25.555"
-        height="22.452"
+        style="width: 2.5555rem; height: 2.2452rem"
         viewBox="0 0 25.555 22.452"
       >
         <defs>

@@ -1,5 +1,5 @@
 <template>
-  <div class="section-layout" style="display: flex">
+  <div class="footer" style="display: flex; margin-bottom: 1rem !important">
     <div
       style="
         width: 60%;
@@ -8,12 +8,15 @@
         align-items: center;
       "
     >
-      <div class="location">
+      <div class="location flex-col">
         <p class="style-9">location</p>
-        <p class="style-4">Address: 1st Settlement, New Cairo, Egypt</p>
+        <p class="style-4">
+          Address: 1st Settlement,<br />
+          New Cairo, Egypt
+        </p>
       </div>
 
-      <div class="get-in-touch">
+      <div class="get-in-touch flex-col">
         <p class="style-9">Get in touch</p>
         <p style="display: flex; flex-direction: column">
           <a
@@ -31,9 +34,9 @@
         </p>
       </div>
 
-      <div class="social-media">
-        <p class="style-9">Social media</p>
-        <SocialIcon></SocialIcon>
+      <div class="social-media flex-col" style="display: flex">
+        <p class="style-9 m-0">Social media</p>
+        <SocialIcon class="mb-5"></SocialIcon>
       </div>
     </div>
 
@@ -55,4 +58,12 @@
 import SocialIcon from "../local/headerComponent/SocialIcon.vue";
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.flex-col {
+  height: 100%;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: start;
+  flex-direction: column;
+}
+</style>

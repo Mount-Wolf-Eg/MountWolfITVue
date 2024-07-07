@@ -78,6 +78,11 @@ body {
   letter-spacing: 0;
 }
 
+#app {
+  min-height: 100vh;
+  position: relative;
+}
+
 //   custom container
 .layout {
   margin: 0 auto;
@@ -85,7 +90,11 @@ body {
 }
 
 .section-layout {
-  margin: 9.6rem 9.6rem;
+  padding: 9rem 9.6rem 0;
+}
+
+.content {
+  padding-bottom: 20rem;
 }
 
 // Nav bar
@@ -118,7 +127,14 @@ body {
   }
 }
 
-// hero section
+//  footer
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 10px;
+}
 
 //   global classes
 .style-1 {
@@ -214,4 +230,31 @@ body {
   font-size: var(--fs-28);
   line-height: var(--line-s-37);
   color: var(--col-wt);
+}
+
+// media query
+@media only screen and (max-width: 1344px) {
+  html {
+    font-size: 55% !important;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 45% !important;
+  }
+}
+@media only screen and (max-width: 944px) {
+  html {
+    font-size: 35% !important;
+  }
+}
+@media only screen and (max-width: 704px) {
+  html {
+    font-size: 25% !important;
+  }
+}
+@media only screen and (max-width: 544px) {
+  html {
+    font-size: 23% !important;
+  }
 }

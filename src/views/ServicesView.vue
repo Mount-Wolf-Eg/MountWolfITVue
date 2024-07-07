@@ -1,5 +1,5 @@
 <script setup></script>
 
 <template>
-  <div>Home Page</div>
+  <div class="text-center fs-1 my-5">Services Page</div>
 </template>
