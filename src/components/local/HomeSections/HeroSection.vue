@@ -1,5 +1,8 @@
 <template>
-  <div class="d-flex flex-column justify-content-center align-items-center">
+  <div
+    class="d-flex flex-column justify-content-center align-items-center"
+    v-motion-slide-bottom
+  >
     <p class="style-8">we are wolves</p>
     <p class="style-2" style="margin-bottom: 9rem">
       websites and platforms - mobile application - mobile games

@@ -1,5 +1,5 @@
 <script setup></script>
 
 <template>
-  <div class="text-center fs-1 my-5">Projects Page</div>
+  <div class="text-center fs-1 my-5" v-motion-slide-bottom>Projects Page</div>
 </template>

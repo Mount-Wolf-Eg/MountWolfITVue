@@ -30,6 +30,7 @@ html {
 
   // font sizes
   --fs-6: 0.65rem;
+  --fs-8: 0.8rem;
   --fs-18: 1.8rem;
   --fs-20: 2rem;
   --fs-24: 2.4rem;
@@ -76,6 +77,7 @@ body {
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0;
+  position: relative;
 }
 
 #app {
@@ -104,9 +106,10 @@ body {
     font-weight: var(--fw-bold);
     padding: 0;
     margin: 0;
+    text-transform: var(--f-style-upper);
   }
   .nav-st {
-    font-size: var(--fs-6);
+    font-size: var(--fs-8);
     font-weight: var(--fw-bold);
     padding: 0;
     margin: 0;
@@ -192,7 +195,7 @@ body {
   font-family: var(--ft-main);
   font-style: var(--fw-normal);
   font-weight: var(--fw-bold);
-  font-size: var(--fs-28);
+  font-size: var(--fs-20);
   line-height: var(--line-s-37);
   color: var(--col-wt);
 }
