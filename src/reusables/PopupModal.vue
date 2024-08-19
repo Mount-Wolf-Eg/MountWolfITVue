@@ -9,8 +9,16 @@
           <div class="modal-title">Mount Wolf</div>
           <button class="close" @click="closeModalView">X</button>
         </div>
-        <div class="modal-body">
-          <div class="p-3 text">{{ data }}</div>
+
+        <div class="modal-body d-flex">
+          <div class="pop-bg w-25">
+            <img
+              src="../assets/media/Images/dire-wolf-beautiful-mythical-wolf-legendary-creature.png"
+              alt="wolf image"
+              style="height: 100%; padding: 0; margin: 0; width: 30rem"
+            />
+          </div>
+          <div class="p-3 text w-75">{{ data }}</div>
         </div>
       </div>
     </div>
@@ -30,6 +38,8 @@ onMounted(() => {
   el.style.top = `${window.innerHeight + 100}px`;
   el.style.opacity = 1;
   el.style.transform = "scale(1)";
+  el.style.width = "80vw";
+  el.style.minHeight = "450px";
 
   data.value = props.modalBody;
 });
@@ -54,21 +64,21 @@ const closeModalView = () => {
   height: 100%;
   width: 100vw;
   .modal-container {
-    background-image: url("/src/assets/media/Images/download(1).png");
+    background-color: #4c4c4c !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     color: white;
     font-size: 14px;
     background-color: white;
     position: absolute;
     text-align: center;
-    width: 80vw;
+    width: 0;
     opacity: 0;
     left: 10%;
     transform: translateX(-50%);
-    min-height: 400px;
+    height: 0;
     border-radius: 12px;
     padding: 10px;
     transform: scale(0);
@@ -103,6 +113,9 @@ const closeModalView = () => {
   }
   .modal-body {
     color: white;
+    height: 100% !important;
+    text-align: start;
+
     .text {
       font-size: 16px;
       font-weight: 500;

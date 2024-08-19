@@ -1,38 +1,38 @@
 <template>
   <div class="section-layout">
-    <div class="about-us">
+    <div class="about-us" v-motion-slide-bottom>
       <div
         class="style-6"
         style="left: 0%; top: 15%"
-        @mouseover="handleHover($event)"
+        @click="handleHover($event)"
       >
         Alpha Wolves Are Just Moms and Dads
       </div>
       <div
         class="style-6"
         style="left: 25%; top: 5%"
-        @mouseover="handleHover($event)"
+        @click="handleHover($event)"
       >
         Wolves are highly intelligent
       </div>
       <div
         class="style-6"
-        style="left: 42%; top: -10%"
-        @mouseover="handleHover($event)"
+        style="left: 45%; top: -10%"
+        @click="handleHover($event)"
       >
         Wolves are skilled communicators
       </div>
       <div
         class="style-6"
         style="left: 65%; top: 10%"
-        @mouseover="handleHover($event)"
+        @click="handleHover($event)"
       >
         Wolves are family oriented
       </div>
       <div
         class="style-6"
         style="left: 85%; top: 20%"
-        @mouseover="handleHover($event)"
+        @click="handleHover($event)"
       >
         Wolves are surprisingly diverse
       </div>
@@ -69,8 +69,13 @@ const handleClose = () => {
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
-  .div {
-    transition: all 0.3s ease-in;
+  .style-6 {
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: #666;
+      transform: scale(1.1);
+    }
   }
 }
 </style>
