@@ -14,6 +14,7 @@
         style="width: 41.8rem; height: 61rem"
       />
       <img
+        style="width: 41.8rem; height: 61rem"
         class="wolf-eye"
         src="/src/assets/media/Images/eye.png"
         alt="wolf eye"
