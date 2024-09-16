@@ -1,31 +1,42 @@
 <template>
-  <div class="section-layout text-center">
-    <div v-motion-slide-bottom>
-      <div class="style-1">services</div>
-      <div
-        class="service-col"
-        style="display: flex; justify-content: space-around; margin: 9rem 0"
-      >
+  <div>
+    <div class="ser-bg-img">
+      <img
+        src="/src/assets/media/Images/3 1.png"
+        style="width: 100%"
+        alt="service img"
+      />
+    </div>
+    <div class="section-layout text-center">
+      <div v-motion-slide-bottom>
+        <div class="style-1">services</div>
         <div
-          style="width: fit-content"
-          v-for="(item, i) in servicesItems"
-          :key="i"
+          class="service-col"
+          style="display: flex; justify-content: space-around; margin: 9rem 0"
         >
           <div
-            style="
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-            "
+            style="width: fit-content"
+            v-for="(item, i) in servicesItems"
+            :key="i"
           >
-            <img
-              :src="item.img"
-              alt="service icon"
-              style="width: 5.6rem; height: 5.6rem; margin-bottom: 4rem"
-            />
-            <div class="style-9">{{ item.title }}</div>
-            <div class="style-5 my-3" v-for="(e, j) in item.items">{{ e }}</div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <img
+                :src="item.img"
+                alt="service icon"
+                style="width: 5.6rem; height: 5.6rem; margin-bottom: 4rem"
+              />
+              <div class="style-9">{{ item.title }}</div>
+              <div class="style-5 my-3" v-for="(e, j) in item.items">
+                {{ e }}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -65,4 +76,40 @@ const servicesItems = ref([
 ]);
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.ser-bg-img {
+  img {
+    // display: block;
+
+    // height: auto;
+    // -webkit-mask-image: radial-gradient(
+    //   circle,
+    //   rgba(0, 0, 0, 1) 10%,
+    //   rgba(0, 0, 0, 0) 90%
+    // );
+    // mask-image: radial-gradient(
+    //   circle,
+    //   rgba(0, 0, 0, 1) 10%,
+    //   rgba(0, 0, 0, 0) 90%
+    // );
+    // -webkit-mask-composite: destination-out;
+    // mask-composite: subtract;
+    display: block;
+    height: auto;
+    -webkit-mask-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 20%,
+      /* Start of opaque region */ rgba(0, 0, 0, 0) 80%
+        /* End of transparent region */
+    );
+    mask-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 20%,
+      /* Start of opaque region */ rgba(0, 0, 0, 0) 80%
+        /* End of transparent region */
+    );
+    -webkit-mask-composite: destination-out;
+    mask-composite: subtract;
+  }
+}
+</style>

@@ -1,8 +1,8 @@
 <template>
   <div class="section-layout">
     <HeroSection></HeroSection>
-    <AboutUs></AboutUs>
     <ServicesHome></ServicesHome>
+    <AboutUs></AboutUs>
     <OurClients></OurClients>
   </div>
 </template>

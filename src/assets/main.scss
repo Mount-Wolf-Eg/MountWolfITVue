@@ -88,7 +88,7 @@ body {
 //   custom container
 .layout {
   margin: 0 auto;
-  padding: 5rem 5.5rem;
+  padding: 3rem 15rem 0; // max-width: 90%;
 }
 
 .section-layout {
@@ -123,7 +123,7 @@ body {
     font-size: var(--fs-18) !important;
     line-height: var(--line-s-24);
     color: var(--col-wt) !important;
-    text-transform: var(--f-style-upper);
+    text-transform: capitalize;
     text-decoration: underline !important;
     text-underline-offset: 6px !important;
     text-decoration-thickness: 3px !important;
@@ -208,7 +208,7 @@ body {
   font-size: var(--fs-18) !important;
   line-height: var(--line-s-24);
   color: var(--col-second);
-  text-transform: var(--f-style-upper);
+  text-transform: capitalize;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -255,10 +255,18 @@ body {
   html {
     font-size: 25% !important;
   }
+  .layout {
+    max-width: 100%;
+    padding: 2rem 3rem;
+  }
 }
 @media only screen and (max-width: 544px) {
   html {
     font-size: 23% !important;
+  }
+  .layout {
+    max-width: 100%;
+    padding: 2rem 3rem;
   }
   .service-col {
     flex-direction: column;

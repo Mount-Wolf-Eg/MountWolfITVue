@@ -1,7 +1,18 @@
 <template>
   <div>
     <!-- nav start-->
-    <NavBar v-if="route.name !== 'Not-found'" />
+    <NavBar
+      style="
+        background-color: var(--col-bg);
+        z-index: 9999;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+      "
+      class="mx-auto"
+      v-if="route.name !== 'Not-found'"
+    />
     <!-- nav end-->
     <main>
       <slot></slot>

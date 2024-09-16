@@ -1,22 +1,37 @@
 <template>
-  <div class="style-7">
-    <!-- style="width: 15%; height: 100%; color: #9a9a9a; font-size: 1.8rem" -->
+  <div class="style-7 d-flex gap-5 w-auto">
     <router-link class="nav-link" active-class="active" :to="{ name: 'home' }"
       >Home</router-link
     >
+
     <router-link
       class="nav-link"
       active-class="active"
-      :to="{ name: 'services' }"
+      :to="{ name: 'work-process' }"
     >
-      Services <
+      Work Process
     </router-link>
     <router-link
       class="nav-link"
       active-class="active"
       :to="{ name: 'projects' }"
-      >Projects</router-link
     >
+      Projects
+    </router-link>
+    <router-link
+      class="nav-link"
+      active-class="active"
+      :to="{ name: 'products' }"
+    >
+      Products
+    </router-link>
+    <router-link
+      class="nav-link"
+      active-class="active"
+      :to="{ name: 'contact-us' }"
+    >
+      Contact us
+    </router-link>
   </div>
 </template>
 

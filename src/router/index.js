@@ -12,11 +12,11 @@ const router = createRouter({
       },
     },
     {
-      path: "/services",
-      name: "services",
-      component: () => import("../views/ServicesView.vue"),
+      path: "/work-process",
+      name: "work-process",
+      component: () => import("../views/WorkProcess.vue"),
       meta: {
-        title: "Services",
+        title: "Work Process",
       },
     },
     {
@@ -24,7 +24,23 @@ const router = createRouter({
       name: "projects",
       component: () => import("../views/ProjectsView.vue"),
       meta: {
-        title: "projects",
+        title: "Projects",
+      },
+    },
+    {
+      path: "/products",
+      name: "products",
+      component: () => import("../views/ProductsView.vue"),
+      meta: {
+        title: "Products",
+      },
+    },
+    {
+      path: "/contact-us",
+      name: "contact-us",
+      component: () => import("../views/ContactUs.vue"),
+      meta: {
+        title: "contact-us",
       },
     },
     {
