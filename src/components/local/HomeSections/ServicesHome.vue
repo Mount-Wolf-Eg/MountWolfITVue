@@ -1,6 +1,15 @@
 <template>
-  <div style="margin-top: -25rem">
+  <div style="margin-top: -25rem" class="section-layout">
     <div class="ser-bg-img">
+      <span
+        class="d-flex justify-content-center align-items-center flex-column w-100 ser-text"
+      >
+        <p class="style-2" style="margin-bottom: 3rem">let's hunt</p>
+        <p class="style-10">
+           The point of using Lorem Ipsum is that it has a more-or-less normal
+          distribution of letters
+        </p>
+      </span>
       <div class="style-3 ser-title">services</div>
       <img
         src="/src/assets/media/Images/serBg.png"
@@ -8,7 +17,7 @@
         alt="service img"
       />
     </div>
-    <div class="section-layout text-center">
+    <div class="section-layout text-center" style="margin-top: -10rem">
       <div v-motion-slide-bottom>
         <div
           class="service-col"
@@ -174,6 +183,12 @@ const servicesItems = ref([
 <style lang="scss" scoped>
 .ser-bg-img {
   position: relative;
+  .ser-text {
+    position: absolute;
+    left: 50%;
+    top: 020%;
+    transform: translateX(-50%);
+  }
   .ser-title {
     position: absolute;
     left: 50%;

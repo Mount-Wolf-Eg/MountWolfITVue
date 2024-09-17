@@ -1,5 +1,5 @@
 <template>
-  <div class="section-layout">
+  <div>
     <HeroSection></HeroSection>
     <ServicesHome></ServicesHome>
     <AboutUs></AboutUs>
