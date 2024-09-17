@@ -1,6 +1,6 @@
 <template>
   <div
-    class="layout nav-bar"
+    class="layout nav-bar pb-4"
     style="display: flex; justify-content: space-between"
   >
     <NavTitle></NavTitle>
