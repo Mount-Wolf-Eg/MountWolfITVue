@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div
+    style="min-height: 100vh"
+    class="d-flex flex-column justify-content-start"
+  >
     <!-- nav start-->
     <NavBar
       style="
@@ -14,7 +17,7 @@
       v-if="route.name !== 'Not-found'"
     />
     <!-- nav end-->
-    <main>
+    <main style="flex-grow: 1">
       <slot></slot>
     </main>
     <!-- footer start -->

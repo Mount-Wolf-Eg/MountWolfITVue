@@ -10,7 +10,7 @@
           distribution of letters
         </p>
       </span>
-      <div class="style-3 ser-title">services</div>
+      <div class="style-3 ser-title">Services</div>
       <img
         src="/src/assets/media/Images/serBg.png"
         style="width: 100%"

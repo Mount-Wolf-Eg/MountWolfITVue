@@ -5,7 +5,7 @@
   >
     <div class="wolf-box">
       <div>
-        <carousel :items-to-show="1">
+        <carousel :items-to-show="1" :wrap-around="true" :transition="500">
           <slide v-for="(slide, i) in slides" :key="i">
             <img :src="slide.img" style="width: 100%" alt="" />
           </slide>
@@ -47,5 +47,8 @@ const slides = ref([
     top: 70%;
     flex-direction: column;
   }
+}
+.carousel__slide--sliding {
+  transition: 0.5s;
 }
 </style>

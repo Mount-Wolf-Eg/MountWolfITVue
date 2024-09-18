@@ -1,56 +1,23 @@
 <template>
-  <div class="footer" style="margin-bottom: 1rem !important">
-    <div style="display: flex; margin: 0 5rem">
-      <div
-        style="
-          width: 50%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-        "
-      >
-        <div class="location flex-col">
-          <p class="style-9">location</p>
-          <p class="style-4">
-            Address: 1st Settlement,<br />
-            New Cairo, Egypt
-          </p>
-        </div>
-
-        <div class="get-in-touch flex-col">
-          <p class="style-9">Get in touch</p>
-          <p style="display: flex; flex-direction: column">
-            <a
-              class="style-4"
-              style="text-decoration: none; color: white"
-              href="tel:+01233456789"
-              >01233456789</a
-            >
-            <a
-              class="style-4"
-              style="text-decoration: none; color: white"
-              href="mailto:info@mount-wolf.com"
-              >E-mail : info@mount-wolf.com</a
-            >
-          </p>
-        </div>
-
-        <div class="social-media flex-col" style="display: flex">
-          <p class="style-9 m-0">Social media</p>
-          <SocialIcon class="mb-5"></SocialIcon>
-        </div>
+  <div class="footer" style="padding: 2rem 0">
+    <div>
+      <div class="location">
+        <p class="foot-item">Location</p>
+        <p class="foot-item">Address: 1st Settlement, New Cairo, Egypt</p>
       </div>
-
-      <div
-        class="copyright style-4"
-        style="
-          width: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        "
-      >
-        © 2024, MOUNT WOLF | Privacy Policy | Terms of Use | Cookie Policy
+      <div class="contacts">
+        <p class="foot-item">E-mail</p>
+        <a class="foot-item" href="mailto:info@mount-wolf.com"
+          >info@mount-wolf.com</a
+        >
+      </div>
+      <div class="social">
+        <SocialIcon></SocialIcon>
+      </div>
+      <div class="copy-right">
+        <p class="foot-item">
+          © 2024, MOUNT WOLF | Privacy Policy | Terms of Use | Cookie Policy
+        </p>
       </div>
     </div>
   </div>
@@ -61,11 +28,11 @@ import SocialIcon from "../local/headerComponent/SocialIcon.vue";
 </script>
 
 <style lang="scss" scoped>
-.flex-col {
-  height: 100%;
-  display: flex;
-  justify-content: space-between !important;
-  align-items: start;
-  flex-direction: column;
+.foot-item {
+  font-family: var(--ft-roboto);
+  font-size: var(--fs-18);
+  font-weight: 700;
+  font-weight: var(--line-s-24);
+  color: var(--col-second);
 }
 </style>
