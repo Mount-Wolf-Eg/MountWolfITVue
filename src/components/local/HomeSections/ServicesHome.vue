@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: -25rem" class="section-layout">
+  <div style="margin-top: -25rem" class="section-layout p-0">
     <div class="ser-bg-img">
       <span
         class="d-flex justify-content-center align-items-center flex-column w-100 ser-text"

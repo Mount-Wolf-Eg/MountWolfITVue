@@ -3,7 +3,7 @@
     <div class="card-img"></div>
     <div class="card-content">
       <svg
-        style="width: 7.7rem; height: 8.7rem"
+        style="width: auto; height: 8.7rem"
         viewBox="0 0 77 87"
         xmlns="http://www.w3.org/2000/svg"
       >

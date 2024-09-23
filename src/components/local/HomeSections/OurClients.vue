@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="feat w-75 mx-auto d-flex justify-content-between">
+    <div
+      class="feat w-75 mx-auto d-flex justify-content-between"
+      v-motion-slide-bottom
+    >
       <span>Accessible</span>
       <span>100% Secure</span>
       <span>Responsive</span>
@@ -36,12 +39,12 @@
         <img
           src="/src/assets/media/Images/footImg.png"
           alt="footer image"
-          style="position: absolute; right: 0; width: 50%"
+          style="position: absolute; right: 0; width: 50%; margin-right: 0.5px"
         />
         <img
           src="/src/assets/media/Images/footImg.png"
           alt="footer image"
-          style="transform: scaleX(-1); width: 50%"
+          style="transform: scaleX(-1); width: 50%; margin-left: 0.5px"
         />
         <p>let's hunt</p>
       </div>

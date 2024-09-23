@@ -1,5 +1,8 @@
 <template>
-  <div class="d-flex justify-content-center align-items-center flex-column">
+  <div
+    class="d-flex justify-content-center align-items-center flex-column"
+    v-motion-slide-bottom
+  >
     <div class="style-3" style="margin: 8rem 0 10rem">Projects</div>
 
     <div style="width: 80%">
