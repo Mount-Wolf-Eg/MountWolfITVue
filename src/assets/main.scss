@@ -60,7 +60,11 @@ html {
   // letter spacing
   --letters-43: 2.8rem;
 }
-
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 input:focus {
   outline: none;
 }
@@ -82,11 +86,14 @@ body {
   line-height: 1;
   letter-spacing: 0;
   position: relative;
+  height: 100%;
 }
 
 #app {
   min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 //   custom container

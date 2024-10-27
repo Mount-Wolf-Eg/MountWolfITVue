@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex gap-4 align-items-center">
-    <a href="#">
+    <a href="https://www.facebook.com/MountWolfAdv/">
       <svg
         id="Group_1964"
         data-name="Group 1964"
@@ -18,7 +18,7 @@
       </svg>
     </a>
 
-    <a href="#">
+    <a href="https://www.instagram.com/mountwolf.co/">
       <svg
         id="Group_1963"
         data-name="Group 1963"
@@ -50,46 +50,20 @@
       </svg>
     </a>
 
-    <a href="#">
+    <a href="https://www.linkedin.com/company/mount-wolf/?viewAsMember=true">
       <svg
-        id="Group_1966"
-        data-name="Group 1966"
+        style="width: 2.2rem; height: 2.2rem"
+        fill="#fff"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        style="width: 2rem; height: 2rem"
-        viewBox="0 0 24.534 24.669"
+        viewBox="0 0 448 512"
       >
-        <defs>
-          <clipPath id="clip-path">
-            <rect
-              id="Rectangle_210"
-              data-name="Rectangle 210"
-              width="24.534"
-              height="24.669"
-              fill="#fff"
-            />
-          </clipPath>
-        </defs>
-        <g id="Group_1961" data-name="Group 1961" clip-path="url(#clip-path)">
-          <path
-            id="Path_8292"
-            data-name="Path 8292"
-            d="M0,24.668c.555-2.024,1.079-3.953,1.617-5.879a1.036,1.036,0,0,0-.091-.824,12.216,12.216,0,1,1,12.507,6.39A11.781,11.781,0,0,1,6.9,23.2a1.149,1.149,0,0,0-.877-.095c-1.848.5-3.7.983-5.554,1.469-.127.034-.258.054-.467.1M22.487,12.235a10.157,10.157,0,1,0-18.808,5.33,1.113,1.113,0,0,1,.146,1c-.265.848-.482,1.711-.716,2.568-.175.641-.173.643.449.481.86-.225,1.726-.431,2.576-.688a1.4,1.4,0,0,1,1.2.153,10.163,10.163,0,0,0,15.156-8.846"
-            transform="translate(0 0.001)"
-            fill="#fff"
-          />
-          <path
-            id="Path_8293"
-            data-name="Path 8293"
-            d="M68.7,75.41a8.406,8.406,0,0,1-3.536-1.129A13.125,13.125,0,0,1,59.836,68.8a3.587,3.587,0,0,1,.491-4.5,1.881,1.881,0,0,1,1.719-.376.757.757,0,0,1,.388.458c.325.772.637,1.55.966,2.32a.609.609,0,0,1-.052.63c-.135.2-.274.393-.42.583-.58.757-.579.755-.053,1.529A8.363,8.363,0,0,0,66.6,72.489a.635.635,0,0,0,.884-.217c.255-.344.541-.664.8-1.005a.491.491,0,0,1,.668-.19q1.251.593,2.5,1.19a.446.446,0,0,1,.257.459,2.289,2.289,0,0,1-.981,2.034,3.381,3.381,0,0,1-2.022.65"
-            transform="translate(-53.179 -57.281)"
-            fill="#fff"
-          />
-        </g>
+        <path
+          d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+        />
       </svg>
     </a>
 
-    <a href="#">
+    <a href="https://vimeo.com/user161307481">
       <svg
         id="Group_1965"
         data-name="Group 1965"

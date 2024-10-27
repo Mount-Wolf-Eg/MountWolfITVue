@@ -61,6 +61,11 @@ const slides = ref([
     title: "WOLVES ARE FAMILY ORIENTED",
     styl: "slide-4",
   },
+  {
+    img: `/src/assets/media/Images/about5.jpg`,
+    title: "WOLVES ARE SKILLED COMMUNICATORS",
+    styl: "slide-4",
+  },
 ]);
 </script>
 

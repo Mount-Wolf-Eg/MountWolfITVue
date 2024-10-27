@@ -7,7 +7,14 @@
       <div>
         <carousel :items-to-show="1" :wrap-around="true" :transition="500">
           <slide v-for="(slide, i) in slides" :key="i">
-            <img :src="slide.img" style="width: 100%" alt="" />
+            <img
+              :src="slide.img"
+              style="width: 100%; position: relative"
+              alt="slider image"
+            />
+            <div style="position: absolute; right: 10%; top: 20%">
+              Mount wolf
+            </div>
           </slide>
 
           <template #addons>
@@ -42,13 +49,13 @@ const slides = ref([
 
 .carousel {
   position: relative;
-  .carousel__pagination {
-    position: absolute;
-    top: 70%;
-    flex-direction: column;
-  }
 }
 .carousel__slide--sliding {
   transition: 0.5s;
 }
 </style>
+<!-- .carousel__pagination {
+    position: absolute;
+    top: 70%;
+    flex-direction: column;
+  } -->
