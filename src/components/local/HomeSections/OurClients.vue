@@ -44,7 +44,12 @@
       >
         <swiper-slide v-for="(slide, i) in slides" :key="i" class="h-100">
           <div
-            style="width: 50% !important; height: 100%"
+            style="
+              width: 10rem;
+              height: auto;
+              object-fit: contain;
+              object-position: center;
+            "
             class="d-flex justify-content-center align-items-center"
             v-html="slide.icon"
           ></div>
@@ -1230,15 +1235,15 @@ const slides = ref([
 ]);
 const breakpoints = {
   0: {
-    slidesPerView: 1,
+    slidesPerView: 4,
     spaceBetween: 10,
   },
-  375: {
-    slidesPerView: 2,
+  370: {
+    slidesPerView: 5,
     spaceBetween: 20,
   },
   575: {
-    slidesPerView: 9,
+    slidesPerView: 8,
     spaceBetween: 20,
   },
 };

@@ -43,22 +43,37 @@
       <div style="width: 70%" class="w-100 d-flex flex-wrap gap-4">
         <span v-if="currentSec == 1">
           <div style="width: 70%" class="w-100 d-flex flex-wrap gap-4">
-            <div v-for="item in 6" style="flex: 0 0 32%" v-motion-slide-bottom>
-              <ProjectCard></ProjectCard>
+            <div
+              v-for="(item, i) in slides"
+              :key="i"
+              style="flex: 0 0 32%"
+              v-motion-slide-bottom
+            >
+              <ProjectCard :data="item"></ProjectCard>
             </div>
           </div>
         </span>
-        <spa v-if="currentSec == 2" n>
+        <span v-if="currentSec == 2">
           <div style="width: 70%" class="w-100 d-flex flex-wrap gap-4">
-            <div v-for="item in 6" style="flex: 0 0 32%" v-motion-slide-bottom>
-              <ProjectCard></ProjectCard>
+            <div
+              v-for="(item, i) in slides"
+              :key="i"
+              style="flex: 0 0 32%"
+              v-motion-slide-bottom
+            >
+              <ProjectCard :data="item"></ProjectCard>
             </div>
           </div>
-        </spa>
-        <span v-if="currentSec == 3" n>
+        </span>
+        <span v-if="currentSec == 3">
           <div style="width: 70%" class="w-100 d-flex flex-wrap gap-4">
-            <div v-for="item in 6" style="flex: 0 0 32%" v-motion-slide-bottom>
-              <ProjectCard></ProjectCard>
+            <div
+              v-for="(item, i) in slides"
+              :key="i"
+              style="flex: 0 0 32%"
+              v-motion-slide-bottom
+            >
+              <ProjectCard :data="item"></ProjectCard>
             </div>
           </div>
         </span>
@@ -71,6 +86,12 @@
 import { ref } from "vue";
 import ProjectCard from "@/reusables/ProjectCard.vue";
 const currentSec = ref(1);
+const slides = ref([
+  "/src/assets/media/Images/Untitled-1-02.jpg",
+  "/src/assets/media/Images/Untitled-1-03.jpg",
+  "/src/assets/media/Images/Untitled-1-04.jpg",
+  "/src/assets/media/Images/Untitled-1-05.jpg",
+]);
 </script>
 
 <style scoped lang="scss">

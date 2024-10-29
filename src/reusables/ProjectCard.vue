@@ -2,7 +2,7 @@
   <div class="project-card">
     <div class="card-img" :style="`background-image: url(${data})`"></div>
     <div class="card-content">
-      <svg
+      <!-- <svg
         style="width: auto; height: 8.7rem"
         viewBox="0 0 77 87"
         xmlns="http://www.w3.org/2000/svg"
@@ -31,13 +31,13 @@
         <path
           d="M45.9001 16.58C41.3201 16.58 37.6101 12.87 37.6101 8.29C37.6101 3.71 41.3201 0 45.9001 0C50.4801 0 54.1901 3.71 54.1901 8.29C54.1901 12.86 50.4801 16.57 45.9001 16.58ZM45.9001 4.6C43.8601 4.6 42.2001 6.26 42.2001 8.3C42.2001 10.34 43.8601 12 45.9001 12C47.9401 12 49.6001 10.34 49.6001 8.3C49.6001 6.26 47.9401 4.6 45.9001 4.6Z"
         />
-      </svg>
-      <p class="card-text">
+      </svg> -->
+      <!-- <p class="card-text">
         It is a long established fact that a reader will be distracted by the
         readable content of a page when looking at its layout. 
-      </p>
-      <p class="show-more">Show more</p>
-      <svg
+      </p> -->
+      <!-- <p class="show-more">Show more</p> -->
+      <!-- <svg
         style="width: 5rem; height: 6.2rem"
         viewBox="0 0 50 62"
         fill="none"
@@ -99,7 +99,7 @@
             <rect width="49.79" height="61.2" fill="white" />
           </clipPath>
         </defs>
-      </svg>
+      </svg> -->
     </div>
   </div>
 </template>
@@ -118,14 +118,13 @@ const props = defineProps({
   position: relative;
   width: 36.5rem;
   height: 59.3rem;
-  border: 1px solid var(--col-second);
   .card-img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
-    filter: brightness(0);
+    filter: brightness(0.5);
     transition: all 0.2s ease-in-out;
   }
 
@@ -168,7 +167,7 @@ const props = defineProps({
     }
   }
   &:hover .card-img {
-    filter: brightness(0.5);
+    filter: brightness(1);
   }
   &:hover .card-text {
     color: var(--col-white);
