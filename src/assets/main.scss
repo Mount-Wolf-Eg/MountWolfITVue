@@ -103,12 +103,8 @@ body {
 }
 
 .section-layout {
-  padding: 9rem 9.6rem 0;
+  padding: 9rem 10rem 0;
 }
-
-// .content {
-//   padding-bottom: 20rem;
-// }
 
 //// Nav bar
 .nav-bar {
@@ -339,16 +335,19 @@ textarea {
     font-size: 55% !important;
   }
 }
+
 @media only screen and (max-width: 1200px) {
   html {
     font-size: 45% !important;
   }
 }
+
 @media only screen and (max-width: 944px) {
   html {
     font-size: 35% !important;
   }
 }
+
 @media only screen and (max-width: 704px) {
   html {
     font-size: 25% !important;
@@ -358,6 +357,7 @@ textarea {
     padding: 2rem 3rem;
   }
 }
+
 @media only screen and (max-width: 544px) {
   html {
     font-size: 23% !important;

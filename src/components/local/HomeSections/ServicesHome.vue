@@ -74,7 +74,7 @@ const servicesItems = ref([
 </svg>
 `,
     img: "/src/assets/media/Servises/Group 1969.png",
-    title: "websites and platforms",
+    title: "Software Development",
 
     items: [
       "Web Development",
@@ -112,7 +112,7 @@ const servicesItems = ref([
 </defs>
 </svg>
 `,
-    title: "Mobile Application",
+    title: "Application Development",
     items: [
       "Application Development",
       "Application Maintenance",
@@ -147,7 +147,7 @@ const servicesItems = ref([
 </svg>
 
 `,
-    title: "Mobile Game Development",
+    title: "UI UX ",
     items: ["Design", "Development"],
   },
   {
@@ -174,7 +174,7 @@ const servicesItems = ref([
 </clipPath>
 </defs>
 </svg>`,
-    title: "Maintenance and Support",
+    title: "SLA",
     items: ["Service Level", "Agreement", "(SLA)"],
   },
 ]);

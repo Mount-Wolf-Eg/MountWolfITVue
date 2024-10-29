@@ -6,7 +6,10 @@ import { MotionPlugin } from "@vueuse/motion";
 
 import { createApp } from "vue";
 import { createPinia } from "pinia";
-
+// swiper
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 // bootstrap
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";

@@ -1,6 +1,6 @@
 <template>
   <div class="project-card">
-    <div class="card-img"></div>
+    <div class="card-img" :style="`background-image: url(${data})`"></div>
     <div class="card-content">
       <svg
         style="width: auto; height: 8.7rem"
@@ -104,7 +104,14 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  data: {
+    type: String,
+    required: false,
+  },
+});
+</script>
 
 <style lang="scss" scoped>
 .project-card {
@@ -113,7 +120,6 @@
   height: 59.3rem;
   border: 1px solid var(--col-second);
   .card-img {
-    background-image: url("/src/assets/media/Images/fitImg.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -162,7 +168,7 @@
     }
   }
   &:hover .card-img {
-    filter: brightness(1);
+    filter: brightness(0.5);
   }
   &:hover .card-text {
     color: var(--col-white);

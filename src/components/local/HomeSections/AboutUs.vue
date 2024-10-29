@@ -1,21 +1,114 @@
 <template>
   <div>
     <div class="about-us w-100" v-motion-slide-bottom>
-      <carousel :items-to-show="1" :wrap-around="true" :transition="500">
-        <slide v-for="(slide, i) in slides" :key="i">
-          <div style="position: relative">
-            <img :src="slide.img" style="width: 100%" alt="slide image" />
-            <div :class="`${slide.styl}`" style="position: absolute">
-              {{ slide.title }}
+      <swiper
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        class="w-100 h-100 py-2"
+        :modules="modules"
+        :pagination="{
+          el: '.swiper-pagination',
+          dynamicBullets: true,
+          clickable: true,
+        }"
+        :loop="true"
+        :slides-per-view="1"
+        :Autoplay="{
+          delay: 1000,
+          disableOnInteraction: true,
+          waitForTransition: true,
+        }"
+        :space-between="10"
+        :navigation="{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }"
+        :preload-images="false"
+        :Lazy="true"
+      >
+        <swiper-slide v-for="(slide, i) in slides" :key="i" class="h-100">
+          <div class="question-card h-100 mx-auto">
+            <div style="position: relative">
+              <img :src="slide.img" style="width: 100%" alt="slide image" />
+              <div :class="`${slide.styl}`" style="position: absolute">
+                {{ slide.title }}
+              </div>
             </div>
           </div>
-        </slide>
-
-        <template #addons>
-          <navigation class="custom-nav" />
-          <pagination class="custom-pagination" />
-        </template>
-      </carousel>
+        </swiper-slide>
+        <div class="swiper-button-next">
+          <svg
+            class="arrow1"
+            fill="#fff"
+            style="height: 4rem; width: 4rem"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            />
+          </svg>
+          <svg
+            class="arrow2"
+            fill="#fff"
+            style="height: 4rem; width: 4rem"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            />
+          </svg>
+          <svg
+            class="arrow3"
+            fill="#fff"
+            style="height: 4rem; width: 4rem"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            />
+          </svg>
+        </div>
+        <div class="swiper-button-prev" style="transform: scaleX(-1)">
+          <svg
+            class="arrow1"
+            fill="#fff"
+            style="height: 4rem; width: 4rem"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            />
+          </svg>
+          <svg
+            class="arrow2"
+            fill="#fff"
+            style="height: 4rem; width: 4rem"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            />
+          </svg>
+          <svg
+            class="arrow3"
+            fill="#fff"
+            style="height: 4rem; width: 4rem"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            />
+          </svg>
+        </div>
+      </swiper>
     </div>
     <PopupModal
       v-if="show"
@@ -26,8 +119,9 @@
 </template>
 
 <script setup>
-import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+const modules = ref([Pagination, Navigation, Autoplay]);
 import PopupModal from "@/reusables/PopupModal.vue";
 import { ref } from "vue";
 const show = ref(false);
@@ -128,37 +222,79 @@ const slides = ref([
   width: 25rem;
 }
 
-.carousel__track {
-  transform-style: preserve-3d;
+// swiper controls
+.swiper-button-next,
+.swiper-button-prev {
+  width: 6rem;
+  margin: 1rem;
+
+  &::after {
+    font-size: 0;
+  }
 }
 
-.carousel__slide--sliding {
-  transition: 0.5s;
+.swiper-pagination-bullets {
+  bottom: 25%;
+  & * {
+    background-color: var(--col-white) !important;
+    width: 1.5rem;
+    height: 0.5rem;
+    border-radius: 0.2rem;
+  }
 }
 
-.carousel__prev,
-.carousel__next {
-  box-sizing: content-box;
-  border: 5px solid white;
-  background-color: yellow !important;
+// slider buttons
+.arrow1 {
+  animation: moveArrow1 0.8s linear infinite;
 }
 
-.carousel__slide--active ~ .carousel__slide {
-  transform: rotateY(20deg) scale(0.9);
+.arrow2 {
+  animation: moveArrow2 0.8s linear infinite;
 }
 
-.carousel__slide--prev {
-  opacity: 1;
-  transform: rotateY(-10deg) scale(0.95);
+.arrow3 {
+  animation: moveArrow3 0.8s linear infinite;
 }
 
-.carousel__slide--next {
-  opacity: 1;
-  transform: rotateY(10deg) scale(0.95);
+@keyframes moveArrow1 {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.carousel__slide--active {
-  opacity: 1;
-  transform: rotateY(0) scale(1.1);
+@keyframes moveArrow2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(15px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveArrow3 {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 </style>
