@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-center fs-1 my-5 h-100"
+    class="contact-us-sec text-center fs-1 my-5 h-100"
     style="flex-grow: 1"
     v-motion-slide-bottom
   >
@@ -12,7 +12,7 @@
     <div class="contact-box">
       <p class="thin-label my-5">Come closer</p>
       <div>
-        <div class="mx-auto" style="width: 60%">
+        <div class="mx-auto form-box" style="width: 60%">
           <!-- first -->
           <div div class="d-flex flex-column gap-4">
             <span class="d-flex gap-4">

@@ -1,13 +1,10 @@
 <template>
   <div>
-    <div
-      class="feat w-75 mx-auto d-flex justify-content-between"
-      v-motion-slide-bottom
-    >
-      <span>Accessible</span>
-      <span>100% Secure</span>
-      <span>Responsive</span>
-      <span>Latest Technologies</span>
+    <div class="feat w-75 mx-auto row" v-motion-slide-bottom>
+      <span class="col-6 col-md-3 mt-4 text-center">Accessible</span>
+      <span class="col-6 col-md-3 mt-4 text-center">100% Secure</span>
+      <span class="col-6 col-md-3 mt-4 text-center">Responsive</span>
+      <span class="col-6 col-md-3 mt-4 text-center">Latest Technologies</span>
     </div>
     <div class="client-slid">
       <div class="slide-title thin-label text-center">
@@ -27,7 +24,6 @@
           clickable: true,
         }"
         :loop="true"
-        :slides-per-view="1"
         :Autoplay="{
           delay: 1000,
           disableOnInteraction: true,
@@ -42,7 +38,11 @@
         :preload-images="false"
         :Lazy="true"
       >
-        <swiper-slide v-for="(slide, i) in slides" :key="i" class="h-100">
+        <swiper-slide
+          v-for="(slide, i) in slides"
+          :key="i"
+          class="h-100 my-auto"
+        >
           <div
             style="
               width: 10rem;
@@ -1235,16 +1235,20 @@ const slides = ref([
 ]);
 const breakpoints = {
   0: {
-    slidesPerView: 4,
+    slidesPerView: 5,
     spaceBetween: 10,
   },
-  370: {
+  330: {
     slidesPerView: 5,
-    spaceBetween: 20,
+    spaceBetween: 10,
   },
   575: {
     slidesPerView: 8,
-    spaceBetween: 20,
+    spaceBetween: 10,
+  },
+  1299: {
+    slidesPerView: 8,
+    spaceBetween: 10,
   },
 };
 </script>

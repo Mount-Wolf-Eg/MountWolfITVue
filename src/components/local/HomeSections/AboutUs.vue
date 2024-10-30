@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="about-us w-100" v-motion-slide-bottom>
+    <div class="about-us w-100 h-100" v-motion-slide-bottom>
       <swiper
         :autoplay="{
           delay: 2500,
@@ -28,7 +28,7 @@
         :preload-images="false"
         :Lazy="true"
       >
-        <swiper-slide v-for="(slide, i) in slides" :key="i" class="h-100">
+        <swiper-slide v-for="(slide, i) in slides" :key="i" class="my-auto">
           <div class="question-card h-100 mx-auto">
             <div style="position: relative">
               <img :src="slide.img" style="width: 100%" alt="slide image" />
@@ -42,7 +42,7 @@
           <svg
             class="arrow1"
             fill="#fff"
-            style="height: 4rem; width: 4rem"
+            style="height: 5rem; width: 5rem"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -53,7 +53,7 @@
           <svg
             class="arrow2"
             fill="#fff"
-            style="height: 4rem; width: 4rem"
+            style="height: 5rem; width: 5rem"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -64,7 +64,7 @@
           <svg
             class="arrow3"
             fill="#fff"
-            style="height: 4rem; width: 4rem"
+            style="height: 5rem; width: 5rem"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -77,7 +77,7 @@
           <svg
             class="arrow1"
             fill="#fff"
-            style="height: 4rem; width: 4rem"
+            style="height: 5rem; width: 5rem"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -88,7 +88,7 @@
           <svg
             class="arrow2"
             fill="#fff"
-            style="height: 4rem; width: 4rem"
+            style="height: 5rem; width: 5rem"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -99,7 +99,7 @@
           <svg
             class="arrow3"
             fill="#fff"
-            style="height: 4rem; width: 4rem"
+            style="height: 5rem; width: 5rem"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -223,13 +223,16 @@ const slides = ref([
 }
 
 // swiper controls
-.swiper-button-next,
-.swiper-button-prev {
-  width: 6rem;
-  margin: 1rem;
+.about-us {
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin: 0 20rem;
+    width: 10rem;
+    height: 10rem;
 
-  &::after {
-    font-size: 0;
+    &::after {
+      font-size: 0;
+    }
   }
 }
 

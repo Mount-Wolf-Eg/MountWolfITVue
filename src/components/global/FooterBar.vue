@@ -1,24 +1,30 @@
 <template>
-  <div class="footer" style="padding: 2rem 0">
-    <div>
-      <div class="location">
+  <div class="footer">
+    <div class="row col-12">
+      <div class="copy-right text-center">
+        <p class="foot-item">By Mount Wolf</p>
+      </div>
+      <!-- <div class="location col">
         <p class="foot-item">Location</p>
         <p class="foot-item">Address: 1st Settlement, New Cairo, Egypt</p>
       </div>
-      <div class="contacts">
+
+      <div class="contacts col">
         <p class="foot-item">E-mail</p>
         <a class="foot-item" href="mailto:info@mount-wolf.com"
           >info@mount-wolf.com</a
         >
       </div>
-      <div class="social">
+
+      <div class="social col">
         <SocialIcon></SocialIcon>
       </div>
-      <div class="copy-right">
+
+      <div class="copy-right col">
         <p class="foot-item">
           © 2024, MOUNT WOLF | Privacy Policy | Terms of Use | Cookie Policy
         </p>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

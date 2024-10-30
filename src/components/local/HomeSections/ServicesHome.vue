@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: -25rem" class="section-layout p-0">
+  <div class="service-sec section-layout p-0">
     <div class="ser-bg-img">
       <span
         class="d-flex justify-content-center align-items-center flex-column w-100 ser-text"
@@ -17,18 +17,19 @@
         alt="service img"
       />
     </div>
-    <div class="section-layout text-center" style="margin-top: -10rem">
+    <div class="section-layout text-center">
       <div v-motion-slide-bottom>
         <div
-          class="service-col"
+          class="row"
           style="display: flex; justify-content: space-around; margin: 9rem 0"
         >
           <div
-            style="width: fit-content"
+            class="col-6 col-lg-3"
             v-for="(item, i) in servicesItems"
             :key="i"
           >
             <div
+              class="h-100 w-100"
               style="
                 display: flex;
                 flex-direction: column;
@@ -186,14 +187,14 @@ const servicesItems = ref([
   .ser-text {
     position: absolute;
     left: 50%;
-    top: 020%;
+    top: 10%;
     transform: translateX(-50%);
   }
   .ser-title {
     position: absolute;
     left: 50%;
-    top: 60%;
-    transform: translate(-50%);
+    top: 40%;
+    transform: translateX(-50%);
   }
   img {
     mix-blend-mode: screen;

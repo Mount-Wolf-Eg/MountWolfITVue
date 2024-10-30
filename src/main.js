@@ -10,10 +10,10 @@ import { createPinia } from "pinia";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+
 // bootstrap
-import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.bundle";
+import "bootstrap";
 
 import App from "./App.vue";
 import router from "./router";

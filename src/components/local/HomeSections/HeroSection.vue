@@ -1,8 +1,7 @@
 <template>
   <div
-    class="section-layout d-flex flex-column justify-content-center align-items-center main-section"
+    class="hero-sec d-flex flex-column justify-content-center align-items-center main-section m-0 p-0"
     v-motion-slide-bottom
-    style="padding: 0 10rem"
   >
     <swiper
       :autoplay="{
@@ -13,7 +12,6 @@
       :modules="modules"
       :pagination="{
         el: '.swiper-pagination',
-        dynamicBullets: true,
         clickable: true,
       }"
       :loop="true"
@@ -60,7 +58,7 @@
           </div>
         </div>
       </swiper-slide>
-      <div class="swiper-button-next">
+      <div class="swiper-button-next" style="z-index: 1">
         <svg
           style="transform: scaleX(-1); font-weight: thin"
           fill="#fff"
@@ -84,7 +82,7 @@
           />
         </svg>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination" style="transform: rotate(90deg)"></div>
     </swiper>
   </div>
 </template>
@@ -113,19 +111,34 @@ const slides = ref([
   }
 }
 
-.carousel {
-  position: relative;
-}
-.carousel__slide--sliding {
-  transition: 0.5s;
-}
-
 .swiper-button-next,
 .swiper-button-prev {
   width: 3.8rem;
   height: 3.8rem;
   &::after {
     content: "";
+  }
+}
+.swiper-button-next {
+  right: 20rem;
+}
+.swiper-button-prev {
+  left: 20rem;
+}
+.swiper-pagination {
+  left: 10rem !important;
+  & * {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white !important;
+  }
+}
+.hero-sec {
+  .swiper-horizontal
+    > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+  .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    margin-bottom: 30rem;
+    margin-left: 5rem;
   }
 }
 </style>

@@ -4,7 +4,7 @@
     v-motion-slide-bottom
   >
     <div class="thin-label" style="margin: 10rem 0">Request Quote</div>
-    <form class="w-50 d-flex row">
+    <form class="w-75 d-flex row">
       <div class="d-flex flex-column gap-4 col">
         <input type="text" placeholder="Websites and Platforms" />
         <input type="text" placeholder="Name" />

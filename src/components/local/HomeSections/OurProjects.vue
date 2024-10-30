@@ -19,7 +19,6 @@
           clickable: true,
         }"
         :loop="true"
-        :slides-per-view="1"
         :breakpoints="breakpoints"
         :Autoplay="{
           delay: 1000,
@@ -34,12 +33,8 @@
         :preload-images="false"
         :Lazy="true"
       >
-        <swiper-slide v-for="(slide, i) in slides" :key="i" class="h-100">
-          <div class="h-100 f-flex flex-column">
-            <div class="question-card h-100">
-              <ProjectCard :data="slide"></ProjectCard>
-            </div>
-          </div>
+        <swiper-slide v-for="(slide, i) in slides" :key="i" class="h-100 m-0">
+          <ProjectCard class="mx-auto" :data="slide"></ProjectCard>
         </swiper-slide>
         <div class="swiper-button-next">
           <svg
@@ -81,18 +76,62 @@ const slides = ref([
   "/src/assets/media/Images/Untitled-1-03.jpg",
   "/src/assets/media/Images/Untitled-1-04.jpg",
   "/src/assets/media/Images/Untitled-1-05.jpg",
+  "/src/assets/media/Images/Untitled-1-02.jpg",
+  "/src/assets/media/Images/Untitled-1-03.jpg",
+  "/src/assets/media/Images/Untitled-1-04.jpg",
+  "/src/assets/media/Images/Untitled-1-05.jpg",
 ]);
 const breakpoints = {
   0: {
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 0,
   },
-  375: {
+  350: {
+    slidesPerView: 1.4,
+    spaceBetween: 0,
+  },
+  400: {
+    slidesPerView: 1.5,
+    spaceBetween: 0,
+  },
+  500: {
+    slidesPerView: 1.5,
+    spaceBetween: 20,
+  },
+  650: {
     slidesPerView: 2,
     spaceBetween: 20,
   },
-  575: {
+  800: {
+    slidesPerView: 2.5,
+    spaceBetween: 20,
+  },
+  950: {
     slidesPerView: 3,
+    spaceBetween: 20,
+  },
+  1190: {
+    slidesPerView: 2,
+    spaceBetween: 20,
+  },
+  1400: {
+    slidesPerView: 2.5,
+    spaceBetween: 20,
+  },
+  1490: {
+    slidesPerView: 2.8,
+    spaceBetween: 20,
+  },
+  1600: {
+    slidesPerView: 3,
+    spaceBetween: 20,
+  },
+  1700: {
+    slidesPerView: 3,
+    spaceBetween: 20,
+  },
+  1800: {
+    slidesPerView: 4,
     spaceBetween: 20,
   },
 };
