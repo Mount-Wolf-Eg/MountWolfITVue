@@ -2,6 +2,7 @@
   <div>
     <HeroSection></HeroSection>
     <ServicesHome></ServicesHome>
+    <serviceProcess></serviceProcess>
     <AboutUs></AboutUs>
     <OurProjects></OurProjects>
     <ContactMe></ContactMe>
@@ -11,6 +12,7 @@
 <script setup>
 import HeroSection from "@/components/local/HomeSections/HeroSection.vue";
 import ServicesHome from "@/components/local/HomeSections/ServicesHome.vue";
+import serviceProcess from "@/components/local/HomeSections/serviceProcess.vue";
 import AboutUs from "@/components/local/HomeSections/AboutUs.vue";
 import OurProjects from "@/components/local/HomeSections/OurProjects.vue";
 import ContactMe from "@/components/local/HomeSections/ContactMe.vue";

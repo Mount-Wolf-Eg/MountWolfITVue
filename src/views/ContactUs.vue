@@ -14,7 +14,7 @@
       <div>
         <div class="mx-auto form-box" style="width: 60%">
           <!-- first -->
-          <div div class="d-flex flex-column gap-4">
+          <!-- <div div class="d-flex flex-column gap-4">
             <span class="d-flex gap-4">
               <button class="submit-btn" type="submit">
                 Websites and Platforms
@@ -29,7 +29,7 @@
               </button>
               <button class="submit-btn" type="submit">Other</button>
             </span>
-          </div>
+          </div> -->
           <!-- second -->
           <div
             div
@@ -53,7 +53,7 @@
               ></textarea>
             </span>
           </div>
-          <button class="submit-btn mt-5" type="submit">Send</button>
+          <button class="submit-btn mt-5 w-100" type="submit">Send</button>
         </div>
       </div>
     </div>

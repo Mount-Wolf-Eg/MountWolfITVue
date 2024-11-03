@@ -28,6 +28,14 @@ const router = createRouter({
       },
     },
     {
+      path: "/prjects/project",
+      name: "project",
+      component: () => import("../views/productInfo.vue"),
+      meta: {
+        title: "project",
+      },
+    },
+    {
       path: "/products",
       name: "products",
       component: () => import("../views/ProductsView.vue"),

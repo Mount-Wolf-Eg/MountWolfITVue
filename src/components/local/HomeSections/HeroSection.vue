@@ -1,6 +1,7 @@
 <template>
   <div
     class="hero-sec d-flex flex-column justify-content-center align-items-center main-section m-0 p-0"
+    style="position: relative"
     v-motion-slide-bottom
   >
     <swiper
@@ -8,7 +9,7 @@
         delay: 2500,
         disableOnInteraction: false,
       }"
-      class="w-100 h-100 py-2"
+      class="w-100 h-100"
       :modules="modules"
       :pagination="{
         el: '.swiper-pagination',
@@ -84,6 +85,17 @@
       </div>
       <div class="swiper-pagination" style="transform: rotate(90deg)"></div>
     </swiper>
+    <div class="hero-text">
+      <span
+        class="d-flex justify-content-center align-items-center flex-column w-100"
+      >
+        <p class="style-2" style="margin-bottom: 3rem">let's hunt</p>
+        <p class="style-10">
+           The point of using Lorem Ipsum is that it has a more-or-less normal
+          distribution of letters
+        </p>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -128,8 +140,8 @@ const slides = ref([
 .swiper-pagination {
   left: 10rem !important;
   & * {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.2rem;
+    height: 1.2rem;
     background-color: white !important;
   }
 }
@@ -140,6 +152,14 @@ const slides = ref([
     margin-bottom: 30rem;
     margin-left: 5rem;
   }
+}
+
+.hero-text {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  z-index: 9999;
 }
 </style>
 <!-- .carousel__pagination {

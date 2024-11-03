@@ -116,8 +116,10 @@ const props = defineProps({
 <style lang="scss" scoped>
 .project-card {
   position: relative;
-  width: 36.5rem;
-  height: 59.3rem;
+  width: 23.8rem;
+  height: 35.6rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
   .card-img {
     background-position: center;
     background-repeat: no-repeat;

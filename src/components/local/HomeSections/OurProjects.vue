@@ -3,7 +3,7 @@
     class="d-flex justify-content-center align-items-center flex-column"
     v-motion-slide-bottom
   >
-    <div class="style-3" style="margin: 8rem 0 10rem">Projects</div>
+    <div class="style-3" style="margin: 8rem 0 10rem">PROJECTS</div>
 
     <div style="width: 80%">
       <swiper
@@ -33,7 +33,11 @@
         :preload-images="false"
         :Lazy="true"
       >
-        <swiper-slide v-for="(slide, i) in slides" :key="i" class="h-100 m-0">
+        <swiper-slide
+          v-for="(slide, i) in slides"
+          :key="i"
+          class="h-100 m-0 swiper-card"
+        >
           <ProjectCard class="mx-auto" :data="slide"></ProjectCard>
         </swiper-slide>
         <div class="swiper-button-next">
@@ -131,7 +135,7 @@ const breakpoints = {
     spaceBetween: 20,
   },
   1800: {
-    slidesPerView: 4,
+    slidesPerView: 5,
     spaceBetween: 20,
   },
 };
@@ -145,5 +149,13 @@ const breakpoints = {
   &::after {
     content: "";
   }
+}
+
+.swiper {
+  padding: 0 5rem;
+}
+.swiper-card {
+  border-radius: 1.2rem;
+  overflow: hidden !important;
 }
 </style>

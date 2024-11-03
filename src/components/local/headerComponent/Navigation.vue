@@ -1,16 +1,16 @@
 <template>
-  <div class="style-7 d-flex gap-5 w-auto">
+  <div class="style-7 d-flex w-auto" style="gap: 7rem">
     <router-link class="nav-link" active-class="active" :to="{ name: 'home' }"
       >Home</router-link
     >
 
-    <router-link
+    <!-- <router-link
       class="nav-link"
       active-class="active"
       :to="{ name: 'work-process' }"
     >
       Work Process
-    </router-link>
+    </router-link> -->
     <router-link
       class="nav-link"
       active-class="active"

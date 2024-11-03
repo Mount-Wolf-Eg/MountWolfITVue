@@ -70,7 +70,7 @@ const closeModalView = () => {
     background-size: cover;
     transition: all 0.3s ease-in-out;
     color: white;
-    font-size: 14px;
+    font-size: 1.4rem;
     background-color: white;
     position: absolute;
     text-align: center;
@@ -79,17 +79,17 @@ const closeModalView = () => {
     left: 10%;
     transform: translateX(-50%);
     height: 0;
-    border-radius: 12px;
-    padding: 10px;
+    border-radius: 1.2rem;
+    padding: 1rem;
     transform: scale(0);
     .header {
       width: 100%;
-      height: 30px;
+      height: 3rem;
       display: flex;
       justify-content: center;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
       .modal-title {
-        font-size: 18px;
+        font-size: 1.8rem;
         color: white;
         font-weight: bold;
         margin-left: auto;
@@ -100,10 +100,10 @@ const closeModalView = () => {
         height: 3rem;
         border: none;
         color: white;
-        font-size: 20px;
+        font-size: 2rem;
         text-align: center;
         line-height: 3rem;
-        border-radius: 5px;
+        border-radius: 5rem;
         background-color: transparent;
         &:hover {
           background-color: gray;
@@ -117,7 +117,7 @@ const closeModalView = () => {
     text-align: start;
 
     .text {
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 500;
     }
   }

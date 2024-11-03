@@ -56,21 +56,7 @@
         </swiper-slide>
       </swiper>
     </div>
-    <div class="lets-hunt">
-      <div style="position: relative; margin-top: -25rem; width: 100%">
-        <img
-          src="/src/assets/media/Images/footImg.png"
-          alt="footer image"
-          style="position: absolute; right: 0; width: 50%; margin-right: 0.5px"
-        />
-        <img
-          src="/src/assets/media/Images/footImg.png"
-          alt="footer image"
-          style="transform: scaleX(-1); width: 50%; margin-left: 0.5px"
-        />
-        <p>let's hunt</p>
-      </div>
-    </div>
+ 
   </div>
 </template>
 
@@ -1271,19 +1257,5 @@ const breakpoints = {
   }
 }
 
-.lets-hunt {
-  width: 100%;
-  p {
-    font-family: var(--ft-roboto);
-    font-weight: bold;
-    font-size: var(--fs-24);
-    line-height: var(--line-s-44);
-    color: var(--col-second);
-    text-align: center;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
+
 </style>

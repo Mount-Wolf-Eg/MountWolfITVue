@@ -4,7 +4,7 @@
       <img
         src="/src/assets/media/MOUNT WOLF SOFTWARE Icon -03.png"
         style="
-          height: 7rem;
+          height: 6.2rem;
           width: auto;
           object-fit: contain;
           object-position: center;

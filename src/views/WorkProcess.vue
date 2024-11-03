@@ -166,12 +166,12 @@ onMounted(() => {
       right: 0;
       display: flex;
       flex-direction: column;
-      border-radius: 9px;
+      border-radius: 0.9rem;
       border: 1px solid white;
       transition: all 0.5s ease-in-out;
       a {
-        width: 5px;
-        margin-bottom: 5px;
+        width: 0.5rem;
+        margin-bottom: 0.5rem;
       }
       a.active {
         background-color: white;
