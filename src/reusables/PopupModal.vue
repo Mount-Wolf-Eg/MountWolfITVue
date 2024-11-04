@@ -1,9 +1,6 @@
 <template>
   <div class="modal-box">
-    <div
-      style="width: 100%; height: 100%; z-index: 1"
-      @click="console.log('hiiii')"
-    >
+    <div style="width: 100%; height: 100%; z-index: 1">
       <div class="modal-container">
         <div class="header">
           <div class="modal-title">Mount Wolf</div>

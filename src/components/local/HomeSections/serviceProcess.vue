@@ -8,7 +8,9 @@
       />
     </div>
     <div class="service-proc-img row">
-      <div class="col d-flex justify-content-end align-items-center">
+      <div
+        class="img-container col d-flex justify-content-end align-items-center"
+      >
         <img
           class="serv-process-hover"
           src="/src/assets/media/Servises/Component 16.png"
@@ -18,6 +20,7 @@
             height: auto;
             object-fit: cover;
             object-position: center;
+            z-index: 5;
           "
         />
       </div>
@@ -34,7 +37,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 const servicesItems = ref([
   {
     logo: `<svg  style="width:5.7rem;height:5.7rem;"  viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -158,6 +161,32 @@ const servicesItems = ref([
     items: ["Service Level", "Agreement", "(SLA)"],
   },
 ]);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          let el = document.querySelector(".service-proc-img");
+          if (!el.classList.contains("slide-enter")) {
+            el.classList.add("slide-enter");
+          }
+
+          document.querySelectorAll(".service-proc-feat").forEach((e) => {
+            if (!e.classList.contains("fade-enter")) {
+              e.classList.add("fade-enter");
+            }
+          });
+        }
+      });
+    },
+    {
+      threshold: 0.4,
+    }
+  );
+  const el = document.querySelector(".service-process");
+  observer.observe(el);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -167,5 +196,78 @@ const servicesItems = ref([
   &:hover {
     filter: saturate(1);
   }
+}
+
+// animate each feat
+@keyframes slideTo {
+  from {
+    transform: translatey(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+
+.slide-enter {
+  animation: slideTo 0.7s ease-in forwards;
+}
+.img-container {
+  animation-fill-mode: forwards;
+}
+.service-proc-img {
+  opacity: 0;
+}
+// animate each feat
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-enter {
+  animation: fadeIn 1s ease-in;
+}
+
+.service-proc-feat {
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation-fill-mode: forwards;
+}
+
+.fade-enter:nth-child(1) {
+  animation: slideIn 1s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+
+.fade-enter:nth-child(2) {
+  animation: slideIn 1s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+.fade-enter:nth-child(3) {
+  animation: slideIn 1s ease-in-out forwards;
+  animation-delay: 1.1s;
+}
+
+.fade-enter:nth-child(4) {
+  animation: slideIn 1s ease-in-out forwards;
+  animation-delay: 1.4s;
+}
+
+.fade-enter:nth-child(5) {
+  animation: slideIn 1s ease-in-out forwards;
+  animation-delay: 1.7s;
+}
+.fade-enter:nth-child(6) {
+  animation: slideIn 1s ease-in-out forwards;
+  animation-delay: 2s;
 }
 </style>

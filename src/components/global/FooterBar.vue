@@ -2,7 +2,7 @@
   <div class="footer">
     <div>
       <div class="lets-hunt">
-        <p>LET'S HUNT</p>
+        <!-- <p>LET'S HUNT</p> -->
 
         <img
           src="/src/assets/media/Images/FOOTO.png"

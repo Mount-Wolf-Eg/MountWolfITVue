@@ -386,6 +386,7 @@ input {
   padding-left: 1rem;
   font-size: 1.6rem;
   color: #464545;
+  border-radius: 1.2rem;
 
   &::placeholder {
     font-weight: bold;
@@ -398,6 +399,7 @@ input {
 textarea {
   width: 100%;
   background-color: transparent;
+  border-radius: 1.2rem;
   border: 1px solid #464545;
   padding: 1rem;
   color: #464545;
@@ -430,6 +432,7 @@ textarea {
   position: relative;
   .ser-bg-img {
     .ser-title {
+      margin-top: 3rem;
       text-align: center;
       font-weight: var(--fw-bold);
       font-size: var(--fs-18);

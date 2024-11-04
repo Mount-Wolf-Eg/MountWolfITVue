@@ -17,7 +17,7 @@
           id="text"
           placeholder="Type your messages"
         ></textarea>
-        <button class="submit-btn" type="submit">Send</button>
+        <button class="submit-btn w-100" type="submit">Send</button>
       </div>
     </form>
   </div>

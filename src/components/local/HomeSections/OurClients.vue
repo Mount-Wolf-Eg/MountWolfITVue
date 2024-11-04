@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="feat w-75 mx-auto row" v-motion-slide-bottom>
+    <!-- <div class="feat w-75 mx-auto row" v-motion-slide-bottom>
       <span class="col-6 col-md-3 mt-4 text-center">Accessible</span>
       <span class="col-6 col-md-3 mt-4 text-center">100% Secure</span>
       <span class="col-6 col-md-3 mt-4 text-center">Responsive</span>
       <span class="col-6 col-md-3 mt-4 text-center">Latest Technologies</span>
-    </div>
+    </div> -->
     <div class="client-slid">
       <div class="slide-title thin-label text-center">
         The spoils of our hunting
@@ -56,7 +56,6 @@
         </swiper-slide>
       </swiper>
     </div>
- 
   </div>
 </template>
 
@@ -1256,6 +1255,4 @@ const breakpoints = {
     margin: 20rem 0 8rem;
   }
 }
-
-
 </style>
