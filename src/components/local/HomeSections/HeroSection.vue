@@ -1,14 +1,20 @@
 <template>
   <div
-    class="hero-sec d-flex flex-column justify-content-center align-items-center main-section m-0 p-0"
+    v-if="props.headSliders.length > 0"
+    class="hero-sec d-flex flex-column justify-content-center align-items-center main-section"
     style="position: relative"
     v-motion-slide-bottom
   >
-    <swiper
-      :autoplay="{
+    <!-- :autoplay="{
         delay: 2500,
         disableOnInteraction: false,
-      }"
+      }" -->
+    <!-- :Autoplay="{
+        delay: 1000,
+        disableOnInteraction: true,
+        waitForTransition: true,
+      }" -->
+    <swiper
       class="w-100 h-100"
       :modules="modules"
       :pagination="{
@@ -17,11 +23,6 @@
       }"
       :loop="true"
       :slides-per-view="1"
-      :Autoplay="{
-        delay: 1000,
-        disableOnInteraction: true,
-        waitForTransition: true,
-      }"
       :space-between="10"
       :navigation="{
         nextEl: '.swiper-button-next',
@@ -30,7 +31,11 @@
       :preload-images="false"
       :Lazy="true"
     >
-      <swiper-slide v-for="(slide, i) in slides" :key="i" class="h-100">
+      <swiper-slide
+        v-for="(slide, i) in props.headSliders"
+        :key="i"
+        class="h-100"
+      >
         <div class="h-100 f-flex flex-column">
           <!-- loading placeholder -->
           <div
@@ -39,19 +44,16 @@
             v-if="!show"
           >
             <div class="spinner-grow text-dark" role="status"></div>
-            <div class="spinner-grow text-dark" role="status"></div>
-            <div class="spinner-grow text-dark" role="status"></div>
-            <div class="spinner-grow text-dark" role="status"></div>
           </div>
           <!-- images -->
 
           <div class="question-card h-100" v-else>
             <img
-              :src="slide.img"
+              :src="slide.image"
               style="
                 width: 100%;
-                height: auto;
-                object-fit: contain;
+                height: 100%;
+                object-fit: cover;
                 object-position: center;
               "
               alt="slider image"
@@ -89,8 +91,8 @@
       <span
         class="d-flex justify-content-center align-items-center flex-column w-100"
       >
-        <p class="style-2" style="margin-bottom: 3rem">let's hunt</p>
-        <p class="style-10">
+        <p class="hero-text-tilte" style="margin-bottom: 3rem">let's hunt</p>
+        <p class="hero-text-body">
            The point of using Lorem Ipsum is that it has a more-or-less normal
           distribution of letters
         </p>
@@ -100,70 +102,28 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper";
 const modules = ref([Pagination, Navigation, Autoplay]);
 const show = ref(false);
-onMounted(() => {
-  show.value = true;
+
+const props = defineProps({
+  headSliders: {
+    type: Object,
+    Required: true,
+    default: {},
+  },
 });
-const slides = ref([
-  { img: `/src/assets/media/Images/HeaderHero1.jpg` },
-  { img: `/src/assets/media/Images/HeaderHero1.jpg` },
-  { img: `/src/assets/media/Images/HeaderHero1.jpg` },
-  { img: `/src/assets/media/Images/HeaderHero1.jpg` },
-]);
+
+watch(
+  () => props.headSliders,
+  (newVal) => {
+    if (newVal.length > 0) {
+      show.value = true;
+    }
+  }
+);
 </script>
 
-<style lang="scss" scoped>
-.wolf-box {
-  img {
-    mix-blend-mode: screen;
-  }
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  width: 3.8rem;
-  height: 3.8rem;
-  &::after {
-    content: "";
-  }
-}
-.swiper-button-next {
-  right: 20rem;
-}
-.swiper-button-prev {
-  left: 20rem;
-}
-.swiper-pagination {
-  left: 10rem !important;
-  & * {
-    width: 1.2rem;
-    height: 1.2rem;
-    background-color: white !important;
-  }
-}
-.hero-sec {
-  .swiper-horizontal
-    > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-  .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-    margin-bottom: 30rem;
-    margin-left: 5rem;
-  }
-}
-
-.hero-text {
-  position: absolute;
-  left: 50%;
-  bottom: 10%;
-  transform: translateX(-50%);
-  z-index: 9999;
-}
-</style>
-<!-- .carousel__pagination {
-    position: absolute;
-    top: 70%;
-    flex-direction: column;
-  } -->
+<style lang="scss" scoped></style>

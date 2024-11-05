@@ -21,7 +21,11 @@
     </div>
   </div>
 </template>
-
+<!-- <PopupModal
+      v-if="show"
+      :modalBody="data"
+      @closeModal="handleClose"
+    ></PopupModal> -->
 <script setup>
 import { onMounted, watch, ref } from "vue";
 

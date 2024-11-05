@@ -148,7 +148,108 @@ body {
     text-decoration-thickness: 3px !important;
   }
 }
+// responsive nav
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  .responsive-nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5rem;
+    width: 50% !important;
+    .nav-link {
+      text-align: center;
+      font-size: var(--fs-16);
+      color: #929292;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        text-align: center;
+        color: #eee !important;
+        font-size: var(--fs-33);
+        width: 100% !important;
+      }
+    }
+  }
+}
+// hero section
+.hero-sec {
+  height: 90rem;
+  .hero-text {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    text-align: center;
+    width: 50%;
+    .hero-text-tilte {
+      font-style: var(--fw-normal);
+      font-weight: 500;
+      font-size: var(--fs-24);
+      line-height: var(--line-s-27);
+      color: var(--col-second);
+      text-transform: var(--f-style-upper);
+    }
+    .hero-text-body {
+      font-size: var(--ft-main);
+      font-weight: 500;
+      font-size: var(--fs-20);
+      line-height: var(--line-s-24);
+      color: var(--col-second);
+      text-transform: var(--f-style-capt);
+    }
+  }
 
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 3.8rem;
+    height: 3.8rem;
+    &::after {
+      content: "";
+    }
+  }
+  .swiper-button-next {
+    right: 20rem;
+  }
+  .swiper-button-prev {
+    left: 20rem;
+  }
+  // .swiper-pagination {
+  //   left: 10rem !important;
+  //   & * {
+  //     width: 1.2rem;
+  //     height: 1.2rem;
+  //     background-color: white !important;
+  //   }
+  // }
+}
+// about us
+// swiper controls
+.about-us {
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin: 0 20rem;
+    width: 7rem;
+    height: 7rem;
+
+    &::after {
+      font-size: 0;
+    }
+  }
+  .swiper-pagination-bullets {
+    bottom: 25%;
+    & * {
+      background-color: var(--col-white) !important;
+      width: 1.5rem;
+      height: 0.5rem;
+      border-radius: 0.2rem;
+    }
+  }
+}
 //  footer
 .footer {
   .lets-hunt {
@@ -619,187 +720,5 @@ textarea {
       line-height: var(--line-s-19);
       color: var(--col-second);
     }
-  }
-}
-
-// media query
-// @media only screen and (max-width: 1344px) {
-//   html {
-//     font-size: 55% !important;
-//   }
-// }
-
-// @media only screen and (max-width: 1200px) {
-//   html {
-//     font-size: 45% !important;
-//   }
-// }
-
-// @media only screen and (max-width: 944px) {
-//   html {
-//     font-size: 40% !important;
-//   }
-// }
-
-// @media only screen and (max-width: 704px) {
-//   html {
-//     font-size: 25% !important;
-//   }
-//   .layout {
-//     max-width: 100%;
-//     padding: 2rem 3rem;
-//   }
-// }
-
-// @media only screen and (max-width: 544px) {
-//   html {
-//     font-size: 23% !important;
-//   }
-//   .layout {
-//     max-width: 100%;
-//     padding: 2rem 3rem;
-//   }
-// }
-
-@media only screen and (max-width: 320px) {
-  body {
-    // background-color: rgba(255, 166, 0, 0.308) !important;
-  }
-  html {
-    font-size: 28% !important;
-  }
-  .hero-sec {
-    .swiper-horizontal
-      > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-    .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-      margin-bottom: 15rem !important;
-      margin-left: 1rem !important;
-    }
-  }
-  .service-sec {
-    .style-2 {
-      font-size: var(--fs-28) !important;
-    }
-    .style-10 {
-      font-size: var(--fs-22) !important;
-    }
-  }
-  .about-us {
-    .swiper-button-next,
-    .swiper-button-prev {
-      margin: 0 7rem !important;
-      width: 6rem !important;
-      height: 6rem !important;
-    }
-  }
-}
-@media only screen and (min-width: 321px) {
-  html {
-    font-size: 32% !important;
-  }
-  .hero-sec {
-    .swiper-horizontal
-      > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-    .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-      margin-bottom: 12rem !important;
-      margin-left: 2rem !important;
-    }
-  }
-  .service-sec {
-    .style-2 {
-      font-size: var(--fs-24) !important;
-    }
-    .style-10 {
-      font-size: var(--fs-18) !important;
-    }
-  }
-  .about-us {
-    .swiper-button-next,
-    .swiper-button-prev {
-      margin: 0 7rem !important;
-      width: 3rem !important;
-      height: 3rem !important;
-    }
-  }
-  body {
-    // background-color: rgba(0, 195, 255, 0.514) !important;
-  }
-}
-@media only screen and (min-width: 481px) {
-  html {
-    font-size: 32% !important;
-  }
-  body {
-    // background-color: rgb(166, 255, 0) !important;
-  }
-}
-@media only screen and (min-width: 481px) {
-  html {
-    font-size: 38% !important;
-  }
-
-  .about-us {
-    .swiper-button-next,
-    .swiper-button-prev {
-      margin: 0 7rem !important;
-      width: 5rem !important;
-      height: 5rem !important;
-    }
-  }
-
-  body {
-    // background-color: rgb(0, 255, 234) !important;
-  }
-}
-
-@media only screen and (min-width: 769px) {
-  html {
-    font-size: 42% !important;
-  }
-  body {
-    // background-color: rgb(0, 38, 255) !important;
-  }
-  .layout {
-    padding: 1rem 8rem 0; // max-width: 90%;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  html {
-    font-size: 45% !important;
-  }
-  body {
-    // background-color: rgb(225, 0, 255) !important;
-  }
-}
-@media only screen and (min-width: 1199px) {
-  html {
-    font-size: 62.5% !important;
-  }
-  .hero-sec {
-    .swiper-horizontal
-      > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-    .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-      margin-bottom: 30rem !important;
-      margin-left: 5rem !important;
-    }
-  }
-  .service-sec {
-    .style-2 {
-      font-size: var(--fs-24);
-    }
-    .style-10 {
-      font-size: var(--fs-20);
-    }
-  }
-  .about-us {
-    .swiper-button-next,
-    .swiper-button-prev {
-      margin: 0 7rem !important;
-      width: 6rem !important;
-      height: 6rem !important;
-    }
-  }
-  body {
-    // background-color: rgb(255, 251, 0) !important;
   }
 }

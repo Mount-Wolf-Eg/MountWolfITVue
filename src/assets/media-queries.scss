@@ -1,0 +1,343 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 350px) {
+  html {
+    font-size: 25% !important;
+  }
+  body {
+    background-color: lightblue !important;
+  }
+  // nav bar
+  .nav-bar {
+    .nav-main-st {
+    }
+    .nav-st {
+    }
+
+    .active {
+      font-size: var(--fs-33) !important;
+    }
+  }
+  // responsive nav
+  .offcanvas-body {
+    .responsive-nav {
+      gap: 6rem;
+      .nav-link {
+        font-size: var(--fs-30);
+        &:hover {
+          font-size: var(--fs-33);
+        }
+      }
+    }
+  }
+  // hero section
+  .hero-sec {
+    height: 50rem;
+    .hero-text {
+      width: 80% !important;
+      text-align: center;
+      bottom: 5%;
+      .hero-text-tilte {
+        font-size: var(--fs-18);
+        margin-bottom: 1rem !important;
+      }
+      .hero-text-body {
+        font-size: var(--fs-16);
+        margin: 0;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 2.5rem;
+      height: 2.5rem;
+      &::after {
+        content: "";
+      }
+    }
+    .swiper-button-next {
+      right: 8rem;
+    }
+    .swiper-button-prev {
+      left: 8rem;
+    }
+  }
+  // about section
+  .about-us {
+    height: 50rem;
+    .swiper-button-next,
+    .swiper-button-prev {
+      margin: 0 5rem;
+      width: 5rem;
+      height: 5rem;
+
+      &::after {
+        font-size: 0;
+      }
+    }
+  }
+}
+
+// /* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 350px) and (max-width: 767px) {
+  html {
+    font-size: 30% !important;
+  }
+
+  body {
+    background-color: red !important;
+  }
+  // nav bar
+  .nav-bar {
+    .nav-main-st {
+    }
+    .nav-st {
+    }
+
+    .active {
+      font-size: var(--fs-33) !important;
+    }
+  }
+  // responsive nav
+  .offcanvas-body {
+    .responsive-nav {
+      gap: 8rem;
+      .nav-link {
+        font-size: var(--fs-30);
+        &:hover {
+          font-size: var(--fs-33);
+        }
+      }
+    }
+  }
+  // hero section
+  .hero-sec {
+    height: 65rem;
+    .hero-text {
+      width: 80% !important;
+      text-align: center;
+      bottom: 10%;
+      .hero-text-tilte {
+        font-size: var(--fs-22);
+        margin-bottom: 1.5rem !important;
+      }
+      .hero-text-body {
+        font-size: var(--fs-20);
+        margin: 0;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 3.2 rem;
+      height: 3.2 rem;
+      &::after {
+        content: "";
+      }
+    }
+    .swiper-button-next {
+      right: 10rem;
+    }
+    .swiper-button-prev {
+      left: 10rem;
+    }
+  }
+  // about section
+  .about-us {
+    height: 65rem;
+    .swiper-button-next,
+    .swiper-button-prev {
+      margin: 0 5rem;
+      width: 5rem;
+      height: 5rem;
+
+      &::after {
+        font-size: 0;
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 35% !important;
+  }
+
+  body {
+    background-color: rgb(43, 255, 0) !important;
+  }
+  // hero section
+  .hero-sec {
+    height: 90rem;
+    .hero-text {
+      width: 80% !important;
+      text-align: center;
+      bottom: 10%;
+      .hero-text-tilte {
+        font-size: var(--fs-24);
+        margin-bottom: 1.5rem !important;
+      }
+      .hero-text-body {
+        font-size: var(--fs-22);
+        margin: 0;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 3.5rem;
+      height: 3.5rem;
+      &::after {
+        content: "";
+      }
+    }
+    .swiper-button-next {
+      right: 10rem;
+    }
+    .swiper-button-prev {
+      left: 10rem;
+    }
+  }
+  // about section
+  .about-us {
+    height: 90rem;
+    .swiper-button-next,
+    .swiper-button-prev {
+      margin: 0 5rem;
+      width: 5rem;
+      height: 5rem;
+
+      &::after {
+        font-size: 0;
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 40% !important;
+  }
+
+  body {
+    background-color: rgb(255, 0, 191) !important;
+  }
+  // hero section
+  .hero-sec {
+    height: 100rem;
+    .hero-text {
+      width: 80% !important;
+      text-align: center;
+      bottom: 12%;
+      .hero-text-tilte {
+        font-size: var(--fs-24);
+        margin-bottom: 1.5rem !important;
+      }
+      .hero-text-body {
+        font-size: var(--fs-22);
+        margin: 0;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 3.5rem;
+      height: 3.5rem;
+      &::after {
+        content: "";
+      }
+    }
+    .swiper-button-next {
+      right: 10rem;
+    }
+    .swiper-button-prev {
+      left: 10rem;
+    }
+  }
+  // about section
+  .about-us {
+    height: 80%;
+    .swiper-button-next,
+    .swiper-button-prev {
+      margin: 0 5rem;
+      width: 5rem;
+      height: 5rem;
+
+      &::after {
+        font-size: 0;
+      }
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  html {
+    font-size: 48% !important;
+  }
+
+  body {
+    background-color: rgb(0, 4, 255) !important;
+  }
+  .hero-sec {
+    height: 90rem;
+
+    .hero-text {
+      width: 80% !important;
+      text-align: center;
+      bottom: 12%;
+      .hero-text-tilte {
+        font-size: var(--fs-24);
+        margin-bottom: 1.5rem !important;
+      }
+      .hero-text-body {
+        font-size: var(--fs-22);
+        margin: 0;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 3.5rem;
+      height: 3.5rem;
+      &::after {
+        content: "";
+      }
+    }
+    .swiper-button-next {
+      right: 10rem;
+    }
+    .swiper-button-prev {
+      left: 10rem;
+    }
+  }
+  // about section
+  .about-us {
+    height: 90%;
+    .swiper-button-next,
+    .swiper-button-prev {
+      margin: 0 5rem;
+      width: 10rem;
+      height: 10rem;
+
+      &::after {
+        font-size: 0;
+      }
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+
+@media only screen and (min-width: 1400px) {
+  html {
+    font-size: 62.5% !important;
+  }
+
+  body {
+    background-color: rgba(204, 0, 255, 0.521) !important;
+  }
+}

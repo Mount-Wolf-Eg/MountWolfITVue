@@ -1,13 +1,13 @@
 <template>
   <div>
-    <HeroSection></HeroSection>
-    <ServicesHome id="services" :transiStart="trans"></ServicesHome>
+    <HeroSection :headSliders="headerSlider"></HeroSection>
+    <AboutUs :aboutSliders="aboutSlider"></AboutUs>
+    <!--  <ServicesHome id="services" :transiStart="trans"></ServicesHome>
     <serviceProcess id="serviceProc" :transiSt="procesTrans"></serviceProcess>
-    <AboutUs></AboutUs>
     <OurProjects></OurProjects>
     <ourProducts></ourProducts>
     <ContactMe></ContactMe>
-    <OurClients></OurClients>
+    <OurClients></OurClients> -->
   </div>
 </template>
 <script setup>
@@ -20,9 +20,14 @@ import OurProjects from "@/components/local/HomeSections/OurProjects.vue";
 import ourProducts from "@/components/local/HomeSections/ourProducts.vue";
 import ContactMe from "@/components/local/HomeSections/ContactMe.vue";
 import OurClients from "@/components/local/HomeSections/OurClients.vue";
+// store
+import { useSlidersStore } from "@/stores/Sliders";
+import { storeToRefs } from "pinia";
+const { headerSlider, aboutSlider } = storeToRefs(useSlidersStore());
 const trans = ref(false);
 const procesTrans = ref(false);
-onMounted(() => {
+onMounted(async () => {
+  await useSlidersStore().getAllSliders();
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {

@@ -12,9 +12,9 @@
     </div>
     <!-- responsive nav -->
     <nav
+      v-else
       style="background-color: var(--col-blk); opacity: 1"
-      class="navbar fixed-top"
-      v-if="navResponse"
+      class="navbar sticky-top"
     >
       <div class="container-fluid layout nav-bar pt-3 px-5 pb-0">
         <NavTitle></NavTitle>
@@ -178,7 +178,7 @@
                 </svg>
               </a>
 
-              <a class="nav-icon" href="https://vimeo.com/user161307481">
+              <!-- <a class="nav-icon" href="https://vimeo.com/user161307481">
                 <svg
                   id="Group_1965"
                   data-name="Group 1965"
@@ -213,7 +213,7 @@
                     />
                   </g>
                 </svg>
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
@@ -230,39 +230,15 @@ import Navigation from "../local/headerComponent/Navigation.vue";
 let navResponse = ref(false);
 
 onMounted(() => {
-  window.innerWidth <= 940
+  window.innerWidth <= 768
     ? (navResponse.value = true)
     : (navResponse.value = false);
+  window.onresize = () => {
+    window.innerWidth <= 768
+      ? (navResponse.value = true)
+      : (navResponse.value = false);
+  };
 });
-
-window.onresize = () => {
-  window.innerWidth <= 940
-    ? (navResponse.value = true)
-    : (navResponse.value = false);
-};
 </script>
 
-<style lang="scss" scoped>
-.offcanvas-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  .responsive-nav {
-    .nav-link {
-      margin: 0.5rem 0;
-      width: 100%;
-      text-align: center;
-      font-size: var(--fs-30);
-      color: #929292;
-      transition: all 0.3s ease-in-out;
-      &:hover {
-        text-align: center;
-        color: #eee !important;
-        font-size: var(--fs-33);
-      }
-    }
-  }
-}
-</style>
+<style lang="scss" scoped></style>

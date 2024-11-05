@@ -21,7 +21,7 @@
       <slot></slot>
     </main>
     <!-- footer start -->
-    <FooterBar v-if="route.name !== 'Not-found'" />
+    <!-- <FooterBar v-if="route.name !== 'Not-found'" /> -->
     <!-- footer end -->
   </div>
 </template>

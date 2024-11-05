@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="about-us w-100 h-100" v-motion-slide-bottom>
+  <div class="about-us">
+    <div class="w-100 h-100" v-motion-slide-bottom>
       <swiper
         :autoplay="{
           delay: 2500,
@@ -28,14 +28,30 @@
         :preload-images="false"
         :Lazy="true"
       >
-        <swiper-slide v-for="(slide, i) in slides" :key="i" class="my-auto">
-          <div class="question-card h-100 mx-auto">
-            <div style="position: relative">
-              <img :src="slide.img" style="width: 100%" alt="slide image" />
-              <div :class="`${slide.styl}`" style="position: absolute">
-                {{ slide.title }}
-              </div>
+        <swiper-slide
+          v-for="(slide, i) in aboutSliders"
+          :key="i"
+          class="my-auto"
+        >
+          <div class="question-card h-100 w-100 mx-auto">
+            <div
+              style="background-color: #868e96"
+              class="w-100 h-100 flex-r gap-3"
+              v-if="!show"
+            >
+              <div class="spinner-grow text-dark" role="status"></div>
             </div>
+            <img
+              v-else
+              :src="slide.image"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+              "
+              alt="slider image"
+            />
           </div>
         </swiper-slide>
         <div class="swiper-button-next">
@@ -110,142 +126,35 @@
         </div>
       </swiper>
     </div>
-    <PopupModal
-      v-if="show"
-      :modalBody="data"
-      @closeModal="handleClose"
-    ></PopupModal>
   </div>
 </template>
 
 <script setup>
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper";
 const modules = ref([Pagination, Navigation, Autoplay]);
-import PopupModal from "@/reusables/PopupModal.vue";
-import { ref } from "vue";
+import { ref, watch } from "vue";
+
 const show = ref(false);
-const data = ref("");
-const handleHover = (e) => {
-  data.value = e.target.innerHTML;
-  show.value = true;
-};
-const handleClose = () => {
-  setTimeout(() => {}, 200);
-  show.value = false;
-};
-const slides = ref([
-  {
-    img: `/src/assets/media/Images/about1.png`,
-    title: "WE ARE WOLVES",
-    styl: "slide-1",
+const props = defineProps({
+  aboutSliders: {
+    type: Object,
+    Required: true,
+    default: {},
   },
-  {
-    img: `/src/assets/media/Images/about2.png`,
-    title: "WOLVES ARE SURPRISINGLY DIVERSE",
-    styl: "slide-2",
-  },
-  {
-    img: `/src/assets/media/Images/about3.png`,
-    title: "WOLVES ARE HIGHLY INTELLIGENT",
-    styl: "slide-3",
-  },
-  {
-    img: `/src/assets/media/Images/about4.jpg`,
-    title: "WOLVES ARE FAMILY ORIENTED",
-    styl: "slide-4",
-  },
-  {
-    img: `/src/assets/media/Images/about5.jpg`,
-    title: "WOLVES ARE SKILLED COMMUNICATORS",
-    styl: "slide-4",
-  },
-]);
+});
+
+watch(
+  () => props.aboutSliders,
+  (newVal) => {
+    if (newVal.length > 0) {
+      show.value = true;
+    }
+  }
+);
 </script>
 
 <style lang="scss" scoped>
-// .about-us {
-//   height: 101.188rem;
-//   width: 100%;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   position: relative;
-// }
-
-.slide-1 {
-  font-family: var(--ft-roboto);
-  font-weight: 100;
-  font-size: 21.1rem;
-  line-height: 24.854rem;
-  color: #2e2e2e;
-  left: 0;
-  top: 5%;
-  width: 100%;
-  text-align: center;
-}
-
-.slide-2 {
-  font-family: var(--ft-roboto);
-  font-weight: 300;
-  font-size: 3.5rem;
-  line-height: 5rem;
-  color: var(--col-second);
-  left: 38%;
-  top: 35%;
-  transform: translateX(-50%);
-  text-align: start;
-  width: 25rem;
-}
-
-.slide-3 {
-  font-family: var(--ft-roboto);
-  font-weight: 300;
-  font-size: 3.5rem;
-  line-height: 5rem;
-  color: var(--col-blk);
-  left: 40%;
-  top: 45%;
-  text-align: center;
-  width: 25rem;
-}
-
-.slide-4 {
-  font-family: var(--ft-roboto);
-  font-weight: 300;
-  font-size: 3.5rem;
-  line-height: 5rem;
-  color: var(--col-white);
-  left: 18%;
-  top: 30%;
-  text-align: start;
-  width: 25rem;
-}
-
-// swiper controls
-.about-us {
-  .swiper-button-next,
-  .swiper-button-prev {
-    margin: 0 20rem;
-    width: 10rem;
-    height: 10rem;
-
-    &::after {
-      font-size: 0;
-    }
-  }
-}
-
-.swiper-pagination-bullets {
-  bottom: 25%;
-  & * {
-    background-color: var(--col-white) !important;
-    width: 1.5rem;
-    height: 0.5rem;
-    border-radius: 0.2rem;
-  }
-}
-
 // slider buttons
 .arrow1 {
   animation: moveArrow1 0.8s linear infinite;
