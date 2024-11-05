@@ -18,13 +18,13 @@
     >
       Projects
     </router-link>
-    <router-link
+    <!-- <router-link
       class="nav-link"
       active-class="active"
       :to="{ name: 'products' }"
     >
       Products
-    </router-link>
+    </router-link> -->
     <router-link
       class="nav-link"
       active-class="active"

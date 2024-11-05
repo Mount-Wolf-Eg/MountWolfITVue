@@ -62,7 +62,7 @@
         />
       </svg>
     </a>
-
+    <!-- 
     <a href="https://vimeo.com/user161307481">
       <svg
         id="Group_1965"
@@ -93,7 +93,7 @@
           />
         </g>
       </svg>
-    </a>
+    </a> -->
   </div>
 </template>
 

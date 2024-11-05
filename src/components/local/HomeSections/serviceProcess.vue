@@ -37,7 +37,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 const servicesItems = ref([
   {
     logo: `<svg  style="width:5.7rem;height:5.7rem;"  viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -162,31 +162,31 @@ const servicesItems = ref([
   },
 ]);
 
-onMounted(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          let el = document.querySelector(".service-proc-img");
-          if (!el.classList.contains("slide-enter")) {
-            el.classList.add("slide-enter");
-          }
+const props = defineProps({
+  transiSt: {
+    type: Boolean,
+    Required: false,
+    default: false,
+  },
+});
 
-          document.querySelectorAll(".service-proc-feat").forEach((e) => {
-            if (!e.classList.contains("fade-enter")) {
-              e.classList.add("fade-enter");
-            }
-          });
+watch(
+  () => props.transiSt,
+  (newVal) => {
+    if (newVal == true) {
+      let el = document.querySelector(".service-proc-img");
+      if (!el.classList.contains("slide-enter")) {
+        el.classList.add("slide-enter");
+      }
+
+      document.querySelectorAll(".service-proc-feat").forEach((e) => {
+        if (!e.classList.contains("fade-enter")) {
+          e.classList.add("fade-enter");
         }
       });
-    },
-    {
-      threshold: 0.4,
     }
-  );
-  const el = document.querySelector(".service-process");
-  observer.observe(el);
-});
+  }
+);
 </script>
 
 <style lang="scss" scoped>
