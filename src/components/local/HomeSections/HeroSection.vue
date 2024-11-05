@@ -5,18 +5,18 @@
     style="position: relative"
     v-motion-slide-bottom
   >
-    <!-- :autoplay="{
-        delay: 2500,
-        disableOnInteraction: false,
-      }" -->
-    <!-- :Autoplay="{
-        delay: 1000,
-        disableOnInteraction: true,
-        waitForTransition: true,
-      }" -->
     <swiper
       class="w-100 h-100"
       :modules="modules"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false,
+      }"
+      :Autoplay="{
+        delay: 1000,
+        disableOnInteraction: true,
+        waitForTransition: true,
+      }"
       :pagination="{
         el: '.swiper-pagination',
         clickable: true,
@@ -106,6 +106,9 @@ import { onMounted, ref, watch } from "vue";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import { Pagination, Navigation, Autoplay } from "swiper";
 const modules = ref([Pagination, Navigation, Autoplay]);
+import { useSlidersStore } from "@/stores/Sliders";
+import { storeToRefs } from "pinia";
+const { headerSlider } = storeToRefs(useSlidersStore());
 const show = ref(false);
 
 const props = defineProps({

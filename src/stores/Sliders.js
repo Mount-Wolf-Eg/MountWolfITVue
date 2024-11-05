@@ -7,6 +7,9 @@ export const useSlidersStore = defineStore("sliderStore", {
   state: () => ({
     headerSlider: [],
     aboutSlider: [],
+    servicesLeft: [],
+    servicesRight: [],
+    servicesBottom: [],
 
     // allQuestions: [],
   }),
@@ -16,9 +19,11 @@ export const useSlidersStore = defineStore("sliderStore", {
       await axiosInstance
         .get(`${mainStore().apiLink}/admin/slider/showSlidersTypes`, {})
         .then((res) => {
-          console.log(res.data.data);
           this.headerSlider = res.data.data.header_slider;
           this.aboutSlider = res.data.data.about_slider;
+          this.servicesLeft = res.data.data.services_left.reverse();
+          this.servicesRight = res.data.data.services_right.reverse();
+          this.servicesBottom = res.data.data.services_bottom.reverse();
         })
         .catch((err) => {
           let errorMessage = "Something went wrong, please try again";
