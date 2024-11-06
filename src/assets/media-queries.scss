@@ -8,11 +8,6 @@
   }
   // nav bar
   .nav-bar {
-    .nav-main-st {
-    }
-    .nav-st {
-    }
-
     .active {
       font-size: var(--fs-33) !important;
     }
@@ -75,6 +70,116 @@
       }
     }
   }
+  // service section
+  .service-sec {
+    height: 125rem;
+    .ser-title {
+      padding: 3rem 0;
+      font-size: var(--fs-22);
+    }
+    .service-img {
+      height: 100% !important ;
+      justify-content: center !important;
+      .box-responsive {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0 !important;
+        .service-list {
+          gap: 0 !important;
+          height: fit-content !important;
+          .serv-item {
+            height: auto !important;
+            margin: 1.5rem auto !important;
+            width: 80% !important;
+            padding: 1.5rem 5rem !important;
+            img {
+              width: 3rem !important;
+              height: 3rem !important;
+            }
+            p {
+              font-size: var(--fs-22) !important;
+            }
+          }
+        }
+        .img-circle {
+          height: 40rem !important;
+          order: 3;
+          .serv-image {
+            width: 50% !important;
+            max-width: 40rem;
+            min-width: 35rem;
+          }
+          .big-c {
+            width: 40%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+            min-width: 33rem;
+          }
+          .small-c {
+            width: 20%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+            min-width: 15rem;
+          }
+        }
+      }
+
+      .service-feat {
+        img {
+          height: 3.2rem !important;
+          margin-bottom: 1.5rem !important;
+        }
+        .feat {
+          font-size: var(--fs-20);
+        }
+      }
+    }
+  }
+  // service process
+  .service-process {
+    height: 110rem;
+    .service-proc-img {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center !important;
+
+      .serv-process-hover {
+        width: 60% !important;
+        min-width: 40rem !important;
+        height: auto;
+      }
+      .service-proc-features {
+        max-height: 50% !important;
+        padding: 5rem 0 0;
+        align-items: center;
+        justify-content: space-between;
+        .service-proc-title {
+          font-size: var(--fs-24) !important;
+        }
+        .service-proc-feat {
+          padding: 3rem 2rem !important;
+          width: 80%;
+          padding: 0 3rem;
+          font-size: var(--fs-22);
+        }
+      }
+    }
+  }
+  // project card
+  .project-card {
+    width: 35rem;
+    height: 53.8rem;
+
+    .card-content {
+      font-size: var(--fs-24);
+      bottom: 5%;
+    }
+  }
+  .contact-form {
+    width: 90% !important;
+  }
 }
 
 // /* Extra small devices (phones, 600px and down) */
@@ -88,11 +193,6 @@
   }
   // nav bar
   .nav-bar {
-    .nav-main-st {
-    }
-    .nav-st {
-    }
-
     .active {
       font-size: var(--fs-33) !important;
     }
@@ -155,6 +255,116 @@
       }
     }
   }
+  // service section
+  .service-sec {
+    height: 160rem;
+    .ser-title {
+      padding: 3rem 0;
+      font-size: var(--fs-22);
+    }
+    .service-img {
+      height: 100% !important ;
+      justify-content: center !important;
+      .box-responsive {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0 !important;
+        .service-list {
+          gap: 0 !important;
+          height: fit-content !important;
+          .serv-item {
+            height: auto !important;
+            margin: 1.5rem auto !important;
+            width: 80% !important;
+            padding: 1.5rem 5rem !important;
+            img {
+              width: 3rem !important;
+              height: 3rem !important;
+            }
+            p {
+              font-size: var(--fs-22) !important;
+            }
+          }
+        }
+        .img-circle {
+          height: 67rem !important;
+          order: 3;
+          .serv-image {
+            width: 52% !important;
+            max-width: 80rem;
+            min-width: 55rem;
+          }
+          .big-c {
+            width: 40%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+            min-width: 60rem;
+          }
+          .small-c {
+            width: 20%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+            min-width: 25rem;
+          }
+        }
+      }
+
+      .service-feat {
+        img {
+          height: 3.2rem !important;
+          margin-bottom: 1.5rem !important;
+        }
+        .feat {
+          font-size: var(--fs-20);
+        }
+      }
+    }
+  }
+  // service process
+  .service-process {
+    height: 150rem;
+    .service-proc-img {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center !important;
+      .serv-process-hover {
+        width: 70% !important;
+        min-width: 60rem !important;
+        max-width: 80rem;
+        height: auto;
+      }
+      .service-proc-features {
+        max-height: 40% !important;
+        padding: 7rem 0 0;
+        align-items: center;
+        justify-content: space-between;
+        .service-proc-title {
+          font-size: var(--fs-24) !important;
+        }
+        .service-proc-feat {
+          padding: 3rem 2rem !important;
+          width: 90%;
+          padding: 0 3rem;
+          font-size: var(--fs-22) !important;
+        }
+      }
+    }
+  }
+  // project card
+  .project-card {
+    width: 35rem;
+    height: 53.8rem;
+
+    .card-content {
+      font-size: var(--fs-24);
+      bottom: 5%;
+    }
+  }
+  .contact-form {
+    width: 90% !important;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -199,6 +409,31 @@
       left: 10rem;
     }
   }
+  // service section
+  .service-sec {
+    height: 85rem;
+    .service-img {
+      height: 100%;
+      .box-responsive {
+        .img-circle {
+          height: 67rem !important;
+          .serv-image {
+            width: 100% !important;
+          }
+          .big-c {
+            width: 100%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+          }
+          .small-c {
+            width: 40%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
   // about section
   .about-us {
     height: 90rem;
@@ -212,6 +447,9 @@
         font-size: 0;
       }
     }
+  }
+  .contact-form {
+    width: 80% !important;
   }
 }
 
@@ -254,6 +492,31 @@
     }
     .swiper-button-prev {
       left: 10rem;
+    }
+  }
+  // service section
+  .service-sec {
+    height: 85rem;
+    .service-img {
+      height: 100%;
+      .box-responsive {
+        .img-circle {
+          height: 67rem !important;
+          .serv-image {
+            width: 100% !important;
+          }
+          .big-c {
+            width: 100%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+          }
+          .small-c {
+            width: 40%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+          }
+        }
+      }
     }
   }
   // about section
@@ -314,6 +577,31 @@
       left: 10rem;
     }
   }
+  // service section
+  .service-sec {
+    height: 85rem;
+    .service-img {
+      height: 100%;
+      .box-responsive {
+        .img-circle {
+          height: 67rem !important;
+          .serv-image {
+            width: 100% !important;
+          }
+          .big-c {
+            width: 100%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+          }
+          .small-c {
+            width: 40%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
   // about section
   .about-us {
     height: 90%;
@@ -339,5 +627,30 @@
 
   body {
     // background-color: rgba(204, 0, 255, 0.521) !important;
+  }
+  // service section
+  .service-sec {
+    height: 85rem;
+    .service-img {
+      height: 100%;
+      .box-responsive {
+        .img-circle {
+          height: 67rem !important;
+          .serv-image {
+            width: 100% !important;
+          }
+          .big-c {
+            width: 100%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+          }
+          .small-c {
+            width: 40%;
+            aspect-ratio: 1 / 1 !important;
+            height: auto;
+          }
+        }
+      }
+    }
   }
 }

@@ -6,12 +6,16 @@
       :transiStart="trans"
       :serviceData="AllServices"
     ></ServicesHome>
-    <serviceProcess id="serviceProc" :transiSt="procesTrans"></serviceProcess>
+    <serviceProcess
+      id="serviceProc"
+      :transiSt="procesTrans"
+      :workerData="allWorkProcesses"
+    ></serviceProcess>
     <AboutUs :aboutSliders="aboutSlider"></AboutUs>
-    <!--   <OurProjects></OurProjects>
-    <ourProducts></ourProducts>
+    <OurProjects :projects="allProjects"></OurProjects>
+    <ourProducts :products="allProducts"></ourProducts>
     <ContactMe></ContactMe>
-    <OurClients></OurClients> -->
+    <OurClients :clients="allClients"></OurClients>
   </div>
 </template>
 <script setup>
@@ -25,7 +29,7 @@ import ourProducts from "@/components/local/HomeSections/ourProducts.vue";
 import ContactMe from "@/components/local/HomeSections/ContactMe.vue";
 import OurClients from "@/components/local/HomeSections/OurClients.vue";
 // store
-import { useSlidersStore } from "@/stores/Sliders";
+import { useSlidersStore } from "@/stores/dataStore";
 import { storeToRefs } from "pinia";
 const {
   headerSlider,
@@ -33,12 +37,22 @@ const {
   servicesLeft,
   servicesRight,
   servicesBottom,
+  allWorkProcesses,
+  allProjects,
+  allProducts,
+  allClients,
 } = storeToRefs(useSlidersStore());
 const trans = ref(false);
 const procesTrans = ref(false);
 const AllServices = ref({});
 onMounted(async () => {
-  await useSlidersStore().getAllSliders();
+  await Promise.all([
+    useSlidersStore().getAllSliders(),
+    useSlidersStore().getAllSettings(),
+    useSlidersStore().getAllProducts(),
+    useSlidersStore().getAllProjects(),
+  ]);
+
   AllServices.value = {
     left: servicesLeft.value,
     right: servicesRight.value,

@@ -5,12 +5,15 @@
   >
     <div class="style-3" style="margin: 8rem 0 10rem">PROJECTS</div>
 
-    <div style="width: 80%">
+    <div style="width: 70%; margin: 0 auto !important">
       <swiper
         :autoplay="{
           delay: 2500,
           disableOnInteraction: false,
         }"
+        :keyboard="{ enabled: true }"
+        :slides-per-view="5"
+        :breakpoints="breakpoints"
         class="w-100 h-100 py-2"
         :modules="modules"
         :pagination="{
@@ -19,13 +22,11 @@
           clickable: true,
         }"
         :loop="true"
-        :breakpoints="breakpoints"
         :Autoplay="{
           delay: 1000,
           disableOnInteraction: true,
           waitForTransition: true,
         }"
-        :space-between="10"
         :navigation="{
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -34,9 +35,9 @@
         :Lazy="true"
       >
         <swiper-slide
-          v-for="(slide, i) in slides"
+          v-for="(slide, i) in [...projects, ...projects]"
           :key="i"
-          class="h-100 m-0 swiper-card"
+          class="h-100 m-0 swiper-card mx-2"
         >
           <ProjectCard class="mx-auto" :data="slide"></ProjectCard>
         </swiper-slide>
@@ -70,73 +71,80 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import { Pagination, Navigation, Autoplay } from "swiper";
 const modules = ref([Pagination, Navigation, Autoplay]);
 import ProjectCard from "@/reusables/ProjectCard.vue";
-const slides = ref([
-  "/src/assets/media/Images/Untitled-1-02.jpg",
-  "/src/assets/media/Images/Untitled-1-03.jpg",
-  "/src/assets/media/Images/Untitled-1-04.jpg",
-  "/src/assets/media/Images/Untitled-1-05.jpg",
-  "/src/assets/media/Images/Untitled-1-02.jpg",
-  "/src/assets/media/Images/Untitled-1-03.jpg",
-  "/src/assets/media/Images/Untitled-1-04.jpg",
-  "/src/assets/media/Images/Untitled-1-05.jpg",
-]);
+
+const props = defineProps({
+  projects: {
+    type: Object,
+    Required: true,
+    default: {},
+  },
+});
+
 const breakpoints = {
   0: {
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 10,
   },
   350: {
     slidesPerView: 1.4,
-    spaceBetween: 0,
+    spaceBetween: 10,
   },
   400: {
-    slidesPerView: 1.5,
-    spaceBetween: 0,
+    slidesPerView: 1.8,
+    spaceBetween: 10,
   },
   500: {
-    slidesPerView: 1.5,
-    spaceBetween: 20,
-  },
-  650: {
     slidesPerView: 2,
-    spaceBetween: 20,
+    spaceBetween: 10,
   },
-  800: {
-    slidesPerView: 2.5,
-    spaceBetween: 20,
+  600: {
+    slidesPerView: 2.2,
+    spaceBetween: 10,
+  },
+  700: {
+    slidesPerView: 2.8,
+    spaceBetween: 10,
+  },
+  770: {
+    slidesPerView: 3.8,
+    spaceBetween: 10,
+  },
+  830: {
+    slidesPerView: 4,
+    spaceBetween: 10,
   },
   950: {
-    slidesPerView: 3,
-    spaceBetween: 20,
+    slidesPerView: 4.2,
+    spaceBetween: 10,
   },
   1190: {
-    slidesPerView: 2,
-    spaceBetween: 20,
+    slidesPerView: 4.4,
+    spaceBetween: 10,
   },
   1400: {
-    slidesPerView: 2.5,
-    spaceBetween: 20,
+    slidesPerView: 4,
+    spaceBetween: 10,
   },
   1490: {
-    slidesPerView: 2.8,
-    spaceBetween: 20,
+    slidesPerView: 4.2,
+    spaceBetween: 10,
   },
   1600: {
-    slidesPerView: 3,
-    spaceBetween: 20,
+    slidesPerView: 4.5,
+    spaceBetween: 10,
   },
   1700: {
-    slidesPerView: 3,
-    spaceBetween: 20,
+    slidesPerView: 5,
+    spaceBetween: 10,
   },
   1800: {
     slidesPerView: 5,
-    spaceBetween: 20,
+    spaceBetween: 10,
   },
 };
 </script>
@@ -149,13 +157,5 @@ const breakpoints = {
   &::after {
     content: "";
   }
-}
-
-.swiper {
-  padding: 0 5rem;
-}
-.swiper-card {
-  border-radius: 1.2rem;
-  overflow: hidden !important;
 }
 </style>

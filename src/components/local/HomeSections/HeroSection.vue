@@ -106,7 +106,7 @@ import { onMounted, ref, watch } from "vue";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import { Pagination, Navigation, Autoplay } from "swiper";
 const modules = ref([Pagination, Navigation, Autoplay]);
-import { useSlidersStore } from "@/stores/Sliders";
+import { useSlidersStore } from "@/stores/dataStore";
 import { storeToRefs } from "pinia";
 const { headerSlider } = storeToRefs(useSlidersStore());
 const show = ref(false);

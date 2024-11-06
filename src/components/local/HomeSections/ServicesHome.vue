@@ -1,17 +1,25 @@
 <template>
-  <div class="service-sec section-layout p-0">
-    <div class="ser-bg-img">
-      <div class="style-3 ser-title">SERVICES</div>
+  <div
+    class="service-sec section-layout p-0 d-flex flex-column align-items-center justify-content-between"
+  >
+    <div class="ser-bg-img w-100 h-100">
       <img
         src="/src/assets/media/Images/serBg.png"
-        style="width: 100%"
+        style="
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        "
         alt="service img"
       />
     </div>
     <div class="service-img d-flex flex-column justify-content-between">
-      <div style="flex: 1" class="row">
+      <div class="ser-title">SERVICES</div>
+
+      <div class="row box-responsive m-0 p-0">
         <div
-          class="col d-flex flex-column align-items-end justify-content-center"
+          class="service-list col-12 col-md-4 d-flex flex-column align-items-end justify-content-center"
           style="gap: 4rem"
         >
           <div
@@ -28,7 +36,7 @@
             <p class="m-0 p-0">{{ elL.title }}</p>
           </div>
         </div>
-        <div class="col img-circle" style="z-index: 99">
+        <div class="col-12 col-md-4 img-circle" style="z-index: 99">
           <div class="big-c"></div>
           <div class="small-c"></div>
           <img
@@ -44,7 +52,7 @@
           />
         </div>
         <div
-          class="col d-flex flex-column align-items-start justify-content-center"
+          class="service-list col-12 col-md-4 d-flex flex-column align-items-start justify-content-center"
           style="gap: 4rem"
         >
           <div
@@ -63,11 +71,9 @@
         </div>
       </div>
       <div class="service-feat">
-        <div
-          class="w-50 mx-auto d-flex align-items-center justify-content-evenly"
-        >
+        <div class="w-75 w-md-50 mx-auto row">
           <div
-            class="d-flex align-items-center gap-2 flex-column justify-content-center"
+            class="col-6 col-md-3 d-flex align-items-center gap-2 flex-column justify-content-center"
             v-for="(item, k) in props.serviceData.bottom"
             :key="k"
           >
@@ -102,13 +108,6 @@ const props = defineProps({
 });
 
 watch(
-  () => props.serviceData,
-  (newVal) => {
-    console.log("newVal", newVal);
-  }
-);
-
-watch(
   () => props.transiStart,
   (newVal) => {
     if (newVal == true) {
@@ -116,6 +115,7 @@ watch(
       if (!el.classList.contains("slide-enter")) {
         el.classList.add("slide-enter");
       }
+
       setTimeout(() => {
         document.querySelectorAll(".serv-item.right").forEach((e) => {
           if (!e.classList.contains("fade-enter-right")) {
@@ -125,6 +125,12 @@ watch(
         document.querySelectorAll(".serv-item.left").forEach((e) => {
           if (!e.classList.contains("fade-enter-left")) {
             e.classList.add("fade-enter-left");
+          }
+        });
+
+        document.querySelectorAll(".service-feat").forEach((e) => {
+          if (!e.classList.contains("slide-enter")) {
+            e.classList.add("slide-enter");
           }
         });
       }, 500);
@@ -143,11 +149,12 @@ watch(
 }
 // animate each feat
 @keyframes slideTo {
-  from {
+  0% {
     transform: translatey(100%);
     opacity: 0;
   }
-  to {
+
+  100% {
     transform: translatey(0);
     opacity: 1;
   }
@@ -158,6 +165,10 @@ watch(
 }
 
 .img-circle {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.service-feat {
   opacity: 0;
   animation-fill-mode: forwards;
 }
