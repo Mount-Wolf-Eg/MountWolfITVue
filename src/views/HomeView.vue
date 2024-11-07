@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="bg-info"
-    style="overflow: hidden !important; margin: 0 auto !important"
-  >
+  <div style="overflow: hidden !important; margin: 0 auto !important">
     <HeroSection :headSliders="headerSlider"></HeroSection>
     <ServicesHome
       id="services"
