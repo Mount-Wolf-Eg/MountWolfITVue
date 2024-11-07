@@ -85,7 +85,7 @@
           />
         </svg>
       </div>
-      <div class="swiper-pagination" style="transform: rotate(90deg)"></div>
+      <!-- <div class="swiper-pagination" style="transform: rotate(90deg)"></div> -->
     </swiper>
     <div class="hero-text">
       <span

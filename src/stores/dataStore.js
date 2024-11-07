@@ -17,8 +17,11 @@ export const useSlidersStore = defineStore("sliderStore", {
     allWorkProcesses: [],
 
     allProjects: [],
+    singleProject: [],
     allProjectsCategory: [],
     allProducts: [],
+    allSettings: [],
+    allSectors: [],
   }),
   actions: {
     // all admins
@@ -50,6 +53,7 @@ export const useSlidersStore = defineStore("sliderStore", {
       await axiosInstance
         .get(`${mainStore().apiLink}/admin/Settings/show`)
         .then((res) => {
+          this.allSettings = res.data.data[0].settings;
           this.allWorkProcesses = res.data.data[0].settings.work_process;
         })
         .catch((err) => {
@@ -82,6 +86,30 @@ export const useSlidersStore = defineStore("sliderStore", {
           mainStore().showAlert(errorMessage, 2);
         });
     },
+    async getSingleProject(data) {
+      let result;
+      await axiosInstance
+        .post(`${mainStore().apiLink}/admin/Projects/one`, data)
+        .then((res) => {
+          this.singleProject = res.data.data;
+          result = res;
+        })
+        .catch((err) => {
+          let errorMessage = "Something went wrong, please try again";
+
+          if (err.response && err.response.data && err.response.data.errors) {
+            const errorArray = Object.values(err.response.data.errors);
+            if (errorArray.length > 0 && errorArray[0][0]) {
+              errorMessage = errorArray[0][0];
+            }
+          }
+          mainStore().showAlert(errorMessage, 2);
+
+          result = false;
+        });
+      return result;
+    },
+
     async getAllProducts() {
       await axiosInstance
         .get(`${mainStore().apiLink}/admin/Products/all`)
@@ -117,6 +145,46 @@ export const useSlidersStore = defineStore("sliderStore", {
           }
           mainStore().showAlert(errorMessage, 2);
         });
+    },
+    async getAllContactSectors() {
+      await axiosInstance
+        .get(`${mainStore().apiLink}/admin/ContactFormSectors/all`)
+        .then((res) => {
+          this.allSectors = res.data.data;
+        })
+        .catch((err) => {
+          let errorMessage = "Something went wrong, please try again";
+
+          if (err.response && err.response.data && err.response.data.errors) {
+            const errorArray = Object.values(err.response.data.errors);
+            if (errorArray.length > 0 && errorArray[0][0]) {
+              errorMessage = errorArray[0][0];
+            }
+          }
+          mainStore().showAlert(errorMessage, 2);
+        });
+    },
+    async sendMessage(data) {
+      let result;
+      await axiosInstance
+        .post(`${mainStore().apiLink}/Mail/SendMessage`, data)
+        .then((res) => {
+          result = res;
+          mainStore().showAlert("Message Sent Successfully", 1);
+        })
+        .catch((err) => {
+          let errorMessage = "Something went wrong, please try again";
+
+          if (err.response && err.response.data && err.response.data.errors) {
+            const errorArray = Object.values(err.response.data.errors);
+            if (errorArray.length > 0 && errorArray[0][0]) {
+              errorMessage = errorArray[0][0];
+            }
+          }
+          mainStore().showAlert(errorMessage, 2);
+          result = false;
+        });
+      return result;
     },
   },
 });

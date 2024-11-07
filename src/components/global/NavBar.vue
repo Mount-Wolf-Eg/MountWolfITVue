@@ -78,15 +78,6 @@
               <router-link
                 class="nav-link"
                 active-class="active"
-                :to="{ name: 'work-process' }"
-              >
-                <span data-bs-dismiss="offcanvas" aria-label="Close">
-                  Work Process
-                </span>
-              </router-link>
-              <router-link
-                class="nav-link"
-                active-class="active"
                 :to="{ name: 'projects' }"
               >
                 <span data-bs-dismiss="offcanvas" aria-label="Close">
@@ -223,21 +214,34 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, onBeforeUnmount, ref, watch } from "vue";
 import NavTitle from "@/components/local/headerComponent/NavTitle.vue";
 import SocialIcon from "../local/headerComponent/SocialIcon.vue";
 import Navigation from "../local/headerComponent/Navigation.vue";
 let navResponse = ref(false);
 
+// onMounted(() => {
+//   window.innerWidth <= 768
+//     ? (navResponse.value = true)
+//     : (navResponse.value = false);
+//   window.onresize = () => {
+//     window.innerWidth <= 768
+//       ? (navResponse.value = true)
+//       : (navResponse.value = false);
+//   };
+// });
+
 onMounted(() => {
-  window.innerWidth <= 768
-    ? (navResponse.value = true)
-    : (navResponse.value = false);
-  window.onresize = () => {
-    window.innerWidth <= 768
-      ? (navResponse.value = true)
-      : (navResponse.value = false);
+  const updateNavResponse = () => {
+    navResponse.value = window.innerWidth <= 768;
   };
+
+  updateNavResponse();
+  window.addEventListener("resize", updateNavResponse);
+
+  onBeforeUnmount(() => {
+    window.removeEventListener("resize", updateNavResponse);
+  });
 });
 </script>
 

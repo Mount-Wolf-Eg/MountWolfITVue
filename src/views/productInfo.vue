@@ -1,26 +1,22 @@
 <template>
-  <div class="project-info layout" v-motion-slide-bottom>
-    <div class="row w-50 mx-auto">
-      <div class="col-12 product-details">
-        <div>
-          <p class="product-title">Doctor Online</p>
+  <div class="project-info mx-auto" style="width: 80%" v-motion-slide-bottom>
+    <div class="mx-auto">
+      <div class="row product-details">
+        <div class="co-12 col-md text-center text-md-start my-5">
+          <p class="product-title my-5">{{ singleProject.name }}</p>
           <p class="product-text">
-            Tabeebak is an innovative electronic platform designed to facilitate
-            and manage medical consultations between doctors and patients. With
-            separate interfaces for patients and doctors, Tabeebak streamlines
-            the process of booking consultations and enhances communication
-            through various channels. The platform also features an admin
-            dashboard for efficient management and oversight.
+            {{ singleProject.content }}
           </p>
         </div>
-        <div>
+        <div class="co-12 col-md-3 text-center my-5">
           <img
-            src="/src/assets/media/Servises/Component 16.png"
+            :src="singleProject.image"
             alt="product image"
             style="
-              width: 48rem;
+              width: 100%;
+              max-width: 25rem;
               height: auto;
-              object-fit: contain;
+              object-fit: cover;
               object-position: center;
             "
           />
@@ -29,10 +25,13 @@
 
       <div class="col-12 product-feature">
         <div class="feat-title">Features</div>
-        <div class="row my-5">
+        <div
+          v-if="singleProject.features"
+          class="mx-auto row d-flex justify-content-between align-items-center my-5"
+        >
           <div
-            class="col-6 d-flex flex-row justify-content-between gap-4 py-5"
-            v-for="(item, i) in productItems"
+            class="col-12 col-md-6 d-flex flex-row justify-content-center gap-5 py-5"
+            v-for="(item, i) in singleProject.features"
             :key="i"
           >
             <div style="position: relative">
@@ -45,66 +44,119 @@
               <img
                 src="/src/assets/media/Servises/Vector.png"
                 alt="product feature"
-                style="width: 8.2rem; height: auto"
+                style="width: 10rem; height: auto"
               />
             </div>
-            <div>
-              <p class="feat-tit">{{ item.title }}</p>
-              <p class="feat-bdy">{{ item.body }}</p>
+            <div
+              style="
+                white-space: normal;
+                word-wrap: break-word !important;
+                overflow: hidden;
+              "
+            >
+              <p class="feat-tit w-100">{{ item.title }}</p>
+              <p class="feat-bdy w-100">{{ item.description }}</p>
             </div>
           </div>
         </div>
-        <div class="d-flex gap-3">
-          <div v-for="(slide, i) in slides" :key="i">
+        <div
+          class="d-flex gap-3 py-5 flex-wrap align-items-center justify-content-center"
+        >
+          <div
+            class="mx-3"
+            v-for="(slide, i) in singleProject.NewAttachments"
+            :key="i"
+          >
             <ProjectCard :data="slide"></ProjectCard>
           </div>
         </div>
       </div>
 
-      <div class="col-12 product-download">
-        <button type="button" class="download-btn">visit website</button>
-        <button type="button" class="download-btn">visit website</button>
-        <button type="button" class="download-btn">visit website</button>
+      <div class="row product-download">
+        <a
+          v-if="singleProject?.settings?.site_url"
+          :href="singleProject?.settings?.site_url"
+          class="mx-auto col-12 col-md-4 download-btn d-flex align-items-center justify-content-center gap-5"
+        >
+          <svg
+            style="width: 3.5rem; height: auto"
+            viewBox="0 0 37 37"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_9_28898)">
+              <path
+                d="M-0.000254118 18.4921C-0.0436169 6.26572 10.1799 -0.0187478 18.6717 4.201e-05C28.8707 0.0231679 37.0041 8.23431 36.9997 18.534C36.9954 28.9623 28.9704 37.0087 18.5749 37C9.76937 36.9914 -0.0479532 30.3918 -0.000254118 18.4921ZM4.83325 19.0876C3.79832 19.0876 2.76195 19.0948 1.72703 19.0832C1.38446 19.0789 1.20234 19.1266 1.23125 19.5544C1.46685 23.1375 2.68968 26.3376 4.88239 29.1777C5.13823 29.5087 5.28278 29.4668 5.54151 29.2023C6.53885 28.1818 7.6605 27.3132 8.88911 26.5905C9.21722 26.3983 9.29817 26.1887 9.20711 25.8288C8.69687 23.7923 8.43091 21.7196 8.39333 19.6224C8.38466 19.1497 8.20253 19.0688 7.79348 19.0789C6.80625 19.102 5.81903 19.0861 4.8318 19.0861L4.83325 19.0876ZM4.78555 17.9168C5.79735 17.9168 6.80914 17.8952 7.8195 17.927C8.26613 17.94 8.3861 17.7954 8.39478 17.356C8.4338 15.2834 8.70265 13.2338 9.1941 11.2204C9.28805 10.836 9.22734 10.6119 8.86743 10.4024C7.65616 9.69847 6.54608 8.84859 5.57909 7.8325C5.2423 7.47983 5.09053 7.55209 4.82458 7.90187C2.6839 10.716 1.47263 13.8698 1.23558 17.4023C1.20523 17.8532 1.36278 17.9298 1.7516 17.9226C2.76195 17.9038 3.77375 17.9168 4.78555 17.9168ZM32.2154 17.9168C33.2257 17.9168 34.2375 17.9038 35.2479 17.9226C35.6382 17.9298 35.7928 17.8518 35.7625 17.4023C35.5225 13.8452 34.3026 10.6712 32.1301 7.84984C31.9046 7.55643 31.7673 7.47838 31.4768 7.78046C30.4708 8.82547 29.326 9.7028 28.0771 10.4385C27.7302 10.6423 27.7331 10.875 27.8141 11.2176C28.2954 13.2338 28.5801 15.2776 28.6076 17.3517C28.6134 17.7882 28.7334 17.9385 29.1829 17.9255C30.1932 17.8952 31.205 17.9154 32.2154 17.9154V17.9168ZM35.735 20.017C35.5774 19.7149 36.1787 19.0702 35.2551 19.0804C33.2098 19.1035 31.1631 19.0948 29.1178 19.0804C28.7478 19.0775 28.6163 19.1902 28.6105 19.5703C28.5773 21.6921 28.3026 23.785 27.7938 25.8461C27.7143 26.1699 27.762 26.3766 28.0699 26.5587C29.3173 27.2958 30.4635 28.1732 31.471 29.2167C31.7528 29.5087 31.8902 29.4639 32.1258 29.1589C34.2115 26.4662 35.4054 23.428 35.735 20.0155V20.017ZM17.9143 6.59815C17.9143 5.00825 17.8941 3.41834 17.9259 1.82988C17.936 1.28208 17.7308 1.22427 17.2841 1.3558C16.1697 1.68101 15.2345 2.28806 14.4265 3.10759C12.5865 4.975 11.5646 7.28904 10.7841 9.74038C10.6699 10.0974 10.8665 10.161 11.0818 10.2607C13.0621 11.1785 15.129 11.7523 17.3174 11.8868C17.8161 11.9171 17.9317 11.761 17.9245 11.2956C17.9013 9.73027 17.9158 8.16493 17.9158 6.5996L17.9143 6.59815ZM19.0851 6.55479C19.0851 8.12012 19.101 9.68546 19.075 11.2508C19.0664 11.7393 19.1733 11.9214 19.711 11.8853C21.8719 11.7379 23.9186 11.1843 25.8801 10.2824C26.1793 10.1451 26.3137 10.0338 26.1894 9.64643C25.539 7.61858 24.7035 5.68468 23.3723 4.00516C22.4327 2.81996 21.3241 1.84578 19.8266 1.39482C19.2817 1.23005 19.0533 1.27341 19.0707 1.93395C19.1126 3.47326 19.0837 5.01547 19.0837 6.55768L19.0851 6.55479ZM17.9143 30.4222C17.9143 28.8323 17.9057 27.2438 17.9201 25.6539C17.923 25.2709 17.8507 25.0916 17.4041 25.1162C15.1652 25.2405 13.0534 25.8259 11.0269 26.7639C10.7609 26.8868 10.7089 27.0169 10.8014 27.3161C11.4547 29.422 12.3321 31.4151 13.7342 33.1351C14.6419 34.2481 15.7115 35.1558 17.1295 35.598C17.712 35.7802 17.9461 35.7411 17.9259 35.0445C17.8825 33.5051 17.9129 31.9629 17.9129 30.4207L17.9143 30.4222ZM19.7587 25.1148C19.1357 24.8951 19.0692 25.3244 19.075 25.969C19.0996 29.0028 19.1025 32.0381 19.0721 35.0719C19.0649 35.7281 19.2803 35.7845 19.8252 35.6125C20.7387 35.3249 21.538 34.858 22.2362 34.2134C24.2858 32.3228 25.3771 29.8845 26.2068 27.2915C26.3108 26.9648 26.1909 26.8666 25.948 26.7524C24.0372 25.8577 22.0353 25.3041 19.7587 25.1148ZM13.6735 17.9168C14.9006 17.9168 16.1292 17.898 17.355 17.927C17.8059 17.9371 17.9331 17.7896 17.923 17.3503C17.8956 16.1954 17.8768 15.0377 17.9302 13.8857C17.9563 13.3018 17.79 13.0879 17.2018 13.0561C14.9729 12.9346 12.8438 12.3767 10.8216 11.4358C10.4328 11.2551 10.3374 11.3693 10.2579 11.7379C9.86044 13.5764 9.67976 15.438 9.54967 17.3098C9.51643 17.781 9.6523 17.94 10.1365 17.927C11.3145 17.8952 12.4954 17.9168 13.6749 17.9168H13.6735ZM23.2668 17.9168C24.4939 17.9168 25.7211 17.9082 26.9483 17.9226C27.3053 17.927 27.4744 17.8446 27.4513 17.4413C27.34 15.4958 27.1347 13.5634 26.7257 11.6541C26.6563 11.3332 26.5276 11.2783 26.2328 11.417C24.121 12.4071 21.8907 12.939 19.5694 13.0922C19.2123 13.1153 19.0707 13.2281 19.0779 13.6096C19.0996 14.8845 19.0982 16.1607 19.0779 17.4355C19.0721 17.8258 19.221 17.927 19.5853 17.9212C20.8124 17.9053 22.0396 17.9154 23.2668 17.9154V17.9168ZM13.7515 19.0876C12.5244 19.0876 11.2972 19.102 10.07 19.0804C9.65952 19.0731 9.52365 19.2018 9.54823 19.6151C9.66386 21.536 9.86188 23.4454 10.2695 25.3301C10.3316 25.6178 10.4169 25.7493 10.7465 25.5946C12.8568 24.6046 15.0857 24.064 17.4085 23.9137C17.8117 23.8877 17.9288 23.7359 17.9216 23.3413C17.8984 22.1142 17.8883 20.8856 17.9245 19.66C17.9389 19.1483 17.7264 19.0702 17.2885 19.0789C16.109 19.102 14.9295 19.0876 13.7515 19.0876ZM23.274 19.0876C22.0714 19.0876 20.8674 19.102 19.6648 19.0804C19.247 19.0731 19.0635 19.1656 19.075 19.6325C19.1054 20.8596 19.1054 22.0867 19.075 23.3138C19.0635 23.7547 19.2094 23.892 19.6359 23.918C21.9341 24.0625 24.1398 24.5973 26.227 25.5831C26.5132 25.7189 26.6548 25.6886 26.7257 25.3576C27.1347 23.4497 27.3414 21.5173 27.4513 19.5718C27.4729 19.1801 27.3255 19.0775 26.9569 19.0832C25.7298 19.1006 24.5026 19.089 23.2754 19.089L23.274 19.0876ZM13.938 1.92527C13.8411 1.90359 13.7905 1.87469 13.7501 1.88625C10.8665 2.68843 8.39622 4.1945 6.25699 6.27294C5.98092 6.54034 6.08499 6.70511 6.30614 6.91469C7.16038 7.72698 8.07389 8.46123 9.04666 9.13188C9.50486 9.44842 9.67253 9.42385 9.8561 8.85871C10.5037 6.8641 11.3998 4.98367 12.7094 3.32728C13.0895 2.84742 13.5159 2.40369 13.938 1.92527ZM23.0369 35.0575C23.141 35.1037 23.167 35.1254 23.1844 35.1211C26.1128 34.3565 28.5859 32.8128 30.7468 30.7257C31.0316 30.4511 30.8972 30.2877 30.6847 30.084C29.7986 29.2341 28.8461 28.4695 27.8213 27.7902C27.4643 27.5531 27.3125 27.6095 27.1795 28.0171C26.3267 30.6491 25.0938 33.0629 23.0355 35.0575H23.0369ZM22.9415 1.84144C25.1285 3.96324 26.3657 6.45651 27.2504 9.14923C27.3891 9.57272 27.6074 9.32845 27.7866 9.21716C28.81 8.57542 29.7278 7.79925 30.6196 6.98696C30.9781 6.6603 30.955 6.45506 30.6124 6.13274C29.0167 4.63679 27.2489 3.41256 25.2224 2.5728C24.5416 2.28951 23.8637 1.99465 22.943 1.84289L22.9415 1.84144ZM13.8802 35.0893C11.9072 33.0672 10.6684 30.6491 9.80985 28.0127C9.70578 27.6933 9.60315 27.5141 9.22445 27.7656C8.17652 28.4594 7.20664 29.2427 6.29457 30.1056C6.0026 30.3817 6.04885 30.571 6.32348 30.8009C6.9508 31.327 7.54342 31.8964 8.19675 32.385C9.90091 33.6612 11.7785 34.5949 13.8787 35.0878L13.8802 35.0893Z"
+                fill="#929292"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_9_28898">
+                <rect width="37" height="37" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          visit website</a
+        >
+        <a
+          v-if="singleProject.settings?.play_store_url"
+          :href="singleProject.settings?.play_store_url"
+          class="mx-auto col-12 col-md-4 download-btn d-flex align-items-center justify-content-center gap-5"
+        >
+          <svg
+            style="width: 3.5rem; height: auto"
+            fill="#929292"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"
+            />
+          </svg>
+
+          visit website</a
+        >
+        <a
+          v-if="singleProject.settings?.app_store_url"
+          :href="singleProject.settings?.app_store_url"
+          href="#"
+          class="mx-auto col-12 col-md-4 download-btn d-flex align-items-center justify-content-center gap-5"
+        >
+          <svg
+            style="width: 2.5rem; height: auto"
+            fill="#929292"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+          >
+            <path
+              d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+            />
+          </svg>
+
+          visit website
+        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onBeforeMount, onMounted, ref } from "vue";
 import ProjectCard from "@/reusables/ProjectCard.vue";
-const productItems = ref([
-  {
-    title: "Dual User Interface:",
-    body: "Separate views for patients and doctors within the same application.",
-  },
-  {
-    title: "Dual User Interface:",
-    body: "Separate views for patients and doctors within the same application.",
-  },
-  {
-    title: "Dual User Interface:",
-    body: "Separate views for patients and doctors within the same application.",
-  },
-  {
-    title: "Dual User Interface:",
-    body: "Separate views for patients and doctors within the same application.",
-  },
-  {
-    title: "Dual User Interface:",
-    body: "Separate views for patients and doctors within the same application.",
-  },
-  {
-    title: "Dual User Interface:",
-    body: "Separate views for patients and doctors within the same application.",
-  },
-]);
+import { useRoute, useRouter } from "vue-router";
+import { useSlidersStore } from "@/stores/dataStore";
+import { storeToRefs } from "pinia";
+const { singleProject } = storeToRefs(useSlidersStore());
+const router = useRouter();
+const route = useRoute();
 
-const slides = ref([
-  "/src/assets/media/Images/Untitled-1-02.jpg",
-  "/src/assets/media/Images/Untitled-1-03.jpg",
-  "/src/assets/media/Images/Untitled-1-03.jpg",
-]);
+onMounted(async () => {});
+onBeforeMount(async () => {
+  const res = await useSlidersStore().getSingleProject({ id: route.params.id });
+  console.log(singleProject.value);
+  if (res == false) router.push({ name: "projects" });
+});
 </script>
 
 <style lang="scss" scoped></style>

@@ -5,7 +5,7 @@
   >
     <div class="style-3" style="margin: 8rem 0 10rem">Products</div>
 
-    <div style="width: 30%">
+    <div style="width: 70%">
       <swiper
         :autoplay="{
           delay: 2500,
@@ -37,7 +37,7 @@
         <swiper-slide
           v-for="(slide, i) in [...products, ...products]"
           :key="i"
-          class="h-100 m-0 swiper-card mx-2"
+          class="h-100 m-0 swiper-card"
         >
           <ProjectCard class="mx-auto" :data="slide"></ProjectCard>
         </swiper-slide>
@@ -87,11 +87,11 @@ const props = defineProps({
 
 const breakpoints = {
   0: {
-    slidesPerView: 1,
-    spaceBetween: 10,
+    slidesPerView: 0.9,
+    spaceBetween: 0,
   },
   773: {
-    slidesPerView: 1.5,
+    slidesPerView: 1,
     spaceBetween: 10,
   },
   900: {

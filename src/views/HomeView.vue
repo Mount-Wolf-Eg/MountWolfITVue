@@ -14,7 +14,7 @@
     <AboutUs :aboutSliders="aboutSlider"></AboutUs>
     <OurProjects :projects="allProjects"></OurProjects>
     <ourProducts :products="allProducts"></ourProducts>
-    <ContactMe></ContactMe>
+    <ContactMe :sectors="allSectors"></ContactMe>
     <OurClients :clients="allClients"></OurClients>
   </div>
 </template>
@@ -41,6 +41,7 @@ const {
   allProjects,
   allProducts,
   allClients,
+  allSectors,
 } = storeToRefs(useSlidersStore());
 const trans = ref(false);
 const procesTrans = ref(false);
@@ -51,6 +52,7 @@ onMounted(async () => {
     useSlidersStore().getAllSettings(),
     useSlidersStore().getAllProducts(),
     useSlidersStore().getAllProjects(),
+    useSlidersStore().getAllContactSectors(),
   ]);
 
   AllServices.value = {

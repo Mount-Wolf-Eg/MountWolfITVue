@@ -180,6 +180,55 @@
   .contact-form {
     width: 90% !important;
   }
+  // responsive footer
+  .footer-responsive {
+    .footer-items {
+      margin-bottom: 12rem !important;
+
+      .foot-title {
+        text-align: start !important;
+        font-size: var(--fs-20) !important;
+      }
+      .footer-items-box {
+        .footer-list-title {
+          font-size: var(--fs-16) !important;
+        }
+        ul {
+          li {
+            font-size: var(--fs-18) !important;
+          }
+        }
+      }
+    }
+  }
+
+  // product info
+  .project-info {
+    width: 80% !important;
+    margin: 3rem auto !important;
+    .product-details {
+      margin: 0 !important;
+      .product-title {
+      }
+      .product-text {
+      }
+    }
+    .product-feature {
+      .feat-title {
+        background-color: yellow !important;
+      }
+      .feat-num {
+      }
+      .feat-tit {
+      }
+      .feat-bdy {
+      }
+    }
+    .product-download {
+      .download-btn {
+      }
+    }
+  }
 }
 
 // /* Extra small devices (phones, 600px and down) */
@@ -359,14 +408,50 @@
 
     .card-content {
       font-size: var(--fs-24);
-      bottom: 5%;
+      bottom: 5% !important;
     }
   }
   .contact-form {
     width: 90% !important;
   }
+
+  // responsive footer
+  .footer-responsive {
+    .footer-items {
+      bottom: 65% !important;
+      padding-bottom: 15rem !important;
+    }
+  }
+
+  //  footer
+  .footer {
+    .lets-hunt {
+      .footer-items {
+        top: -3%;
+        .foot-title {
+        }
+        .footer-items-box {
+          .footer-list-title {
+          }
+          ul {
+            li {
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
+@media screen and (min-width: 450px) and (max-width: 768px) {
+  // responsive footer
+  .footer-responsive {
+    .footer-items {
+      bottom: 55% !important;
+      padding-bottom: 15rem !important;
+    }
+  }
+}
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -450,6 +535,24 @@
   }
   .contact-form {
     width: 80% !important;
+  }
+  //  footer
+  .footer {
+    .lets-hunt {
+      .footer-items {
+        top: 0;
+        .foot-title {
+        }
+        .footer-items-box {
+          .footer-list-title {
+          }
+          ul {
+            li {
+            }
+          }
+        }
+      }
+    }
   }
 }
 

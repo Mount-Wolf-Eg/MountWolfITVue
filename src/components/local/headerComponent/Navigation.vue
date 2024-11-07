@@ -4,13 +4,6 @@
       >Home</router-link
     >
 
-    <!-- <router-link
-      class="nav-link"
-      active-class="active"
-      :to="{ name: 'work-process' }"
-    >
-      Work Process
-    </router-link> -->
     <router-link
       class="nav-link"
       active-class="active"
@@ -18,13 +11,7 @@
     >
       Projects
     </router-link>
-    <!-- <router-link
-      class="nav-link"
-      active-class="active"
-      :to="{ name: 'products' }"
-    >
-      Products
-    </router-link> -->
+
     <router-link
       class="nav-link"
       active-class="active"

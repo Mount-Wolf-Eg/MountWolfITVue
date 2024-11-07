@@ -28,21 +28,14 @@ const router = createRouter({
       },
     },
     {
-      path: "/prjects/project",
+      path: "/prjects/project/:id",
       name: "project",
       component: () => import("../views/productInfo.vue"),
       meta: {
         title: "project",
       },
     },
-    {
-      path: "/products",
-      name: "products",
-      component: () => import("../views/ProductsView.vue"),
-      meta: {
-        title: "Products",
-      },
-    },
+
     {
       path: "/contact-us",
       name: "contact-us",

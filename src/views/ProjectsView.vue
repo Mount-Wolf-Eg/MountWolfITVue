@@ -29,7 +29,7 @@
       <div class="m-0 p-0 bg row col-12 col-md my-5 my-md-0 mx-md-5">
         <div class="row w-100 m-0 p-2">
           <div
-            class="col d-flex flex-row flex-wrap gap-3"
+            class="col d-flex flex-wrap flex-row gap-3 justify-content-center justify-content-md-start"
             style="width: auto"
             v-motion-slide-bottom
           >
@@ -39,7 +39,12 @@
               v-for="(item, i) in categData"
               :key="i"
             >
-              <ProjectCard :data="item"></ProjectCard>
+              <ProjectCard
+                :data="item"
+                @click="
+                  router.push({ name: 'project', params: { id: item.id } })
+                "
+              ></ProjectCard>
             </div>
             <div
               class="w-100 h-100 fs-4 d-flex justify-content-center align-items-center"
