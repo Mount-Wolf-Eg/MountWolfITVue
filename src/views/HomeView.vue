@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-info">
     <HeroSection :headSliders="headerSlider"></HeroSection>
     <ServicesHome
       id="services"
