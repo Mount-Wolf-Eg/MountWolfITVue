@@ -154,7 +154,6 @@ const route = useRoute();
 onMounted(async () => {});
 onBeforeMount(async () => {
   const res = await useSlidersStore().getSingleProject({ id: route.params.id });
-  console.log(singleProject.value);
   if (res == false) router.push({ name: "projects" });
 });
 </script>

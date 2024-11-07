@@ -40,7 +40,11 @@
           :key="i"
           class="h-100 m-0 swiper-card mx-2"
         >
-          <ProjectCard class="mx-auto" :data="slide"></ProjectCard>
+          <ProjectCard
+            @click="router.push({ name: 'project', params: { id: slide.id } })"
+            class="mx-auto"
+            :data="slide"
+          ></ProjectCard>
         </swiper-slide>
         <!-- <div class="swiper-button-next">
           <svg
@@ -75,8 +79,10 @@
 import { ref, watch } from "vue";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import { Pagination, Navigation, Autoplay } from "swiper";
-const modules = ref([Pagination, Navigation, Autoplay]);
 import ProjectCard from "@/reusables/ProjectCard.vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+const modules = ref([Pagination, Navigation, Autoplay]);
 
 const props = defineProps({
   projects: {
