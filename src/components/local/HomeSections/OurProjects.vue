@@ -38,7 +38,7 @@
         <swiper-slide
           v-for="(slide, i) in [...projects, ...projects]"
           :key="i"
-          class="h-100 m-0 swiper-card mx-2"
+          class="h-100 m-0 swiper-card mx-auto"
         >
           <ProjectCard
             @click="router.push({ name: 'project', params: { id: slide.id } })"

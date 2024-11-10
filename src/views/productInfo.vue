@@ -8,13 +8,12 @@
             {{ singleProject.content }}
           </p>
         </div>
-        <div class="co-12 col-md-3 text-center my-5">
+        <div class="co-12 col-md-4 text-center my-5">
           <img
-            :src="singleProject.image"
+            :src="singleProject.second_image"
             alt="product image"
             style="
               width: 100%;
-              max-width: 25rem;
               height: auto;
               object-fit: cover;
               object-position: center;
@@ -23,14 +22,14 @@
         </div>
       </div>
 
-      <div class="col-12 product-feature">
+      <div class="col-10 mx-auto product-feature">
         <div class="feat-title">Features</div>
         <div
           v-if="singleProject.features"
           class="mx-auto row d-flex justify-content-between align-items-center my-5"
         >
           <div
-            class="col-12 col-md-6 d-flex flex-row justify-content-center gap-5 py-5"
+            class="col-12 col-md-6 d-flex flex-row justify-content-start gap-5 py-5"
             v-for="(item, i) in singleProject.features"
             :key="i"
           >

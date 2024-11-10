@@ -5,7 +5,7 @@
   >
     <div class="style-3" style="margin: 8rem 0 10rem">Products</div>
 
-    <div style="width: 70%">
+    <div class="products-hero" style="width: 70%; margin: 0 auto !important">
       <swiper
         :autoplay="{
           delay: 2500,
@@ -16,6 +16,7 @@
         :breakpoints="breakpoints"
         class="w-100 h-100 py-2"
         :modules="modules"
+        :space-between="30"
         :pagination="{
           el: '.swiper-pagination',
           dynamicBullets: true,
@@ -37,7 +38,7 @@
         <swiper-slide
           v-for="(slide, i) in [...products, ...products]"
           :key="i"
-          class="h-100 m-0 swiper-card"
+          class="h-100 m-0 swiper-card mx-auto"
         >
           <ProjectCard class="mx-auto" :data="slide"></ProjectCard>
         </swiper-slide>
@@ -87,11 +88,15 @@ const props = defineProps({
 
 const breakpoints = {
   0: {
-    slidesPerView: 0.9,
+    slidesPerView: 1,
+    spaceBetween: 0,
+  },
+  350: {
+    slidesPerView: 1,
     spaceBetween: 0,
   },
   773: {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 10,
   },
   900: {

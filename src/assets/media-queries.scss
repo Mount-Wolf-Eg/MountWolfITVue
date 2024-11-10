@@ -441,6 +441,12 @@
       }
     }
   }
+  .products-hero {
+    width: 50% !important;
+    // .card-img {
+    //   width: 100% !important;
+    // }
+  }
 }
 
 @media screen and (min-width: 450px) and (max-width: 768px) {
@@ -554,6 +560,9 @@
       }
     }
   }
+  .products-hero {
+    width: 40% !important;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -635,6 +644,9 @@
         font-size: 0;
       }
     }
+  }
+  .products-hero {
+    width: 40% !important;
   }
 }
 
@@ -719,6 +731,9 @@
       }
     }
   }
+  .products-hero {
+    width: 35% !important;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1400px and up) */
@@ -755,5 +770,8 @@
         }
       }
     }
+  }
+  .products-hero {
+    width: 35% !important;
   }
 }

@@ -1,1 +1,0 @@
-import{_ as t,f as o,i as s,B as c,g as r,e as i}from"./index-Nnif_k89.js";const n={},_={class:"text-center fs-1 my-5"};function a(d,m){const e=i("motion-slide-bottom");return o((r(),s("div",_,[c("Products")])),[[e]])}const l=t(n,[["render",a]]);export{l as default};
