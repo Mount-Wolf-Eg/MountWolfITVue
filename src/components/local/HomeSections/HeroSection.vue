@@ -93,8 +93,10 @@
       >
         <p class="hero-text-tilte" style="margin-bottom: 3rem">let's hunt</p>
         <p class="hero-text-body">
-           The point of using Lorem Ipsum is that it has a more-or-less normal
-          distribution of letters
+          Every brand is a lone wolf, powerful and ready to thrive. Mount Wolf
+          builds custom software solutions, each crafted with the focus and
+          resilience of the wild. Join us as we bring your brand to life and
+          guide it to claim its ground.
         </p>
       </span>
     </div>
