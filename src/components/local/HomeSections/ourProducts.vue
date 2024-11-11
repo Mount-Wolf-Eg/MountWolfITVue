@@ -5,7 +5,7 @@
   >
     <div class="style-3" style="margin: 8rem 0 10rem">Products</div>
 
-    <div class="products-hero" style="width: 70%; margin: 0 auto !important">
+    <div class="products-hero" style="width: 70vw; margin: 0 auto !important">
       <swiper
         :autoplay="{
           delay: 2500,
