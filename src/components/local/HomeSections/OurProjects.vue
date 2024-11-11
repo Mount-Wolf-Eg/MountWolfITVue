@@ -97,60 +97,57 @@ const breakpoints = {
     slidesPerView: 1,
     spaceBetween: 0,
   },
-  350: {
-    slidesPerView: 1,
-    spaceBetween: 0,
-  },
+
   400: {
     slidesPerView: 1,
-    spaceBetween: 5,
+    spaceBetween: 0,
   },
   500: {
     slidesPerView: 1.5,
     spaceBetween: 10,
   },
   600: {
-    slidesPerView: 2.2,
+    slidesPerView: 2,
     spaceBetween: 10,
   },
   700: {
-    slidesPerView: 2.8,
+    slidesPerView: 2.2,
     spaceBetween: 10,
   },
   770: {
-    slidesPerView: 3.8,
+    slidesPerView: 3,
     spaceBetween: 10,
   },
   810: {
-    slidesPerView: 4,
+    slidesPerView: 3.2,
     spaceBetween: 10,
   },
   950: {
-    slidesPerView: 4.2,
+    slidesPerView: 3.8,
     spaceBetween: 10,
   },
   1190: {
-    slidesPerView: 4.4,
+    slidesPerView: 3.8,
     spaceBetween: 10,
   },
   1400: {
-    slidesPerView: 4,
+    slidesPerView: 3.5,
     spaceBetween: 10,
   },
   1490: {
-    slidesPerView: 4.2,
+    slidesPerView: 3.6,
     spaceBetween: 10,
   },
   1600: {
-    slidesPerView: 4.5,
+    slidesPerView: 4,
     spaceBetween: 10,
   },
   1700: {
-    slidesPerView: 5,
+    slidesPerView: 4,
     spaceBetween: 10,
   },
   1800: {
-    slidesPerView: 5,
+    slidesPerView: 4.5,
     spaceBetween: 10,
   },
 };

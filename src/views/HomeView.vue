@@ -73,7 +73,7 @@ onMounted(async () => {
       });
     },
     {
-      threshold: 0.5,
+      threshold: 0.25,
     }
   );
   const el = document.querySelector("#services");

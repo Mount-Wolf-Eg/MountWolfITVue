@@ -97,23 +97,23 @@ const breakpoints = {
   },
   773: {
     slidesPerView: 2,
-    spaceBetween: 10,
+    spaceBetween: 0,
   },
   900: {
     slidesPerView: 2,
-    spaceBetween: 10,
+    spaceBetween: 0,
   },
   1380: {
-    slidesPerView: 1.7,
-    spaceBetween: 10,
+    slidesPerView: 2,
+    spaceBetween: 0,
   },
   1700: {
     slidesPerView: 2,
-    spaceBetween: 10,
+    spaceBetween: 0,
   },
   1900: {
-    slidesPerView: 2.2,
-    spaceBetween: 10,
+    slidesPerView: 2,
+    spaceBetween: 0,
   },
 };
 </script>
