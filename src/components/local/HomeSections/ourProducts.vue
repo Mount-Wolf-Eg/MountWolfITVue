@@ -36,7 +36,10 @@
         :Lazy="true"
       >
         <swiper-slide
-          v-for="(slide, i) in [...products, ...products]"
+          v-for="(slide, i) in [
+            ...products.filter((e) => e.sticky == 1),
+            ...products.filter((e) => e.sticky == 1),
+          ]"
           :key="i"
           class="h-100 m-0 swiper-card mx-auto"
         >

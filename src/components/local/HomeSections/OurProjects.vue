@@ -4,7 +4,6 @@
     v-motion-slide-bottom
   >
     <div class="style-3" style="margin: 8rem 0 10rem">PROJECTS</div>
-
     <div class="projects-hero" style="width: 70vw; margin: 0 auto !important">
       <swiper
         :autoplay="{
@@ -36,7 +35,10 @@
         :Lazy="true"
       >
         <swiper-slide
-          v-for="(slide, i) in [...projects, ...projects]"
+          v-for="(slide, i) in [
+            ...projects.filter((e) => e.sticky == 1),
+            ...projects.filter((e) => e.sticky == 1),
+          ]"
           :key="i"
           class="h-100 m-0 swiper-card mx-auto"
         >
