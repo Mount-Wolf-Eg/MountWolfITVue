@@ -56,9 +56,9 @@ onMounted(async () => {
   ]);
 
   AllServices.value = {
-    left: servicesLeft.value,
-    right: servicesRight.value,
-    bottom: servicesBottom.value,
+    left: servicesLeft.value.slice(-3),
+    right: servicesRight.value.slice(-3),
+    bottom: servicesBottom.value.slice(-4),
   };
   const observer = new IntersectionObserver(
     (entries) => {
