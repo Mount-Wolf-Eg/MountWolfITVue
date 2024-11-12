@@ -206,6 +206,7 @@ const sendApplication = async () => {
       phone: formData.value.number,
       email: formData.value.email,
       message: formData.value.message,
+      formName: "ََQuote",
     });
     if (res) {
       resetFormData();
