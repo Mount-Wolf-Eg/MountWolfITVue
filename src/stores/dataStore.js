@@ -53,8 +53,8 @@ export const useSlidersStore = defineStore("sliderStore", {
       await axiosInstance
         .get(`${mainStore().apiLink}/admin/Settings/show`)
         .then((res) => {
-          this.allSettings = res.data.data[0].settings;
-          this.allWorkProcesses = res.data.data[0].settings.work_process;
+          this.allSettings = res.data.data.settings;
+          this.allWorkProcesses = res.data.data.settings.work_process;
         })
         .catch((err) => {
           let errorMessage = "Something went wrong, please try again";
