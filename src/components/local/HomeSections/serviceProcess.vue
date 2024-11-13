@@ -37,7 +37,7 @@
           <span
             class="d-block d-md-none ms-auto"
             style="color: var(--col-text)"
-            >{{ i < 10 ? "0" + i : i }}</span
+            >{{ i < 10 ? "0" + (i + 1) : i }}</span
           >
         </div>
       </div>

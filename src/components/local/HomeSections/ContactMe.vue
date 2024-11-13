@@ -28,7 +28,12 @@
               Websites and Platforms
             </option>
 
-            <option v-for="(el, j) in props.sectors" :key="j" :value="el.name">
+            <option
+              v-for="(el, j) in props.sectors"
+              :key="j"
+              :value="el.name"
+              class="w-100"
+            >
               {{ el.name }}
             </option>
           </select>

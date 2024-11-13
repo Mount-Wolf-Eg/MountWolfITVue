@@ -27,7 +27,10 @@ export const useSlidersStore = defineStore("sliderStore", {
     // all admins
     async getAllSliders() {
       await axiosInstance
-        .get(`${mainStore().apiLink}/admin/slider/showSlidersTypes`, {})
+        .get(
+          `${mainStore().apiLink}/admin/slider/showSlidersTypesWithoutTrashed`,
+          {}
+        )
         .then((res) => {
           this.headerSlider = res.data.data.header_slider;
           this.aboutSlider = res.data.data.about_slider;
@@ -70,7 +73,7 @@ export const useSlidersStore = defineStore("sliderStore", {
     },
     async getAllProjects() {
       await axiosInstance
-        .get(`${mainStore().apiLink}/admin/Projects/all`)
+        .get(`${mainStore().apiLink}/admin/Projects/show`)
         .then((res) => {
           this.allProjects = res.data.data;
         })
@@ -112,7 +115,7 @@ export const useSlidersStore = defineStore("sliderStore", {
 
     async getAllProducts() {
       await axiosInstance
-        .get(`${mainStore().apiLink}/admin/Products/all`)
+        .get(`${mainStore().apiLink}/admin/Products/show`)
         .then((res) => {
           this.allProducts = res.data.data;
         })
@@ -130,7 +133,7 @@ export const useSlidersStore = defineStore("sliderStore", {
     },
     async getAllProjectsCategory() {
       await axiosInstance
-        .get(`${mainStore().apiLink}/admin/ProjectCategories/all`)
+        .get(`${mainStore().apiLink}/admin/ProjectCategories/show`)
         .then((res) => {
           this.allProjectsCategory = res.data.data.reverse();
         })

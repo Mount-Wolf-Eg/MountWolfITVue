@@ -59,6 +59,7 @@
           </div>
         </div>
         <div
+          v-if="singleProject.attachments"
           class="d-flex gap-3 py-5 flex-wrap align-items-center justify-content-center"
         >
           <div
@@ -66,7 +67,13 @@
             v-for="(slide, i) in singleProject.attachments"
             :key="i"
           >
-            <ProjectCard :data="slide"></ProjectCard>
+            <div class="project-card">
+              <div>
+                <img class="card-img" :src="slide" alt="" />
+                <div class="card-content">{{ slide.name }}</div>
+              </div>
+            </div>
+            <!-- <ProjectCard :data="slide"></ProjectCard> -->
           </div>
         </div>
       </div>
