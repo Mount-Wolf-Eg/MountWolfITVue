@@ -6,7 +6,7 @@
       class="layout nav-bar pb-4"
       style="display: flex; justify-content: space-between"
     >
-      <NavTitle></NavTitle>
+      <NavTitle :logSrc="allSettings.logo"></NavTitle>
       <Navigation></Navigation>
       <SocialIcon></SocialIcon>
     </div>
@@ -218,6 +218,9 @@ import { onMounted, onBeforeUnmount, ref, watch } from "vue";
 import NavTitle from "@/components/local/headerComponent/NavTitle.vue";
 import SocialIcon from "../local/headerComponent/SocialIcon.vue";
 import Navigation from "../local/headerComponent/Navigation.vue";
+import { useSlidersStore } from "@/stores/dataStore";
+import { storeToRefs } from "pinia";
+const { allSettings } = storeToRefs(useSlidersStore());
 let navResponse = ref(false);
 
 // onMounted(() => {
@@ -231,17 +234,33 @@ let navResponse = ref(false);
 //   };
 // });
 
-onMounted(() => {
-  const updateNavResponse = () => {
-    navResponse.value = window.innerWidth <= 768;
-  };
+// onMounted(async () => {
+//   await useSlidersStore().getAllSettings();
+//   const updateNavResponse = () => {
+//     navResponse.value = window.innerWidth <= 768;
+//   };
 
+//   updateNavResponse();
+
+//   window.addEventListener("resize", updateNavResponse);
+
+//   onBeforeUnmount(() => {
+//     window.removeEventListener("resize", updateNavResponse);
+//   });
+// });
+const updateNavResponse = () => {
+  navResponse.value = window.innerWidth <= 768;
+};
+
+// Register the onBeforeUnmount hook before awaiting the asynchronous operation
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", updateNavResponse);
+});
+
+onMounted(async () => {
+  await useSlidersStore().getAllSettings();
   updateNavResponse();
   window.addEventListener("resize", updateNavResponse);
-
-  onBeforeUnmount(() => {
-    window.removeEventListener("resize", updateNavResponse);
-  });
 });
 </script>
 

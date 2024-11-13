@@ -143,19 +143,34 @@ let footerResponse = ref(false);
 //   };
 // });
 
+// onMounted(async () => {
+//   await useSlidersStore().getAllSettings();
+
+//   const updateFooterResponse = () => {
+//     footerResponse.value = window.innerWidth <= 600;
+//   };
+
+//   updateFooterResponse();
+//   window.addEventListener("resize", updateFooterResponse);
+
+//   onBeforeUnmount(() => {
+//     window.removeEventListener("resize", updateFooterResponse);
+//   });
+// });
+
+const updateFooterResponse = () => {
+  footerResponse.value = window.innerWidth <= 600;
+};
+
+// Register the onBeforeUnmount hook before awaiting the asynchronous operation
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", updateFooterResponse);
+});
+
 onMounted(async () => {
   await useSlidersStore().getAllSettings();
-
-  const updateFooterResponse = () => {
-    footerResponse.value = window.innerWidth <= 600;
-  };
-
   updateFooterResponse();
   window.addEventListener("resize", updateFooterResponse);
-
-  onBeforeUnmount(() => {
-    window.removeEventListener("resize", updateFooterResponse);
-  });
 });
 </script>
 
