@@ -71,7 +71,7 @@
         </div>
       </div>
       <div class="service-feat">
-        <div class="w-75 w-md-50 mx-auto row">
+        <div class="w-75 w-md-50 mx-auto row f-box">
           <div
             class="col-6 col-md-3 d-flex align-items-center gap-2 flex-column justify-content-center"
             v-for="(item, k) in props.serviceData.bottom"

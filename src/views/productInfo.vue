@@ -63,7 +63,7 @@
         >
           <div
             class="mx-3"
-            v-for="(slide, i) in singleProject.NewAttachments"
+            v-for="(slide, i) in singleProject.attachments"
             :key="i"
           >
             <ProjectCard :data="slide"></ProjectCard>
@@ -154,6 +154,7 @@ onMounted(async () => {});
 onBeforeMount(async () => {
   const res = await useSlidersStore().getSingleProject({ id: route.params.id });
   if (res == false) router.push({ name: "projects" });
+  console.log("project", singleProject.value);
 });
 </script>
 

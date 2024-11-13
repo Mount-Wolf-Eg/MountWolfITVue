@@ -72,10 +72,11 @@
   }
   // service section
   .service-sec {
-    height: 125rem;
+    height: 150rem;
     .ser-title {
+      margin-top: auto;
       padding: 3rem 0;
-      font-size: var(--fs-22);
+      font-size: var(--fs-30);
     }
     .service-img {
       height: 100% !important ;
@@ -95,11 +96,12 @@
             width: 80% !important;
             padding: 1.5rem 5rem !important;
             img {
-              width: 3rem !important;
-              height: 3rem !important;
+              width: 5rem !important;
+              height: 5rem !important;
             }
             p {
-              font-size: var(--fs-22) !important;
+              padding-left: 4px !important;
+              font-size: var(--fs-30) !important;
             }
           }
         }
@@ -127,19 +129,26 @@
       }
 
       .service-feat {
-        img {
-          height: 3.2rem !important;
-          margin-bottom: 1.5rem !important;
-        }
-        .feat {
-          font-size: var(--fs-20);
+        margin-top: 7rem;
+        .f-box {
+          width: 100% !important;
+          div {
+            margin-bottom: 5rem;
+            img {
+              height: 4.8rem !important;
+              margin-bottom: 2rem !important;
+            }
+            .feat {
+              font-size: var(--fs-28);
+            }
+          }
         }
       }
     }
   }
   // service process
   .service-process {
-    height: 110rem;
+    height: 140rem;
     .service-proc-img {
       flex-direction: column-reverse;
       align-items: center;
@@ -156,16 +165,24 @@
         align-items: center;
         justify-content: space-between;
         .service-proc-title {
-          font-size: var(--fs-24) !important;
+          font-size: var(--fs-30) !important;
         }
         .service-proc-feat {
-          padding: 3rem 2rem !important;
+          padding: 4rem 2rem !important;
           width: 80%;
-          padding: 0 3rem;
-          font-size: var(--fs-22);
+          font-size: var(--fs-28);
         }
       }
     }
+  }
+  .proj-title {
+    font-size: var(--fs-30);
+    margin: 8rem auto 5rem !important;
+  }
+
+  .thin-label {
+    font-size: var(--fs-30);
+    margin: 8rem 0 4rem !important;
   }
   // project card
   .project-card {
@@ -305,10 +322,10 @@
   }
   // service section
   .service-sec {
-    height: 160rem;
+    height: 165rem;
     .ser-title {
       padding: 3rem 0;
-      font-size: var(--fs-22);
+      font-size: var(--fs-28);
     }
     .service-img {
       height: 100% !important ;
@@ -328,11 +345,12 @@
             width: 80% !important;
             padding: 1.5rem 5rem !important;
             img {
-              width: 3rem !important;
-              height: 3rem !important;
+              width: 4rem !important;
+              height: 4rem !important;
             }
             p {
-              font-size: var(--fs-22) !important;
+              padding-left: 2px !important;
+              font-size: var(--fs-28) !important;
             }
           }
         }
@@ -361,12 +379,19 @@
       }
 
       .service-feat {
-        img {
-          height: 3.2rem !important;
-          margin-bottom: 1.5rem !important;
-        }
-        .feat {
-          font-size: var(--fs-20);
+        margin-top: 5rem;
+        .f-box {
+          width: 100% !important;
+          div {
+            margin-bottom: 3rem;
+            img {
+              height: 5rem !important;
+              margin-bottom: 2rem !important;
+            }
+            .feat {
+              font-size: var(--fs-20);
+            }
+          }
         }
       }
     }
@@ -390,17 +415,28 @@
         align-items: center;
         justify-content: space-between;
         .service-proc-title {
-          font-size: var(--fs-24) !important;
+          font-size: var(--fs-30) !important;
         }
         .service-proc-feat {
-          padding: 3rem 2rem !important;
+          padding: 3.5rem 2rem !important;
           width: 90%;
           padding: 0 3rem;
-          font-size: var(--fs-22) !important;
+          font-size: var(--fs-28) !important;
         }
       }
     }
   }
+
+  .proj-title {
+    font-size: var(--fs-28);
+    margin: 10rem auto 5rem !important;
+  }
+
+  .thin-label {
+    font-size: var(--fs-28);
+    margin: 10rem 0 4rem !important;
+  }
+
   // project card
   .project-card {
     width: 35rem;
@@ -419,7 +455,7 @@
   .footer-responsive {
     .footer-items {
       bottom: 65% !important;
-      padding-bottom: 15rem !important;
+      padding-bottom: 20rem !important;
     }
   }
 
@@ -503,9 +539,22 @@
   // service section
   .service-sec {
     height: 85rem;
+    .ser-title {
+      margin-top: auto;
+      font-size: var(--fs-30);
+    }
     .service-img {
       height: 100%;
+      justify-content: center !important;
       .box-responsive {
+        .service-list {
+          .serv-item {
+            img {
+              width: 5rem;
+            }
+          }
+        }
+
         .img-circle {
           height: 67rem !important;
           .serv-image {

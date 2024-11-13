@@ -3,7 +3,7 @@
     class="d-flex justify-content-center align-items-center flex-column"
     v-motion-slide-bottom
   >
-    <div class="style-3" style="margin: 8rem 0 10rem">PROJECTS</div>
+    <div class="style-3 proj-title" style="margin: 8rem 0 10rem">PROJECTS</div>
     <div class="projects-hero" style="width: 70vw; margin: 0 auto !important">
       <swiper
         :autoplay="{
