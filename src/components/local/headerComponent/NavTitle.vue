@@ -1,8 +1,9 @@
 <template>
   <div class="d-flex flex-column align-items-center text-center">
     <router-link to="/">
+      <!-- src="/src/assets/media/MOUNT WOLF SOFTWARE Icon -03.png" -->
       <img
-        src="/src/assets/media/MOUNT WOLF SOFTWARE Icon -03.png"
+        :src="props.logSrc"
         style="
           height: 6.2rem;
           width: auto;
@@ -17,6 +18,14 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  logSrc: {
+    type: String,
+    Required: true,
+    default: "",
+  },
+});
+</script>
 
 <style lang="scss" scoped></style>
