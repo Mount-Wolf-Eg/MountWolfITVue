@@ -222,26 +222,35 @@
   // product info
   .project-info {
     width: 80% !important;
+    width: 90% !important;
     margin: 3rem auto !important;
     .product-details {
       margin: 0 !important;
       .product-title {
+        font-size: var(--fs-33);
       }
       .product-text {
+        font-size: var(--fs-28);
+        line-height: var(--fs-33);
       }
     }
     .product-feature {
       .feat-title {
+        font-size: var(--fs-33);
       }
       .feat-num {
       }
       .feat-tit {
+        font-size: var(--fs-30);
       }
       .feat-bdy {
+        font-size: var(--fs-28);
+        line-height: var(--fs-30);
       }
     }
     .product-download {
       .download-btn {
+        width: 100%;
       }
     }
   }
@@ -421,7 +430,7 @@
           padding: 3.5rem 2rem !important;
           width: 90%;
           padding: 0 3rem;
-          font-size: var(--fs-28) !important;
+          font-size: var(--fs-26) !important;
         }
       }
     }
@@ -456,6 +465,35 @@
     .footer-items {
       bottom: 65% !important;
       padding-bottom: 20rem !important;
+    }
+  }
+  .project-info {
+    width: 80% !important;
+    width: 90% !important;
+    margin: 3rem auto !important;
+    .product-details {
+      margin: 0 !important;
+      .product-title {
+        font-size: var(--fs-33);
+      }
+      .product-text {
+        font-size: var(--fs-28);
+        line-height: var(--fs-33);
+      }
+    }
+  }
+  .product-feature {
+    .feat-title {
+      font-size: var(--fs-30) !important;
+    }
+    .feat-num {
+    }
+    .feat-tit {
+      font-size: var(--fs-30) !important;
+    }
+    .feat-bdy {
+      font-size: var(--fs-26) !important;
+      line-height: var(--fs-28) !important;
     }
   }
 
