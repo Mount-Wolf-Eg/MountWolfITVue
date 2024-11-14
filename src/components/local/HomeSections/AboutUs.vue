@@ -46,6 +46,7 @@
               :src="slide.image"
               style="
                 width: 100%;
+                max-height: 100vh;
                 height: auto;
                 object-fit: cover;
                 object-position: center;

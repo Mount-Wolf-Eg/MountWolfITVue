@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="projects.filter((e) => e.sticky == 1).length > 0"
     class="d-flex justify-content-center align-items-center flex-column"
     v-motion-slide-bottom
   >
