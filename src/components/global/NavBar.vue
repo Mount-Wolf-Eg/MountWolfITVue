@@ -17,7 +17,7 @@
       class="navbar sticky-top"
     >
       <div class="container-fluid layout nav-bar pt-3 px-5 pb-0">
-        <NavTitle></NavTitle>
+        <NavTitle :logSrc="allSettings.logo"></NavTitle>
 
         <button
           class="navbar-toggler py-2 px-3"

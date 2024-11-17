@@ -19,6 +19,7 @@
       }"
       :pagination="{
         el: '.swiper-pagination',
+        dynamicBullets: true,
         clickable: true,
       }"
       :loop="true"
@@ -63,30 +64,33 @@
       </swiper-slide>
       <div class="swiper-button-next" style="z-index: 1">
         <svg
-          style="transform: scaleX(-1); font-weight: thin"
-          fill="#fff"
+          style="width: 3.8rem; height: 3.8rem"
+          viewBox="0 0 38 38"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
         >
           <path
-            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"
+            d="M33.7071 19.7071C34.0976 19.3166 34.0976 18.6834 33.7071 18.2929L27.3431 11.9289C26.9526 11.5384 26.3195 11.5384 25.9289 11.9289C25.5384 12.3195 25.5384 12.9526 25.9289 13.3431L31.5858 19L25.9289 24.6569C25.5384 25.0474 25.5384 25.6805 25.9289 26.0711C26.3195 26.4616 26.9526 26.4616 27.3431 26.0711L33.7071 19.7071ZM5 20L33 20L33 18L5 18L5 20Z"
+            fill="white"
           />
         </svg>
       </div>
+
       <div class="swiper-button-prev">
         <svg
-          style="font-weight: thin"
-          fill="#fff"
+          style="width: 3.8rem; height: 3.8rem"
+          viewBox="0 0 38 38"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
         >
           <path
-            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"
+            d="M4.29289 18.2929C3.90237 18.6834 3.90237 19.3166 4.29289 19.7071L10.6569 26.0711C11.0474 26.4616 11.6805 26.4616 12.0711 26.0711C12.4616 25.6805 12.4616 25.0474 12.0711 24.6569L6.41421 19L12.0711 13.3431C12.4616 12.9526 12.4616 12.3195 12.0711 11.9289C11.6805 11.5384 11.0474 11.5384 10.6569 11.9289L4.29289 18.2929ZM33 18L5 18L5 20L33 20L33 18Z"
+            fill="white"
           />
         </svg>
       </div>
-      <!-- <div class="swiper-pagination" style="transform: rotate(90deg)"></div> -->
     </swiper>
+    <div class="swiper-pagination"></div>
     <div class="hero-text">
       <span
         class="d-flex justify-content-center align-items-center flex-column w-100"
@@ -131,4 +135,23 @@ watch(
 );
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+// .swiper-pagination {
+//   height: 50px !important;
+//   position: absolute;
+//   bottom: 10px; /* Adjust if necessary */
+//   z-index: 999 !important;
+// }
+
+// .swiper-pagination-bullet {
+//   background-color: rgba(255, 255, 255, 0.5);
+//   width: 12px !important;
+//   height: 12px !important;
+//   margin: 0 5px !important;
+//   opacity: 1 !important;
+// }
+
+// .swiper-pagination-bullet-active {
+//   background-color: #fff !important;
+// }
+</style>

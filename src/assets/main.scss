@@ -189,15 +189,14 @@ body {
     .hero-text-tilte {
       font-style: var(--fw-normal);
       font-weight: 500;
-      font-size: var(--fs-24);
+      font-size: var(--fs-20);
       line-height: var(--line-s-27);
       color: var(--col-whtie);
       text-transform: var(--f-style-upper);
     }
     .hero-text-body {
-      font-size: var(--ft-main);
-      font-weight: 500;
-      font-size: var(--fs-20);
+      font-weight: var(--fw-normal);
+      font-size: var(--fs-16);
       line-height: var(--line-s-24);
       color: var(--col-whtie);
       text-transform: var(--f-style-capt);
@@ -206,8 +205,9 @@ body {
 
   .swiper-button-next,
   .swiper-button-prev {
-    width: 3.8rem;
-    height: 3.8rem;
+    // width: 3.8rem;
+    // height: 3.8rem;
+    top: 40% !important;
     &::after {
       content: "";
     }
@@ -218,14 +218,6 @@ body {
   .swiper-button-prev {
     left: 20rem;
   }
-  // .swiper-pagination {
-  //   left: 10rem !important;
-  //   & * {
-  //     width: 1.2rem;
-  //     height: 1.2rem;
-  //     background-color: white !important;
-  //   }
-  // }
 }
 // about us
 // swiper controls
@@ -420,7 +412,7 @@ body {
   width: 20%;
   font-style: var(--fw-normal);
   font-weight: var(--fw-normal) !important;
-  font-size: var(--fs-18) !important;
+  font-size: var(--fs-16) !important;
   line-height: var(--line-s-24);
   color: var(--col-second);
   text-transform: capitalize;

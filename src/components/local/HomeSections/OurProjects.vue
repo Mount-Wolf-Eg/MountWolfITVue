@@ -6,11 +6,16 @@
   >
     <div class="style-3 proj-title" style="margin: 8rem 0 10rem">PROJECTS</div>
     <div class="projects-hero" style="width: 70vw; margin: 0 auto !important">
-      <swiper
-        :autoplay="{
+      <!-- :autoplay="{
           delay: 2500,
           disableOnInteraction: false,
-        }"
+        }" -->
+      <!-- :Autoplay="{
+          delay: 1000,
+          disableOnInteraction: true,
+          waitForTransition: true,
+        }" -->
+      <swiper
         :keyboard="{ enabled: true }"
         :slides-per-view="5"
         :breakpoints="breakpoints"
@@ -23,11 +28,6 @@
           clickable: true,
         }"
         :loop="true"
-        :Autoplay="{
-          delay: 1000,
-          disableOnInteraction: true,
-          waitForTransition: true,
-        }"
         :navigation="{
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
