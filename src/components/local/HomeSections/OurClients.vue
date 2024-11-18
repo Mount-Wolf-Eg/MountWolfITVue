@@ -1,7 +1,7 @@
 <template>
   <div style="margin-bottom: 200rem; width: 80%; margin: 0 auto">
     <div class="client-slid">
-      <div class="slide-title text-center">our clients</div>
+      <div class="slide-title text-center">Our Clients</div>
 
       <swiper
         :keyboard="{ enabled: true }"
