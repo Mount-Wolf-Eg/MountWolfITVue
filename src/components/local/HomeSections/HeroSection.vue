@@ -78,7 +78,7 @@
       <div
         class="swiper-button-next"
         style="z-index: 1"
-        v-if="props.headSliders.length != 0"
+        v-if="props.headSliders.length > 1"
       >
         <svg
           style="width: 3.8rem; height: 3.8rem"
@@ -93,7 +93,7 @@
         </svg>
       </div>
 
-      <div class="swiper-button-prev" v-if="props.headSliders.length != 0">
+      <div class="swiper-button-prev" v-if="props.headSliders.length > 1">
         <svg
           style="width: 3.8rem; height: 3.8rem"
           viewBox="0 0 38 38"
