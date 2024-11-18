@@ -60,14 +60,15 @@
                 class="d-flex justify-content-center align-items-center flex-column w-100"
               >
                 <p class="hero-text-tilte" style="margin-bottom: 3rem">
-                  let's hunt
+                  <!-- let's hunt -->
+                  {{ slide.title }}
                 </p>
                 <p class="hero-text-body">
                   <!-- Every brand is a lone wolf, powerful and ready to thrive.
                   Mount Wolf builds custom software solutions, each crafted with
                   the focus and resilience of the wild. Join us as we bring your
                   brand to life and guide it to claim its ground. -->
-                  {{ slide.title }}
+                  {{ slide.description }}
                 </p>
               </span>
             </div>
