@@ -70,6 +70,12 @@
       }
     }
   }
+
+  .client-slid {
+    .slide-title {
+      font-size: var(--fs-30) !important;
+    }
+  }
   // service section
   .service-sec {
     height: 150rem;
@@ -329,6 +335,11 @@
       }
     }
   }
+  .client-slid {
+    .slide-title {
+      font-size: var(--fs-28) !important;
+    }
+  }
   // service section
   .service-sec {
     height: 165rem;
@@ -572,6 +583,11 @@
     }
     .swiper-button-prev {
       left: 10rem;
+    }
+  }
+  .client-slid {
+    .slide-title {
+      font-size: var(--fs-30) !important;
     }
   }
   // service section
