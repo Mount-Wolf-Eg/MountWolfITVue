@@ -265,6 +265,7 @@ body {
         font-weight: 500;
         font-size: var(--fs-18);
         line-height: var(--line-s-19);
+        color: var(--col-white);
       }
       .footer-items-box {
         margin: 0 auto;
@@ -455,7 +456,7 @@ body {
   font-weight: var(--fw-bold);
   font-size: var(--fs-18);
   line-height: var(--line-s-19);
-  color: var(--col-second);
+  color: var(--col-white);
   padding: 3rem 0 2rem;
 }
 
@@ -557,7 +558,7 @@ textarea {
     font-weight: var(--fw-bold);
     font-size: var(--fs-18);
     line-height: var(--line-s-19);
-    color: var(--col-second);
+    color: var(--col-white);
     padding: 5rem 0 2rem;
   }
   .ser-bg-img {
@@ -624,7 +625,7 @@ textarea {
         font-weight: 500;
         font-size: var(--fs-16);
         line-height: var(--line-s-19);
-        color: var(--col-second);
+        color: var(--col-white);
       }
     }
   }
@@ -661,7 +662,7 @@ textarea {
       font-weight: var(--fw-bold);
       font-size: var(--fs-18);
       line-height: var(--line-s-19);
-      color: var(--col-second);
+      color: var(--col-white);
       padding-bottom: 2rem;
     }
     .service-proc-feat {

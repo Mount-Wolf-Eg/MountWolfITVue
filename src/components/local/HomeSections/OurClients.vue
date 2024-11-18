@@ -1,15 +1,9 @@
 <template>
   <div style="margin-bottom: 200rem; width: 80%; margin: 0 auto">
     <div class="client-slid">
-      <div class="slide-title thin-label text-center">
-        The spoils of our hunting
-      </div>
+      <div class="slide-title text-center">our clients</div>
 
       <swiper
-        :autoplay="{
-          delay: 2500,
-          disableOnInteraction: false,
-        }"
         :keyboard="{ enabled: true }"
         :slides-per-view="5"
         :breakpoints="breakpoints"
@@ -21,7 +15,7 @@
           clickable: true,
         }"
         :loop="true"
-        :Autoplay="{
+        :autoplay="{
           delay: 1000,
           disableOnInteraction: true,
           waitForTransition: true,
@@ -105,7 +99,12 @@ const props = defineProps({
 .client-slid {
   margin-bottom: 10rem;
   .slide-title {
-    margin: 20rem 0 8rem;
+    margin: 15rem 0 8rem;
+    text-align: center;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-18);
+    line-height: var(--line-s-19);
+    color: var(--col-white);
   }
 }
 
