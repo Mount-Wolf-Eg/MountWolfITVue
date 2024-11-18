@@ -38,17 +38,19 @@
           :key="i"
           class="h-100 my-auto"
         >
-          <img
-            :src="slide.image"
-            alt="client image"
-            style="
-              width: 100%;
-              height: auto;
-              object-fit: contain;
-              object-position: center;
-              max-width: 7rem;
-            "
-          />
+          <a :href="slide.url" target="_blank">
+            <img
+              class="client-lg"
+              :src="slide.image"
+              alt="client image"
+              style="
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                object-position: center;
+              "
+            />
+          </a>
         </swiper-slide>
       </swiper>
     </div>
@@ -64,19 +66,19 @@ const modules = ref([Pagination, Navigation, Autoplay]);
 const breakpoints = {
   0: {
     slidesPerView: 3.5,
-    spaceBetween: 10,
+    spaceBetween: 30,
   },
   330: {
     slidesPerView: 4,
-    spaceBetween: 10,
+    spaceBetween: 30,
   },
   575: {
     slidesPerView: 8,
-    spaceBetween: 10,
+    spaceBetween: 30,
   },
   1299: {
     slidesPerView: 8,
-    spaceBetween: 10,
+    spaceBetween: 30,
   },
 };
 
@@ -104,6 +106,14 @@ const props = defineProps({
   margin-bottom: 10rem;
   .slide-title {
     margin: 20rem 0 8rem;
+  }
+}
+
+.client-lg {
+  filter: saturate(0);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    filter: saturate(1);
   }
 }
 </style>

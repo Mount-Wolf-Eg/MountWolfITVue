@@ -10,10 +10,6 @@
       :modules="modules"
       :autoplay="{
         delay: 2500,
-        disableOnInteraction: false,
-      }"
-      :Autoplay="{
-        delay: 1000,
         disableOnInteraction: true,
         waitForTransition: true,
       }"
@@ -62,7 +58,11 @@
           </div>
         </div>
       </swiper-slide>
-      <div class="swiper-button-next" style="z-index: 1">
+      <div
+        class="swiper-button-next"
+        style="z-index: 1"
+        v-if="props.headSliders.length != 0"
+      >
         <svg
           style="width: 3.8rem; height: 3.8rem"
           viewBox="0 0 38 38"
@@ -76,7 +76,7 @@
         </svg>
       </div>
 
-      <div class="swiper-button-prev">
+      <div class="swiper-button-prev" v-if="props.headSliders.length != 0">
         <svg
           style="width: 3.8rem; height: 3.8rem"
           viewBox="0 0 38 38"
@@ -89,8 +89,8 @@
           />
         </svg>
       </div>
+      <div class="swiper-pagination"></div>
     </swiper>
-    <div class="swiper-pagination"></div>
     <div class="hero-text">
       <span
         class="d-flex justify-content-center align-items-center flex-column w-100"
@@ -136,22 +136,15 @@ watch(
 </script>
 
 <style lang="scss" scoped>
-// .swiper-pagination {
-//   height: 50px !important;
-//   position: absolute;
-//   bottom: 10px; /* Adjust if necessary */
-//   z-index: 999 !important;
-// }
-
-// .swiper-pagination-bullet {
-//   background-color: rgba(255, 255, 255, 0.5);
-//   width: 12px !important;
-//   height: 12px !important;
-//   margin: 0 5px !important;
-//   opacity: 1 !important;
-// }
-
-// .swiper-pagination-bullet-active {
-//   background-color: #fff !important;
-// }
+.swiper-pagination {
+  left: 11% !important;
+  top: 50%;
+  height: 45px !important;
+  transform: rotate(90deg) !important;
+  & * {
+    background-color: white;
+    width: 1rem;
+    height: 1rem;
+  }
+}
 </style>

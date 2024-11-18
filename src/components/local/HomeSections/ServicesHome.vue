@@ -36,7 +36,10 @@
             <p class="m-0 p-0">{{ elL.title }}</p>
           </div>
         </div>
-        <div class="col-12 col-md-4 img-circle" style="z-index: 99">
+        <div
+          class="col-12 col-md-4 img-circle"
+          style="z-index: 99; margin-top: -5rem"
+        >
           <div class="big-c"></div>
           <div class="small-c"></div>
           <img

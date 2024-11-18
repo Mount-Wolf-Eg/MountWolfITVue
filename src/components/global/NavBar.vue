@@ -3,7 +3,7 @@
     <!-- nav bar -->
     <div
       v-if="!navResponse"
-      class="layout nav-bar pb-4"
+      class="layout nav-bar col-8 pb-4 px-0"
       style="display: flex; justify-content: space-between"
     >
       <NavTitle :logSrc="allSettings.logo"></NavTitle>

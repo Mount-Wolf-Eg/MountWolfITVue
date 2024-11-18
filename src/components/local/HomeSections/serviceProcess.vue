@@ -15,15 +15,18 @@
     <div class="service-proc-img row">
       <div
         class="img-container col d-flex justify-content-center justify-content-md-end align-items-center"
+        style="padding: 0 5rem !important"
       >
         <img
           class="serv-process-hover"
           src="/src/assets/media/Servises/Component 16.png"
           alt="service image"
           style="
-            width: 62.2rem;
+            max-width: 62.2rem;
+            width: auto;
             height: auto;
-            object-fit: cover;
+            max-height: 46.7rem;
+            object-fit: contain;
             object-position: center;
             z-index: 5;
           "

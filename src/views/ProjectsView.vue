@@ -1,10 +1,5 @@
 <template>
   <div v-motion-slide-bottom>
-    <img
-      src="/src/assets/media/Images/Mask group.jpg"
-      alt="screen img"
-      style="width: 100%"
-    />
     <div style="width: 80%; margin: 7rem" class="text-center mx-auto row gap-4">
       <div style="position: relative" class="col-12 col-md-3 p-2">
         <span
@@ -40,6 +35,7 @@
               :key="i"
             >
               <ProjectCard
+                class="proj-box"
                 :data="item"
                 @click="
                   router.push({ name: 'project', params: { id: item.id } })
@@ -80,5 +76,23 @@ onMounted(async () => {
 .active {
   background-color: #9a9a9a38 !important;
   color: white;
+}
+.proj-box {
+  position: relative;
+}
+
+.proj-box::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+  transition: all 0.5s ease;
+}
+
+.proj-box:hover::after {
+  background: none;
 }
 </style>

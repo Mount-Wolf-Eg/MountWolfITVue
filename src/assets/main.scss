@@ -195,8 +195,8 @@ body {
       text-transform: var(--f-style-upper);
     }
     .hero-text-body {
-      font-weight: var(--fw-normal);
-      font-size: var(--fs-16);
+      font-weight: 500;
+      font-size: var(--fs-16) !important;
       line-height: var(--line-s-24);
       color: var(--col-whtie);
       text-transform: var(--f-style-capt);
@@ -584,8 +584,8 @@ textarea {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 52.4rem;
-        height: 52.4rem;
+        width: 52.4rem !important;
+        height: 52.4rem !important;
         border-radius: 50%;
         background-color: transparent;
         border: 1px solid var(--col-second);
@@ -595,8 +595,8 @@ textarea {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 26.4rem;
-        height: 26.4rem;
+        width: 26.4rem !important;
+        height: 26.4rem !important;
         border-radius: 50%;
         background-color: transparent;
         border: 1px solid var(--col-second);
@@ -704,14 +704,14 @@ textarea {
   }
   .product-feature {
     .feat-title {
-      font-size: var(--fs-33);
+      font-size: var(--fs-24);
       line-height: var(--line-s-37);
       color: var(--col-second);
       font-weight: var(--fw-bold);
       text-align: center;
     }
     .feat-num {
-      font-size: var(--fs-33);
+      font-size: var(--fs-20);
       font-weight: var(--fw-bold);
       color: var(--col-second);
       line-height: var(--line-s-37);
@@ -721,7 +721,7 @@ textarea {
       color: var(--col-second);
       font-weight: var(--fw-bold);
       line-height: var(--fs-28);
-      font-size: var(--fs-24);
+      font-size: var(--fs-18);
     }
     .feat-bdy {
       width: 40%;

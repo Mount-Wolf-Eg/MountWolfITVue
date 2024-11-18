@@ -176,8 +176,8 @@ onMounted(async () => {
 
 <style lang="scss" scoped>
 .foot-item {
-  font-size: var(--fs-18);
-  font-weight: 700;
+  font-size: var(--fs-16);
+  font-weight: 500;
   font-weight: var(--line-s-24);
   color: var(--col-second);
 }

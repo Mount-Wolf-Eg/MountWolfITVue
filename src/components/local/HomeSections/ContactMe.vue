@@ -11,29 +11,18 @@
       style="width: 80%"
     >
       <div class="d-flex flex-column col-12 col-md-6">
-        <span>
+        <span class="w-100">
           <select
             placeholder="Websites and Platforms"
             v-model="formData.platform"
             class="form-select"
             :class="checkErrName(['platform']) ? 'err-border' : ''"
           >
-            <option
-              style="color: yellow !important"
-              value=""
-              disabled
-              selected
-              hidden
-            >
+            <option value="" disabled selected hidden>
               Websites and Platforms
             </option>
 
-            <option
-              v-for="(el, j) in props.sectors"
-              :key="j"
-              :value="el.name"
-              class="w-100"
-            >
+            <option v-for="(el, j) in props.sectors" :key="j" :value="el.name">
               {{ el.name }}
             </option>
           </select>
@@ -221,4 +210,8 @@ const sendApplication = async () => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.form-select option:hover {
+  background-color: yellow !important;
+}
+</style>

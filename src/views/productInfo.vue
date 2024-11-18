@@ -1,6 +1,6 @@
 <template>
   <div class="project-info mx-auto" style="width: 80%" v-motion-slide-bottom>
-    <div class="mx-auto">
+    <div class="mx-auto row col-8">
       <div class="row product-details">
         <div class="co-12 col-md text-center text-md-start my-5">
           <p class="product-title my-5">{{ singleProject.name }}</p>
@@ -43,7 +43,7 @@
               <img
                 src="/src/assets/media/Servises/Vector.png"
                 alt="product feature"
-                style="width: 10rem; height: auto"
+                style="width: 8.2rem; height: auto"
               />
             </div>
             <div
