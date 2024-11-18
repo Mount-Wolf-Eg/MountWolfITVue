@@ -4,16 +4,6 @@
     style="flex-grow: 1"
     v-motion-slide-bottom
   >
-    <img
-      src="/src/assets/media/Images/Mask group.jpg"
-      alt="screen img"
-      style="
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        object-position: center;
-      "
-    />
     <div class="contact-box">
       <p class="thin-label my-5">Come closer</p>
       <div>
