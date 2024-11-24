@@ -43,7 +43,7 @@
               ></ProjectCard>
             </div>
             <div
-              class="w-100 h-100 fs-4 d-flex justify-content-center align-items-center"
+              class="w-100 h-100 fs-1 d-flex justify-content-center align-items-center"
               v-else
             >
               No Data
