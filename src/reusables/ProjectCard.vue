@@ -1,5 +1,5 @@
 <template>
-  <div class="project-card">
+  <div class="project-card my-2">
     <div>
       <img class="card-img" :src="data.image" alt="" />
       <div class="card-content" style="z-index: 9999">{{ data.name }}</div>

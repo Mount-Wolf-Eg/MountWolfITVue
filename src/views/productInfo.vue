@@ -1,6 +1,6 @@
 <template>
   <div class="project-info mx-auto" style="width: 80%" v-motion-slide-bottom>
-    <div class="mx-auto row col-8">
+    <div class="mx-auto row col-12 col-lg-8">
       <div class="row product-details">
         <div class="co-12 col-md text-center text-md-start my-5">
           <p class="product-title my-5">{{ singleProject.name }}</p>
@@ -15,8 +15,9 @@
             style="
               width: 100%;
               height: auto;
-              object-fit: cover;
+              object-fit: contain;
               object-position: center;
+              max-height: 300px;
             "
           />
         </div>
@@ -46,13 +47,7 @@
                 style="width: 8.2rem; height: auto"
               />
             </div>
-            <div
-              style="
-                white-space: normal;
-                word-wrap: break-word !important;
-                overflow: hidden;
-              "
-            >
+            <div style="white-space: normal; word-wrap: break-word !important">
               <p class="feat-tit w-100">{{ item.title }}</p>
               <p class="feat-bdy w-100">{{ item.description }}</p>
             </div>
@@ -67,7 +62,7 @@
             v-for="(slide, i) in singleProject.attachments"
             :key="i"
           >
-            <div class="project-card">
+            <div class="project-card my-2">
               <div>
                 <img class="card-img" :src="slide" alt="" />
                 <div class="card-content">{{ slide.name }}</div>

@@ -18,7 +18,7 @@
         <div class="footer-items">
           <p class="foot-title">CONTACT US</p>
 
-          <div class="footer-items-box row">
+          <div class="footer-items-box row col-12">
             <div class="col">
               <p class="footer-list-title">Egypt</p>
               <ul class="d-flex flex-column align-items-center mt-4">

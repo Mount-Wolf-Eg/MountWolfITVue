@@ -5,7 +5,12 @@
         id="Group_1964"
         data-name="Group 1964"
         xmlns="http://www.w3.org/2000/svg"
-        style="width: 1.075rem; height: 2rem"
+        style="
+          width: 1.075rem;
+          height: 2rem;
+          min-width: 20px !important;
+          min-height: 20px;
+        "
         viewBox="0 0 12.938 24"
       >
         <path
@@ -23,7 +28,12 @@
         id="Group_1963"
         data-name="Group 1963"
         xmlns="http://www.w3.org/2000/svg"
-        style="width: 2rem; height: 2rem"
+        style="
+          width: 2rem;
+          height: 2rem;
+          min-width: 20px !important;
+          min-height: 20px;
+        "
         viewBox="0 0 24 24.004"
       >
         <path
@@ -52,7 +62,12 @@
 
     <a href="https://www.linkedin.com/company/mount-wolf/?viewAsMember=true">
       <svg
-        style="width: 2.2rem; height: 2.2rem"
+        style="
+          width: 2.2rem;
+          height: 2.2rem;
+          min-width: 20px !important;
+          min-height: 20px;
+        "
         fill="#929292"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"

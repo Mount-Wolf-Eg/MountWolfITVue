@@ -13,7 +13,7 @@
           class="contact-form row mx-auto"
           style="width: 80%"
         >
-          <div class="d-flex flex-column col-12 col-md-6">
+          <div class="d-flex flex-column col-12 col-md-6 ps-0">
             <span>
               <input
                 type="text"
@@ -66,7 +66,7 @@
               >
             </span>
           </div>
-          <div class="d-flex flex-column col-12 col-md-6">
+          <div class="d-flex flex-column col-12 col-md-6 pe-0">
             <span>
               <input
                 type="text"
