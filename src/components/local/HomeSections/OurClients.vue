@@ -43,6 +43,7 @@
                 object-fit: contain;
                 object-position: center;
               "
+              loading="lazy"
             />
           </a>
         </swiper-slide>
@@ -60,15 +61,15 @@ const modules = ref([Pagination, Navigation, Autoplay]);
 const breakpoints = {
   0: {
     slidesPerView: 3.5,
-    spaceBetween: 30,
+    spaceBetween: 10,
   },
   330: {
     slidesPerView: 4,
-    spaceBetween: 30,
+    spaceBetween: 10,
   },
   575: {
     slidesPerView: 8,
-    spaceBetween: 30,
+    spaceBetween: 10,
   },
   1299: {
     slidesPerView: 8,

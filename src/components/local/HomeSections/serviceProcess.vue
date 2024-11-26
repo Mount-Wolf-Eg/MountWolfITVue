@@ -19,7 +19,7 @@
       >
         <img
           class="serv-process-hover"
-          src="/src/assets/media/Servises/Component 16.png"
+          src="/src/assets/media/Servises/Component 16.webp"
           alt="service image"
           style="
             max-width: 62.2rem;
@@ -30,6 +30,7 @@
             object-position: center;
             z-index: 5;
           "
+          loading="lazy"
         />
       </div>
 

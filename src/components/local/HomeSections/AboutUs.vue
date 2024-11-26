@@ -33,7 +33,9 @@
           :key="i"
           class="my-auto"
         >
-          <div class="question-card h-100 w-100 mx-auto">
+          <div
+            class="question-card h-100 w-100 mx-auto d-flex flex-row align-items-center justify-content-center"
+          >
             <div
               style="background-color: #868e96"
               class="w-100 h-100 flex-r gap-3"
@@ -46,11 +48,11 @@
               :src="slide.image"
               style="
                 width: 100%;
-                max-height: 100vh;
                 height: auto;
                 object-fit: cover;
                 object-position: center;
               "
+              loading="lazy"
               alt="slider image"
             />
           </div>

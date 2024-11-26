@@ -5,13 +5,9 @@
   }
 
   :root {
-    // --1st-title: 20px;
-    // --2st-title: 18px;
-    // --3st-title: 16px;
-    // --body-txt: 14px;
-    --first-title: 18px;
-    --second-title: 16px;
-    --third-title: 14px;
+    --first-title: 16px;
+    --second-title: 14px;
+    --third-title: 12px;
     --body-txt: 12px;
   }
 
@@ -19,6 +15,9 @@
   .nav-bar {
     .active {
       font-size: var(--fs-33) !important;
+    }
+    .brand-logo {
+      max-height: 25px;
     }
   }
   // responsive nav
@@ -37,6 +36,7 @@
   // hero section
   .hero-sec {
     height: 750px;
+    background-color: yellow !important ;
     .hero-text {
       width: 95% !important;
       text-align: center;
@@ -72,7 +72,7 @@
 
   // about section
   .about-us {
-    height: 50rem;
+    height: 200px;
     .swiper-button-next,
     .swiper-button-prev {
       margin: 0 5rem;
@@ -87,7 +87,7 @@
 
   // service section
   .service-sec {
-    height: 650px;
+    height: 800px;
     .ser-title {
       margin: 12px 0;
       padding: 0;
@@ -95,7 +95,7 @@
     }
     .service-img {
       height: 100% !important ;
-      justify-content: center !important;
+      justify-content: space-between !important;
       .box-responsive {
         display: flex !important;
         flex-direction: row !important;
@@ -127,8 +127,8 @@
           flex: 1;
           .serv-image {
             height: 100% !important;
-            width: 50% !important;
-            max-width: 40rem;
+            width: 80vw !important;
+            max-width: 80vw;
             min-width: 35rem;
           }
           .big-c {
@@ -327,16 +327,19 @@
     font-size: 30% !important;
   }
   :root {
-    --first-title: 20px;
-    --second-title: 18px;
-    --third-title: 16px;
-    --body-txt: 14px;
+    --first-title: 18px;
+    --second-title: 16px;
+    --third-title: 14px;
+    --body-txt: 12px;
   }
 
   // nav bar
   .nav-bar {
     .active {
       font-size: var(--fs-33) !important;
+    }
+    .brand-logo {
+      max-height: 30px;
     }
   }
 
@@ -390,7 +393,7 @@
   }
   // about section
   .about-us {
-    height: 80rem;
+    height: 500px;
     .swiper-button-next,
     .swiper-button-prev {
       margin: 0 5rem;
@@ -446,8 +449,8 @@
 
           .serv-image {
             height: 100% !important;
-            width: 40% !important;
-            max-width: 80rem;
+            width: 60vw !important;
+            max-width: 60vw;
             min-width: 50rem;
           }
           .big-c {
@@ -673,15 +676,6 @@
   }
 }
 
-// @media screen and (min-width: 450px) and (max-width: 768px) {
-//   // responsive footer
-//   .footer-responsive {
-//     .footer-items {
-//       bottom: 55% !important;
-//       padding-bottom: 15rem !important;
-//     }
-//   }
-// }
 // /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -802,7 +796,8 @@
   }
   // about section
   .about-us {
-    height: 90rem;
+    height: 650px;
+
     .swiper-button-next,
     .swiper-button-prev {
       margin: 0 5rem;
@@ -1161,7 +1156,8 @@
   }
   // about section
   .about-us {
-    height: 80%;
+    height: 700px;
+
     .swiper-button-next,
     .swiper-button-prev {
       margin: 0 5rem;
@@ -1484,7 +1480,8 @@
   }
   // about section
   .about-us {
-    height: 80%;
+    height: 700px;
+
     .swiper-button-next,
     .swiper-button-prev {
       margin: 0 5rem;
@@ -1680,7 +1677,8 @@
   }
   // about section
   .about-us {
-    height: 80%;
+    height: 900px;
+
     .swiper-button-next,
     .swiper-button-prev {
       margin: 0 5rem;

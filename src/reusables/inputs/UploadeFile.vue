@@ -59,8 +59,9 @@
       <img
         class="mt-3"
         :src="userImg"
-        alt=""
+        alt="user image"
         style="max-width: 10rem; border-radius: 7px"
+        loading="lazy"
       />
     </div>
   </div>

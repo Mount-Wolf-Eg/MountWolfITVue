@@ -13,6 +13,7 @@
               src="../assets/media/Images/dire-wolf-beautiful-mythical-wolf-legendary-creature.png"
               alt="wolf image"
               style="height: 100%; padding: 0; margin: 0; width: 30rem"
+              loading="lazy"
             />
           </div>
           <div class="p-3 text w-75">{{ data }}</div>

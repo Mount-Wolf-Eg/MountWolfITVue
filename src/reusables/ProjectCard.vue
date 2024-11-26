@@ -1,7 +1,7 @@
 <template>
   <div class="project-card my-2">
     <div>
-      <img class="card-img" :src="data.image" alt="" />
+      <img class="card-img" :src="data.image" alt="card image" loading="lazy" />
       <div class="card-content" style="z-index: 9999">{{ data.name }}</div>
     </div>
   </div>

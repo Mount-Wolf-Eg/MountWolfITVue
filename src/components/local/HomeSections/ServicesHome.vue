@@ -11,6 +11,7 @@
           object-fit: cover;
           object-position: center;
         "
+        loading="lazy"
         alt="service img"
       />
     </div>
@@ -31,6 +32,7 @@
               :src="elL.image"
               alt="service image"
               style="width: 2.5rem; height: 2.5rem"
+              loading="lazy"
             />
 
             <p class="m-0 p-0">{{ elL.title }}</p>
@@ -47,11 +49,12 @@
             alt="service image"
             class="serv-image"
             style="
-              width: 66.9rem;
+              width: 100%;
               height: auto;
               object-fit: cover;
               object-position: center;
             "
+            loading="lazy"
           />
         </div>
         <div
@@ -67,6 +70,7 @@
               style="width: 2.5rem; height: 2.5rem"
               :src="elR.image"
               alt="service image"
+              loading="lazy"
             />
 
             <p class="m-0 p-0">{{ elR.title }}</p>
@@ -84,6 +88,7 @@
               style="width: auto; height: 2.7rem"
               :src="item.image"
               alt="service image"
+              loading="lazy"
             />
 
             <p class="feat">{{ item.title }}</p>

@@ -1,8 +1,8 @@
 <template>
   <div class="d-flex flex-column align-items-center text-center">
     <router-link to="/">
-      <!-- src="/src/assets/media/MOUNT WOLF SOFTWARE Icon -03.png" -->
       <img
+        class="brand-logo"
         :src="props.logSrc"
         style="
           height: 6.2rem;
@@ -10,10 +10,9 @@
           object-fit: contain;
           object-position: center;
         "
-        alt=""
+        loading="lazy"
+        alt="brand logo"
       />
-      <!-- <p class="nav-main-st">Mount Wolf</p>
-      <p class="nav-st">For Information Technologies</p> -->
     </router-link>
   </div>
 </template>

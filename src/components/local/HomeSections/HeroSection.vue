@@ -44,7 +44,11 @@
           </div>
           <!-- images -->
 
-          <div class="question-card h-100" v-else>
+          <div
+            class="question-card h-100"
+            style="overflow: hidden !important"
+            v-else
+          >
             <img
               :src="slide.image"
               style="

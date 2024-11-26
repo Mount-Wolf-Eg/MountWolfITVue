@@ -35,11 +35,13 @@
           src="/src/assets/media/Images/footImg.png"
           alt="footer image"
           style="position: absolute; right: 0; width: 50%; margin-right: 0.5px"
+          loading="lazy"
         />
         <img
           src="/src/assets/media/Images/footImg.png"
           alt="footer image"
           style="transform: scaleX(-1); width: 50%; margin-left: 0.5px"
+          loading="lazy"
         />
         <p>let's hunt</p>
       </div>

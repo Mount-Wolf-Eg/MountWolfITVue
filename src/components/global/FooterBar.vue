@@ -12,6 +12,7 @@
             object-fit: cover;
             object-position: center;
           "
+          loading="lazy"
           alt="footer-image"
         />
 

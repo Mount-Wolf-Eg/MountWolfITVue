@@ -19,6 +19,7 @@
               object-position: center;
               max-height: 300px;
             "
+            loading="lazy"
           />
         </div>
       </div>
@@ -45,6 +46,7 @@
                 src="/src/assets/media/Servises/Vector.png"
                 alt="product feature"
                 style="width: 8.2rem; height: auto"
+                loading="lazy"
               />
             </div>
             <div style="white-space: normal; word-wrap: break-word !important">
@@ -64,7 +66,12 @@
           >
             <div class="project-card my-2">
               <div>
-                <img class="card-img" :src="slide" alt="" />
+                <img
+                  class="card-img"
+                  :src="slide"
+                  alt="card image"
+                  loading="lazy"
+                />
                 <div class="card-content">{{ slide.name }}</div>
               </div>
             </div>

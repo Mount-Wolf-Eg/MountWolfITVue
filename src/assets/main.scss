@@ -224,6 +224,7 @@ body {
 .about-us {
   .swiper-button-next,
   .swiper-button-prev {
+    top: 50% !important;
     margin: 0 20rem;
     width: 7rem;
     height: 7rem;
