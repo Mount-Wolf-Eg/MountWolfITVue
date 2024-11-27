@@ -61,12 +61,17 @@ import ProjectCard from "@/reusables/ProjectCard.vue";
 import { useRouter } from "vue-router";
 import { useSlidersStore } from "@/stores/dataStore";
 import { storeToRefs } from "pinia";
+import { useInsightsStore } from "@/stores/InsightsStore";
 const { allProjectsCategory } = storeToRefs(useSlidersStore());
 const router = useRouter();
 const currentSec = ref();
 const categData = ref({});
 onMounted(async () => {
   await useSlidersStore().getAllProjectsCategory();
+  await useInsightsStore().SendInsight({
+    url: window.location.href,
+    user_agent: navigator.userAgent,
+  });
   currentSec.value = allProjectsCategory.value[0].id;
   categData.value = allProjectsCategory.value[0].category_projects;
 });

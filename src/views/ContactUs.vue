@@ -114,7 +114,8 @@
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { useInsightsStore } from "@/stores/InsightsStore";
 // validation
 import useVuelidator from "@vuelidate/core";
 import {
@@ -186,4 +187,10 @@ const sendApplication = async () => {
   }
   isLoading.value = false;
 };
+onMounted(async () => {
+  await useInsightsStore().SendInsight({
+    url: window.location.href,
+    user_agent: navigator.userAgent,
+  });
+});
 </script>

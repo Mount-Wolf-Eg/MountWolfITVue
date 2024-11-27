@@ -154,12 +154,18 @@ import { onBeforeMount, onMounted, ref } from "vue";
 import ProjectCard from "@/reusables/ProjectCard.vue";
 import { useRoute, useRouter } from "vue-router";
 import { useSlidersStore } from "@/stores/dataStore";
+import { useInsightsStore } from "@/stores/InsightsStore";
 import { storeToRefs } from "pinia";
 const { singleProject } = storeToRefs(useSlidersStore());
 const router = useRouter();
 const route = useRoute();
 
-onMounted(async () => {});
+onMounted(async () => {
+  await useInsightsStore().SendInsight({
+    url: window.location.href,
+    user_agent: navigator.userAgent,
+  });
+});
 onBeforeMount(async () => {
   const res = await useSlidersStore().getSingleProject({ id: route.params.id });
   if (res == false) router.push({ name: "projects" });

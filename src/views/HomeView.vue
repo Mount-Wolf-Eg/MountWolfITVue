@@ -28,6 +28,7 @@ import OurProjects from "@/components/local/HomeSections/OurProjects.vue";
 import ourProducts from "@/components/local/HomeSections/ourProducts.vue";
 import ContactMe from "@/components/local/HomeSections/ContactMe.vue";
 import OurClients from "@/components/local/HomeSections/OurClients.vue";
+import { useInsightsStore } from "@/stores/InsightsStore";
 // store
 import { useSlidersStore } from "@/stores/dataStore";
 import { storeToRefs } from "pinia";
@@ -53,6 +54,10 @@ onMounted(async () => {
     useSlidersStore().getAllProducts(),
     useSlidersStore().getAllProjects(),
     useSlidersStore().getAllContactSectors(),
+    useInsightsStore().SendInsight({
+      url: window.location.href,
+      user_agent: navigator.userAgent,
+    }),
   ]);
 
   AllServices.value = {
