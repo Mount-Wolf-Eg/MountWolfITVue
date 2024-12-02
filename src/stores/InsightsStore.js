@@ -22,7 +22,7 @@ export const useInsightsStore = defineStore("insightStore", {
               errorMessage = errorArray[0][0];
             }
           }
-          mainStore().showAlert(errorMessage, 2);
+          // mainStore().showAlert(errorMessage, 2);
           this.start = false;
         });
     },
