@@ -13,7 +13,7 @@
               (currentSec = categ.id), (categData = categ.category_projects)
             "
             :class="`${currentSec == categ.id ? 'active' : ''}`"
-            class="submit-btn w-100"
+            class="submit-btn py-2 py-lg-5 w-100"
             type="submit"
           >
             {{ categ.name }}

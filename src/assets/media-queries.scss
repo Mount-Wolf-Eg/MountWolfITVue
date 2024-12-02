@@ -36,7 +36,6 @@
   // hero section
   .hero-sec {
     height: 750px;
-    background-color: yellow !important ;
     .hero-text {
       width: 95% !important;
       text-align: center;
@@ -87,7 +86,7 @@
 
   // service section
   .service-sec {
-    height: 800px;
+    min-height: 800px;
     .ser-title {
       margin: 12px 0;
       padding: 0;
@@ -106,13 +105,15 @@
           gap: 0 !important;
           height: fit-content !important;
           .serv-item {
+            height: 28px !important;
             height: auto !important;
             margin: 1.5rem auto !important;
             width: 80% !important;
-            padding: 1.5rem 5rem !important;
             img {
               width: 5rem !important;
-              height: 5rem !important;
+              height: auto !important;
+              max-width: 30px;
+              max-height: 30px;
             }
             p {
               padding-left: 4px !important;
@@ -157,8 +158,10 @@
           div {
             margin-bottom: 5rem;
             img {
-              height: 4.8rem !important;
+              height: 28px !important;
               margin-bottom: 2rem !important;
+              max-width: 30px;
+              max-height: 30px;
             }
             .feat {
               font-size: var(--third-title);
@@ -408,7 +411,7 @@
 
   // service section
   .service-sec {
-    height: 900px;
+    min-height: 900px;
     .ser-title {
       margin: 25px 0;
       padding: 0;
@@ -430,10 +433,12 @@
             height: auto !important;
             margin: 1.5rem auto !important;
             width: 80% !important;
-            padding: 6px 5rem !important;
+            padding: 2px 5rem !important;
             img {
               width: 7rem !important;
               height: 7rem !important;
+              max-width: 30px;
+              max-height: 30px;
             }
             p {
               padding-left: 4px !important;
@@ -477,6 +482,8 @@
           div {
             margin-bottom: 3rem;
             img {
+              max-width: 30px;
+              max-height: 30px;
               height: 7rem !important;
               margin-bottom: 2rem !important;
             }
@@ -729,7 +736,7 @@
 
   // service section
   .service-sec {
-    height: 500px;
+    min-height: 500px;
     .ser-title {
       margin: 25px 0;
       padding: 0;
@@ -743,8 +750,10 @@
           .serv-item {
             width: 65%;
             height: auto !important;
-            padding: 10px 10px !important;
+            padding: 5px 10px !important;
             img {
+              max-width: 30px;
+              max-height: 30px;
               width: 4rem !important;
               height: 4rem !important;
             }
@@ -783,6 +792,8 @@
           div {
             margin-bottom: 3rem;
             img {
+              max-width: 30px;
+              max-height: 30px;
               height: 5rem !important;
               margin-bottom: 2rem !important;
             }
@@ -1014,7 +1025,8 @@
   }
   // service section
   .service-sec {
-    height: 85rem;
+    min-height: 85rem;
+
     .service-img {
       height: 100%;
 
@@ -1029,7 +1041,7 @@
           .serv-item {
             width: 65%;
             height: auto !important;
-            padding: 10px 10px !important;
+            padding: 5px 10px !important;
             img {
               width: 4rem !important;
               height: 4rem !important;
@@ -1069,6 +1081,8 @@
           div {
             margin-bottom: 3rem;
             img {
+              max-width: 30px;
+              max-height: 30px;
               height: 5rem !important;
               margin-bottom: 2rem !important;
             }
@@ -1338,7 +1352,7 @@
   }
   // service section
   .service-sec {
-    height: 85rem;
+    min-height: 85rem;
     .service-img {
       height: 100%;
 
@@ -1353,7 +1367,7 @@
           .serv-item {
             width: 65%;
             height: auto !important;
-            padding: 10px 10px !important;
+            padding: 5px 10px !important;
             img {
               width: 4rem !important;
               height: 4rem !important;
@@ -1583,7 +1597,7 @@
   }
   // service section
   .service-sec {
-    height: 85rem;
+    min-height: 85rem;
     .service-img {
       height: 100%;
       .box-responsive {

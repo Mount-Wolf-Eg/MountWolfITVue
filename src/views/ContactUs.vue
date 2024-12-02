@@ -102,7 +102,7 @@
             >
           </div>
           <button
-            class="submit-btn w-100"
+            class="submit-btn py-2 py-lg-5 w-100"
             style="margin-bottom: 2rem"
             type="submit"
           >

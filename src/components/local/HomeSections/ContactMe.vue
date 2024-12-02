@@ -110,13 +110,13 @@
         >
         <button
           v-if="!isLoading"
-          class="submit-btn py-5 w-100 d-flex align-items-center justify-content-center"
+          class="submit-btn py-2 py-lg-5 w-100 d-flex align-items-center justify-content-center"
           style="margin-bottom: 2rem"
           type="submit"
         >
           Send
         </button>
-        <button v-else class="submit-btn w-100">
+        <button v-else class="submit-btn py-2 py-lg-5 w-100">
           <div class="spinner-grow me-3" role="status"></div>
           <span> Loading...</span>
         </button>

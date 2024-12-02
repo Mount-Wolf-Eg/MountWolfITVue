@@ -22,10 +22,10 @@
           src="/src/assets/media/Servises/Component 16.webp"
           alt="service image"
           style="
-            max-width: 62.2rem;
+            max-width: 50vw;
             width: auto;
             height: auto;
-            max-height: 46.7rem;
+            max-height: 460px;
             object-fit: contain;
             object-position: center;
             z-index: 5;
