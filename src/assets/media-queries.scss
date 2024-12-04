@@ -229,13 +229,19 @@
   }
 
   input,
-  select,
+  .form-select,
   textarea {
     font-size: var(--body-txt) !important;
     padding: 10px 5px !important;
     height: auto !important;
 
     &::placeholder {
+      font-size: var(--body-txt) !important;
+    }
+  }
+  .dropdown-menu {
+    width: 93%;
+    .dropdown-item {
       font-size: var(--body-txt) !important;
     }
   }
@@ -555,7 +561,7 @@
   }
 
   input,
-  select,
+  .form-select,
   textarea {
     margin-bottom: 15px !important;
     font-size: var(--body-txt) !important;
@@ -563,6 +569,12 @@
     height: auto !important;
 
     &::placeholder {
+      font-size: var(--body-txt) !important;
+    }
+  }
+  .dropdown-menu {
+    width: 89%;
+    .dropdown-item {
       font-size: var(--body-txt) !important;
     }
   }
@@ -872,7 +884,7 @@
   }
 
   input,
-  select,
+  .form-select,
   textarea {
     margin-bottom: 15px !important;
     font-size: var(--body-txt) !important;
@@ -880,6 +892,12 @@
     height: auto !important;
 
     &::placeholder {
+      font-size: var(--body-txt) !important;
+    }
+  }
+  .dropdown-menu {
+    width: 44.3%;
+    .dropdown-item {
       font-size: var(--body-txt) !important;
     }
   }
@@ -1138,7 +1156,7 @@
   }
 
   input,
-  select,
+  .form-select,
   textarea {
     margin-bottom: 15px !important;
     font-size: var(--body-txt) !important;
@@ -1146,6 +1164,12 @@
     height: auto !important;
 
     &::placeholder {
+      font-size: var(--body-txt) !important;
+    }
+  }
+  .dropdown-menu {
+    width: 44.2%;
+    .dropdown-item {
       font-size: var(--body-txt) !important;
     }
   }
@@ -1462,7 +1486,7 @@
   }
 
   input,
-  select,
+  .form-select,
   textarea {
     margin-bottom: 15px !important;
     font-size: var(--body-txt) !important;
@@ -1470,6 +1494,12 @@
     height: auto !important;
 
     &::placeholder {
+      font-size: var(--body-txt) !important;
+    }
+  }
+  .dropdown-menu {
+    width: 44%;
+    .dropdown-item {
       font-size: var(--body-txt) !important;
     }
   }
@@ -1659,7 +1689,7 @@
   }
 
   input,
-  select,
+  .form-select,
   textarea {
     margin-bottom: 15px !important;
     font-size: var(--body-txt) !important;

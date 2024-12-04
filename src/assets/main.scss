@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 
 * {
   color: var(--col-wt);
@@ -489,6 +490,9 @@ input {
   border-radius: 1.2rem;
   font-size: var(--fs-18) !important;
   margin-bottom: 2rem !important;
+  &:focus {
+    border: 1px solid #fff;
+  }
 
   &::placeholder {
     font-weight: bold;
@@ -497,23 +501,31 @@ input {
     color: #817d7d !important;
   }
 }
-select {
-  width: 100%;
-  height: 6.2rem;
-  background-color: var(--col-bg) !important;
-  border: 1px solid #464545;
-  padding-left: 1rem;
-  font-size: 1.6rem;
+.form-select {
+  text-align: start;
+  height: auto;
+  border: 1px solid #464545 !important;
+  padding: 1rem !important;
+  font-size: 1.6rem !important;
   color: #817d7d !important;
   border-radius: 1.2rem !important;
-  font-size: var(--fs-18) !important;
   margin-bottom: 2rem !important;
-
-  &::placeholder {
-    font-weight: bold;
-    font-size: 1.6rem;
-    line-height: 2.9rem;
-    color: #817d7d !important;
+}
+.dropdown-menu {
+  min-width: 39.5% !important;
+  border: 1px solid #464545 !important;
+  background-color: var(--col-bg) !important;
+  color: var(--col-white) !important;
+  .dropdown-item {
+    font-size: 1.4rem !important;
+    color: var(--col-white) !important;
+    cursor: context-menu;
+    &:hover {
+      color: var(--col-bg) !important;
+    }
+    &:active {
+      background-color: var(--col-bg) !important;
+    }
   }
 }
 
@@ -521,7 +533,7 @@ textarea {
   width: 100%;
   background-color: transparent;
   border-radius: 1.2rem;
-  border: 1px solid #464545;
+  border: 1px solid #464545 !important;
   padding: 1rem;
   color: var(--col-white) !important;
   font-size: var(--fs-18) !important;
@@ -533,6 +545,13 @@ textarea {
     font-size: 1.6rem;
     line-height: 2.9rem;
     color: #817d7d !important;
+  }
+  &:active {
+    border: 1px solid #464545 !important;
+  }
+  &:focus {
+    border: 1px solid #464545 !important;
+    outline: none !important;
   }
 }
 

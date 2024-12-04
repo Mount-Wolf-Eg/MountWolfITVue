@@ -10,22 +10,50 @@
       class="contact-form row"
       style="width: 80%"
     >
-      <div class="d-flex flex-column col-12 col-md-6">
-        <span class="w-100">
-          <select
-            placeholder="Websites and Platforms"
-            v-model="formData.platform"
-            class="form-select"
-            :class="checkErrName(['platform']) ? 'err-border' : ''"
-          >
-            <option value="" disabled selected hidden>
-              Websites and Platforms
-            </option>
+      <div class="d-flex flex-column col-12 col-md-6 p-2">
+        <div class="w-100">
+          <div class="w-100">
+            <button
+              style="width: inherit !important"
+              :style="
+                checkErrName(['platform'])
+                  ? 'border:1px solid rgb(131, 0, 0) !important'
+                  : ''
+              "
+              type="button"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              class="form-select nav-link dropdown-toggle nav-route"
+              :class="{
+                'text-light': formData.platform,
+              }"
+            >
+              {{ formData.platform || "Websites and Platforms" }}
+            </button>
 
-            <option v-for="(el, j) in props.sectors" :key="j" :value="el.name">
+            <ul class="dropdown-menu" style="text-align: inherit">
+              <li
+                v-for="(el, j) in props.sectors"
+                :key="j"
+                class="dropdown-item"
+                @click="formData.platform = el.name"
+              >
+                {{ el.name }}
+              </li>
+            </ul>
+          </div>
+
+          <ul class="dropdown-menu" style="text-align: inherit">
+            <li
+              v-for="(el, j) in props.sectors"
+              :key="j"
+              class="dropdown-item"
+              @click="formData.platform = el.name"
+            >
               {{ el.name }}
-            </option>
-          </select>
+            </li>
+          </ul>
           <span
             class="center-row justify-content-start"
             style="margin-top: -1rem; margin-bottom: 1rem"
@@ -35,7 +63,8 @@
               {{ err.$message }}
             </span></span
           >
-        </span>
+        </div>
+
         <span>
           <input
             type="text"
@@ -90,7 +119,7 @@
           >
         </span>
       </div>
-      <div class="d-flex flex-column col-12 col-md-6">
+      <div class="d-flex flex-column col-12 col-md-6 p-2">
         <textarea
           name="text"
           style="flex: 1"
@@ -110,13 +139,13 @@
         >
         <button
           v-if="!isLoading"
-          class="submit-btn py-2 py-lg-5 w-100 d-flex align-items-center justify-content-center"
+          class="submit-btn py-2 py-lg-3 w-100 d-flex align-items-center justify-content-center"
           style="margin-bottom: 2rem"
           type="submit"
         >
           Send
         </button>
-        <button v-else class="submit-btn py-2 py-lg-5 w-100">
+        <button v-else class="submit-btn py-2 py-lg-3 w-100">
           <div class="spinner-grow me-3" role="status"></div>
           <span> Loading...</span>
         </button>
@@ -126,7 +155,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 
 // validation
 import useVuelidator from "@vuelidate/core";
@@ -210,8 +239,4 @@ const sendApplication = async () => {
 };
 </script>
 
-<style lang="scss" scoped>
-.form-select option:hover {
-  background-color: yellow !important;
-}
-</style>
+<style lang="scss" scoped></style>
