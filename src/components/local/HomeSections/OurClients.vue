@@ -98,7 +98,7 @@ const props = defineProps({
 }
 
 .client-slid {
-  margin-bottom: 10rem;
+  margin-bottom: 7rem;
   .slide-title {
     margin: 15rem 0 8rem;
     text-align: center;

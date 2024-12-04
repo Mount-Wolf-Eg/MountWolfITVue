@@ -114,44 +114,44 @@ const breakpoints = {
     spaceBetween: 10,
   },
   700: {
-    slidesPerView: 2.2,
+    slidesPerView: 3,
     spaceBetween: 10,
   },
   770: {
     slidesPerView: 3,
-    spaceBetween: 10,
+    spaceBetween: 2,
   },
   810: {
-    slidesPerView: 3.2,
-    spaceBetween: 10,
+    slidesPerView: 3.5,
+    spaceBetween: 2,
   },
   950: {
-    slidesPerView: 3.8,
-    spaceBetween: 10,
+    slidesPerView: 4,
+    spaceBetween: 2,
   },
   1190: {
-    slidesPerView: 3.8,
-    spaceBetween: 10,
+    slidesPerView: 4,
+    spaceBetween: 2,
   },
   1400: {
-    slidesPerView: 3.5,
-    spaceBetween: 10,
+    slidesPerView: 3.8,
+    spaceBetween: 2,
   },
   1490: {
-    slidesPerView: 3.6,
-    spaceBetween: 10,
+    slidesPerView: 4,
+    spaceBetween: 2,
   },
   1600: {
-    slidesPerView: 4,
-    spaceBetween: 10,
+    slidesPerView: 4.3,
+    spaceBetween: 2,
   },
   1700: {
-    slidesPerView: 4,
-    spaceBetween: 10,
+    slidesPerView: 4.5,
+    spaceBetween: 2,
   },
   1800: {
-    slidesPerView: 4.5,
-    spaceBetween: 10,
+    slidesPerView: 5,
+    spaceBetween: 2,
   },
 };
 </script>
