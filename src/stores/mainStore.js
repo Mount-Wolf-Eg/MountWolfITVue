@@ -4,7 +4,8 @@ import { useToast } from "vue-toastification";
 // testing url
 // const mainDomain = "https://itesting.mountwolfs.com/api";
 // production
-const mainDomain = "https://mwsw.mountwolfs.com/api";
+// const mainDomain = "https://mwsw.mountwolfs.com/api";
+const mainDomain = "https://api.sw.mount-wolf.com/api";
 
 export const mainStore = defineStore("mainStore", {
   state: () => ({
