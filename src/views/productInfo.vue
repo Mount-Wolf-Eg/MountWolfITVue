@@ -167,6 +167,7 @@ onMounted(async () => {
   });
 });
 onBeforeMount(async () => {
+  singleProject.value = [];
   const res = await useSlidersStore().getSingleProject({ id: route.params.id });
   if (res == false) router.push({ name: "projects" });
 });
