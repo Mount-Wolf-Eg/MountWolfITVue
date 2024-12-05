@@ -13,7 +13,7 @@
           class="contact-form row mx-auto"
           style="width: 80%"
         >
-          <div class="d-flex flex-column col-12 col-md-6 p-2">
+          <div class="d-flex flex-column col-12 col-md-6 ps-0">
             <span>
               <input
                 type="text"
@@ -66,7 +66,7 @@
               >
             </span>
           </div>
-          <div class="d-flex flex-column col-12 col-md-6 p-2">
+          <div class="d-flex flex-column col-12 col-md-6 pe-0">
             <span>
               <input
                 type="text"
@@ -101,14 +101,16 @@
               </span></span
             >
           </div>
+
           <button
             v-if="!isLoading"
-            class="submit-btn py-2 py-lg-3 w-100"
+            class="submit-btn py-2 py-lg-3 w-100 d-flex align-items-center justify-content-center"
             style="margin-bottom: 2rem"
             type="submit"
           >
             Send
           </button>
+
           <button v-else class="submit-btn py-2 py-lg-3 w-100">
             <div class="spinner-grow me-3" role="status"></div>
             <span> Loading...</span>
